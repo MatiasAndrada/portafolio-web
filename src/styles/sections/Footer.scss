@@ -1,0 +1,30 @@
+/*
+@use "../../scss/abstracts/vars.scss" as *;
+@use "../../scss/abstracts/fn.scss" as fn;
+
+.footer{
+    height: 120px;
+    background-color: map-get($colors, A);
+    display: flex;
+    justify-content: center;
+    .footer__container{
+        display: flex;
+        height: auto;
+        width: 400px;
+        justify-content: space-evenly;
+        align-items: center;
+        .container__item{
+            height: 48px;
+            width: 48px;
+            &--linkedin{
+                background-image: url(../../assets/icon/iconfooter/linkedin.svg);
+            }
+            &--github{
+                background-image: url(../../assets/icon/iconfooter/github.svg);
+            }
+            &--email{
+                background-image: url(../../assets/icon/iconfooter/email.svg);
+            }
+        }
+    }
+}*/

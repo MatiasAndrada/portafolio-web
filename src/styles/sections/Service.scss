@@ -1,0 +1,68 @@
+@use '../abstracts/vars' as *;
+@use '../abstracts/fonts' as *;
+@use '../abstracts/functions' as fn;
+
+
+.service {
+  height: 100vh;
+
+  .service__title {
+    font-size: map-get($headings, h3);
+    font-family: $font-subtitle-it;
+    text-shadow: fn.shadow(map-get($colors, D));
+    text-align: center;
+    height: 10%;
+    padding-top: 1em;
+  }
+  .service__container {
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-around;
+    .container__item {
+      width: 300px;
+      height: fit-content;
+      padding: 1em;
+      border-radius: map-get($b-radius, medium);
+      color: $text-color-dark;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &--orange {
+        background-color: map-get($colors, F);
+      }
+      &--lightBlue {
+        background-color: map-get($colors, C);
+      }
+      &--yellow {
+        background-color: map-get($colors, G);
+      }
+      &--green {
+        background-color: map-get($colors, D);
+      }
+
+      .item__img {
+        height: 128px;
+      }
+      .item__title {
+        font-size: map-get($headings, h3);
+        text-align: center;
+        font-family: $font-subtitle-condensed;
+        color: $text-color-light;
+        padding: 4px;
+        width: 70%;
+        background-color: map-get($colors, E);
+        border-radius: map-get($b-radius, large);
+      }
+      .serviceitem__paragraph {
+        font-size: map-get($headings, p);
+        font-family: $font-paragraph;
+        color: $text-color-dark;
+        padding: 1em;
+      }
+    }
+  }
+}

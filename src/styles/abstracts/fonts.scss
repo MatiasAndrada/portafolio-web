@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+    font-family: 'hello';
+    font-weight: 900;
+    src: local('hello'), url(/src/assets/fonts/hello.ttf) format("truetype");
+
+  }
+@font-face {
+    font-family: 'Coolvetica-it';
+    font-weight: 900;
+    src: local("Coolvetica-it"), url(/src/assets/fonts/coolvetica-it.otf) format("truetype");
+};
+@font-face {
+    font-family: 'Coolvetica-condensed';
+    font-weight: 900;
+    src: local('Coolvetica-condensed'), url(/src/assets/fonts/coolvetica-condensed.otf) format("truetype");
+}; 
+@font-face{
+    font-family: 'gothic-style';
+    font-weight: 900;
+    src: local('gothic-style'), url(/src/assets/fonts/Nightcore.ttf) format("truetype");
+}
+
+$font-title: 'hello';
+$font-subtitle-it: 'Coolvetica-it';
+$font-subtitle-condensed: 'Coolvetica-condensed';
+$font-paragraph: 'Heebo';
+$font-gothic: 'gothic-style';
+

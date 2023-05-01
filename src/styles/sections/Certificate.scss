@@ -1,0 +1,198 @@
+@use "../abstracts/vars" as *;
+@use "../abstracts/fonts" as *;
+@use '../abstracts/mixins' as *;
+@use "../abstracts/functions" as fn;
+
+.certificate__container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+
+
+.card {
+  background-color: transparent;
+  overflow: visible;
+  height: 230px;
+  width: 300px;
+  border-radius: map-get($b-radius, large);
+  box-shadow: 0px 2px 7px 1px #a6a1a11d;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 2px 7px 1px #a6a1a11d;
+  border-radius: map-get($b-radius, large);
+}
+
+.front,
+.back {
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: map-get($b-radius, large);
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.back--color0::before {
+  background-image: linear-gradient(315deg,
+      map-get($colors, E) 0%,
+      map-get($colors, D) 74%);
+}
+
+.back--color1::before {
+  background-image: linear-gradient(315deg,
+      map-get($colors, B) 0%,
+      map-get($colors, G) 74%);
+}
+
+.back--color2::before {
+  background-image: linear-gradient(315deg,
+      map-get($colors, E) 0%,
+      map-get($colors, B) 74%);
+}
+
+.back--color3::before {
+  background-image: linear-gradient(315deg,
+      map-get($colors, G) 0%,
+      map-get($colors, F) 74%);
+}
+
+.back::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 120px;
+  height: 250%;
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #000000;
+  border-radius: map-get($b-radius, large);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  strong {
+    margin-bottom: 2em;
+  }
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  background-color: #00000074;
+  color: white;
+
+  &__title {
+    text-shadow: fn.shadow(map-get($colors, B));
+    letter-spacing: 9px;
+    font-size: map-get($headings, h3);
+    font-family: $font-subtitle-condensed;
+    text-transform: uppercase;
+    margin-left: 1em;
+  }
+
+  &__link:hover {
+    text-decoration: none;
+    background-color: rgb(51, 213, 51);
+    text-shadow: fn.shadow(map-get($colors, B));
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+  }
+}
+
+
+.front .img {
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  top: 10px;
+  left: 75px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff8866;
+  right: 150px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: #ff2233;
+  left: 270px;
+  top: 10px;
+  width: 70px;
+  height: 70px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

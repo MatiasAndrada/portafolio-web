@@ -1,0 +1,8 @@
+@use "../abstracts/vars" as *;
+@use "../abstracts/fonts" as *;
+@use "../abstracts/functions" as fn;
+
+.navbar {
+  .navbar__right {
+    font-family: $font-gothic;
+  }}

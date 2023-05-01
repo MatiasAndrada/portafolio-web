@@ -6,7 +6,6 @@ import { textVariant, fadeIn } from "../utils/motion";
 import { now } from "../constants";
 
 const Now = () => {
-  console.log(now)
 
   return (
     <>

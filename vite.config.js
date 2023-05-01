@@ -8,4 +8,7 @@ export default defineConfig({
   plugins: [
     reactRefresh(),
   ],
+  headers: {
+    'Content-Type': 'application/javascript'
+  }
 });

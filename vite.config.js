@@ -31,7 +31,6 @@ export default defineConfig({
     open: true,
     port: 3000,
   },
-  base: '/assets/',
   publicPath: process.env.NODE_ENV === 'production'
     ? '/public/'
     : '/',

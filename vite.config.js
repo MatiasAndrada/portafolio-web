@@ -1,13 +1,21 @@
-import { defineConfig } from 'vite';
-import reactRefresh from '@vitejs/plugin-react';
+// vite.config.js
+import path from 'path';
 
-export default defineConfig({
-  plugins: [reactRefresh()],
+export default {
+  base: '/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
   },
   server: {
     port: 3000,
+    open: true,
+    proxy: {
+      '/api': 'http://localhost:4000',
+    },
+    fs: {
+      strict: false,
+      // Indica a Vite que sirva los archivos estáticos desde src/assets
+      allow: ['./src/assets'],
+    },
   },
-});
+};

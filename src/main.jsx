@@ -4,4 +4,9 @@ import ReactDOM from "react-dom";
 import "./styles/main.scss";
 import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const rootElement = document.getElementById("root");
+if (!rootElement) {
+  throw new Error("Unable to find #root element");
+}
+
+ReactDOM.render(<App />, rootElement);

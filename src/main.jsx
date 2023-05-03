@@ -9,4 +9,6 @@ if (!rootElement) {
   throw new Error("Unable to find #root element");
 }
 
-createRoot(rootElement).render(<App />);
+createRoot(rootElement).render(
+  <h1>'Hello, world!'</h1>
+);

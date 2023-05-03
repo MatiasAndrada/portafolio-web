@@ -1,6 +1,6 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { createRoot } from 'react-dom/client';
-
 import "./styles/main.scss";
 import App from "./App";
 
@@ -9,6 +9,4 @@ if (!rootElement) {
   throw new Error("Unable to find #root element");
 }
 
-createRoot(rootElement).render(
-  <h1>'Hello, world!'</h1>
-);
+createRoot(rootElement).render(<App />);

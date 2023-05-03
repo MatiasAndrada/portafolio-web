@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 
 import "./styles/main.scss";
 import App from "./App";
@@ -9,4 +9,4 @@ if (!rootElement) {
   throw new Error("Unable to find #root element");
 }
 
-ReactDOM.createRoot(rootElement).render(<App />);
+createRoot(rootElement).render(<App />);

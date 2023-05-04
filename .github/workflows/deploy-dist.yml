@@ -14,9 +14,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy dist folder
-        run: |
-        rsync -e "ssh -p $SSH_PORT" -r dist/ u974304417@149.100.155.153:/public_html
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_PORT: ${{ secrets.SSH_PORT }}
- 
+        run: |
+          rsync -e "ssh -p $SSH_PORT" -r dist/ u974304417@149.100.155.153:/public_html

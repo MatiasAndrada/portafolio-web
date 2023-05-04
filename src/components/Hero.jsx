@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { StarsCanvas } from "./canvas";
+//import { StarsCanvas } from "./canvas";
 import { styles } from "../styles";
 
 
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto bg-black `}>
-      <StarsCanvas />
+
       <div
         className={`absolute inset-0 bottom-[100px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-center gap-5`}
       >

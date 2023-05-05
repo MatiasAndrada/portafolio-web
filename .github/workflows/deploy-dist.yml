@@ -1,21 +1,21 @@
-name: Deploy dist folder
+  name: Deploy dist folder
 
-on:
-  push:
-    paths:
-      - 'dist/**'
+  on:
+    push:
+      paths:
+        - 'dist/**'
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
 
-      - name: Deploy dist folder
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SSH_PORT: ${{ secrets.SSH_PORT }}
-        run: |
-          rsync -e "ssh -p $SSH_PORT" -r dist/ u974304417@149.100.155.153:/public_html
+        - name: Deploy dist folder
+          env:
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            SSH_PORT: ${{ secrets.SSH_PORT }}
+          run: |
+            rsync -e "ssh -p $SSH_PORT" -r dist/ u974304417@149.100.155.153:/public_html

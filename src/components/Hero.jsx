@@ -18,7 +18,7 @@ const Hero = () => {
     
         <div className="fullpage__header-left">
           <div>
-            <h1 className="fullpage__header__name ">Matías Andrada.</h1>
+            <h1 className="fullpage__header__name ">.</h1>
             <h3 className="fullpage__header__role" >
               Desarrollador Full Stack Junior.
             </h3>

@@ -13,7 +13,7 @@ jobs:
     - name: Instalar dependencias
       run: npm install
     - name: Desplegar aplicación
-      run: rsync -e "ssh -p ${{ secrets.SSH_PORT }}" -r dist/ u974304417@149.100.155.153:/public_html
+      run: rsync -e "ssh -p ${{ secrets.SSH_PORT }} -o 'IdentitiesOnly yes' -o 'BatchMode yes'" -r dist/ u974304417@149.100.155.153:/public_html
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SSH_PRIVATE_KEY_PASSPHRASE: ${{ secrets.SSH_PRIVATE_KEY_PASSPHRASE }}

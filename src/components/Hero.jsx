@@ -1,28 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
-//import { StarsCanvas } from "./canvas";
-import { styles } from "../styles";
-
+import { StarsCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto bg-black `}>
+    <section className="relative w-full h-screen mx-auto bg-black">
+      <StarsCanvas />
 
-      <div
-        className={`absolute inset-0 bottom-[100px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-center gap-5`}
-      >
-<div className="flex flex-col justify-center items-center mt-5 sm:mt-0  sm:flex">
-  <div className="w-5 h-5 rounded-full bg-[#2820bd] hidden sm:block" />
-  <div className="w-1 h-40 blue-pink-gradient hidden sm:block" />
-</div>
-    
-        <div className="fullpage__header-left">
-          <div>
-            <h1 className="fullpage__header__name ">.</h1>
-            <h3 className="fullpage__header__role" >
-              Desarrollador Full Stack Junior.
-            </h3>
-          </div>
+      <div className="absolute inset-0 bottom-[100px] max-w-7xl mx-auto px-5 flex flex-row items-center gap-5">
+        <div className="flex flex-col justify-center items-center mt-5 sm:mt-0 sm:flex">
+          <div className="w-5 h-5 rounded-full bg-[#2820bd] hidden sm:block" />
+          <div className="w-1 h-40 bg-gradient-to-b from-[#2820bd] to-[#f272c8] hidden sm:block" />
+        </div>
+
+        <div className="flex flex-col justify-start ">
+          <h1 className="name">
+            Matías Andrada.
+          </h1>
+          <h3 className="role ">
+            Desarrollador Full Stack Junior.
+          </h3>
         </div>
       </div>
 

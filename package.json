@@ -33,5 +33,9 @@
     "tailwindcss": "^3.2.7",
     "vite": "^4.1.4",
     "vite-plugin-windicss": "^1.8.10"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standar/eslintrc.json"
   }
+
 }

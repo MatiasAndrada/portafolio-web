@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { SectionWrapper } from "../hoc";
-import { motion } from 'framer-motion ';
+import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { certificates } from "../constants";

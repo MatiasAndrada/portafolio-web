@@ -7,7 +7,7 @@
 
 .name {
   font-size: map-get($headings, h1);
-  text-shadow: fn.shadow(map-get($colors, B));
+
   font-family: $font-title;
   letter-spacing: 1px;
   color: $text-color-light;

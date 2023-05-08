@@ -1,5 +1,6 @@
 import { EarthCanvas, BallCanvas, StarsCanvas } from "./canvas";
 import Hero from "./Hero";
+import Background from "./Background";
 import Navbar from "./Navbar";
 import About from "./About";
 import Certificate from "./Certificate";
@@ -26,5 +27,6 @@ export {
   Feedbacks,
   Contact,
   CanvasLoader,
+  Background,
 
 };

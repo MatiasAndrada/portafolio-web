@@ -11,13 +11,15 @@ import {
   Navbar,
   Tech,
   Works,
+  Background,
 } from "./components";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
       <Navbar />
       <Hero />
+      <Background />
       <About />
       <Certificate />
       <Experience />

@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import { motion } from "framer-motion";
 import { StarsCanvas } from "./canvas";
 
 const Hero = () => {
-  return (
-    <section className="relative w-full h-screen mx-auto bg-black">
-      <StarsCanvas />
 
+
+
+  return (
+    <section className="relative w-full h-screen mx-auto">
+      <StarsCanvas />
       <div className="absolute inset-0 bottom-[100px] max-w-7xl mx-auto px-5 flex flex-row items-center gap-5">
         <div className="flex flex-col justify-center items-center mt-5 sm:mt-0 sm:flex">
           <div className="w-5 h-5 rounded-full bg-[#2820bd] hidden sm:block" />
@@ -21,7 +23,7 @@ const Hero = () => {
             Desarrollador Full Stack Junior.
           </h3>
         </div>
-      </div>
+      </div>3
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

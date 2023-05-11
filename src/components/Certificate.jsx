@@ -37,7 +37,7 @@ const CertificateCard = ({ title, image, link }) => {
               ></g>
               \
             </svg>
-            <img src={image} alt={title} />
+            <img src={image} alt={title} width={"120px"} height={"120px"}/>
             <strong>{title}</strong>
           </div>
         </div>
@@ -50,7 +50,7 @@ const CertificateCard = ({ title, image, link }) => {
           <div className="flex items-center flex-row justify-around h-full ">
             <h3 className="front__title text-white">{title}</h3>
             <a className="front__link" href={link} target="_blank">
-              <img src={eyeSVG} alt="viewCertificate" />
+              <img src={eyeSVG} alt="viewCertificate"  width={"64px"} height={"64px"}/>
             </a>
           </div>
         </div>

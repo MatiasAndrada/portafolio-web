@@ -27,21 +27,21 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_r0jcplm",
-        "template_1t76uxq",
+        "service_g6k2aak",
+        "template_yqpagk6",
         {
-          form_name: form.name,
-          to_name: "Matias Andrada",
+          from_name: form.name,
+          to_name: "Matías Andrada",
           from_email: form.email,
           to_email: "matiasandrada5622@gmail.com",
           message: form.message,
         },
-        "Jqq9AvwIuSjoMiA5c"
+        "XxQbUlg6qxTiPAGqY"
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert("Mensaje enviado con éxito, muchas gracias. Me contactare con usted a la brevedad");
 
           setForm({
             name: "",
@@ -53,7 +53,7 @@ const Contact = () => {
           setLoading(false);
 
           console.log(error);
-          alert("Something went wrong.");
+          alert("Hubo un error al enviar el mensaje. Intente nuevamente.");
         }
       );
   };
@@ -66,7 +66,7 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75]  bg-opacity-60 bg-slate-900  backdrop-blur-sm p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Enviame un correo</p>
+        <p className={styles.sectionSubText}>Envíame un correo</p>
         <h3 className={styles.sectionHeadText}>Contacto.</h3>
 
         <form

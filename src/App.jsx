@@ -1,18 +1,28 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import {
-  About,
-  Certificate,
-  Contact,
-  Experience,
-  Now,
-  //  Feedbacks,
+  // About,
+  // Certificate,
+  // Experience,
+  // Now,
+  // Feedbacks,
+  // Tech,
+  // Works,
   Hero,
   Navbar,
-  Tech,
-  Works,
   Background,
 } from "./components";
+
+const LazyAbout = lazy(() => import("./components/About"));
+const LazyCertificate = lazy(() => import("./components/Certificate"));
+const LazyExperience = lazy(() => import("./components/Experience"));
+const LazyNow = lazy(() => import("./components/Now"));
+//const LazyFeedbacks = lazy(() => import("./components/Feedbacks"));
+const LazyTech = lazy(() => import("./components/Tech"));
+const LazyWorks = lazy(() => import("./components/Works"));
+const Contact = lazy(() => import("./components/Contact"));
+
+
 
 const App = () => {
   return (
@@ -20,13 +30,15 @@ const App = () => {
       <Navbar />
       <Hero />
       <Background />
-      <About />
-      <Certificate />
-      <Experience />
-      <Now />
-      <Tech />
-      <Works />
+      <Suspense >
+        <LazyAbout />
+        <LazyCertificate />
+        <LazyExperience />
+        <LazyNow />
 
+        <LazyTech />
+        <LazyWorks />
+      </Suspense>
       <Contact />
     </BrowserRouter>
   );

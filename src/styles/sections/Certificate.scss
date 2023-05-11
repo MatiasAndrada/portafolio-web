@@ -12,6 +12,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 3em;
+
 }
 
 
@@ -22,7 +23,7 @@
   height: 230px;
   width: 300px;
   border-radius: map-get($b-radius, large);
-  box-shadow: 0px 2px 7px 1px #a6a1a11d;
+  box-shadow: 0px 2px 7px 1px #050505f6;
 }
 
 .content {
@@ -30,7 +31,7 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 300ms;
-  box-shadow: 0px 2px 7px 1px #a6a1a11d;
+  box-shadow: 0px 2px 7px 1px #050505cd;
   border-radius: map-get($b-radius, large);
 }
 

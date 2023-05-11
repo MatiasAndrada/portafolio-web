@@ -268,7 +268,7 @@ const experiences = [
     company_name: "Mi propia empresa",
     icon: me,
     iconBg: "#E6DEDD",
-    date: "Feb 2021 - Feb 2022",
+    date: "2021 - Feb 2022",
     points: [
       "Diseñé y desarrollé páginas web para contenido de marca, utilizando HTML, CSS y JavaScript",
       "Utilicé herramientas como AdobeXD para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página antes de la implementación.",
@@ -278,10 +278,10 @@ const experiences = [
   },
   {
     title: "Full stack Developer",
-    company_name: "XYZ Software Solutions",
+    company_name: "MERN Stack",
     icon: fullStack,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Ene 2023 - Presente",
     points: [
       "Desarrollo de aplicaciones web utilizando tecnologías como React, Node.js, Express, MongoDB",
       "Trabajar en colaboración con equipos multifuncionales, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad y soluciones escalables.",

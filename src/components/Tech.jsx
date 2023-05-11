@@ -9,15 +9,15 @@ import { technologies, skills } from "../constants";
 const Tech = () => {
   return (
     <>
-      <motion.div variants={textVariant()} id="skills">
-        <p className={styles.sectionSubText}>Tecnologias trabajadas</p>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Tecnologías trabajadas</p>
         <h2 className={styles.sectionHeadText}>Skills.</h2>
       </motion.div>
       <div className="flex flex-row flex-wrap justify-center gap-10  text-center">
         {technologies.map((technology) => (
           <div className="w-28 h-28" key={technology.name}>
             <BallCanvas icon={technology.icon} />
-            <span className="text-white text-[12px] font-semibold capitalize">{technology.name}</span>
+            <span className="text-white text-[12px] font-semibold capitalize select-none">{technology.name}</span>
           </div>
         ))}
       </div>
@@ -33,7 +33,7 @@ const Tech = () => {
               <ul className="flex flex-row flex-wrap gap-3   mt-2 ">
                 {skill.items.map((skill, index) => (
                   <li className="place-self-center" key={index}>
-                    <span className="inline-block bg-sky-700 rounded-full px-3 py-1 text-sm  text-white mr- mb-1 capitalize">
+                    <span className="inline-block bg-sky-700 rounded-full px-3 py-1 text-sm  text-white mr- mb-1 capitalize select-none">
                       {skill}
                     </span>
                   </li>
@@ -47,4 +47,4 @@ const Tech = () => {
   );
 };
 
-export default SectionWrapper(Tech, "tech");
+export default SectionWrapper(Tech, "skills");

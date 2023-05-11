@@ -9,11 +9,12 @@
   font-size: map-get($headings, h1);
 
   font-family: $font-title;
-  letter-spacing: 1px;
+//  letter-spacing: 1px;
   color: $text-color-light;
   animation-duration: 2s;
   animation-delay: 0.25s;
   animation-name: slideIn;
+  text-shadow: fn.shadow(map-get($colors, B));
 }
 
 @keyframes slideIn {

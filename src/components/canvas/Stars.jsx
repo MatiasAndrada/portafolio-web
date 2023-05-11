@@ -1,7 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import PoissonDiskSampling from 'poisson-disk-sampling';
+import Loader from '../Loader';
 
 const Stars = (props) => {
   const ref = useRef();
@@ -43,7 +44,9 @@ const StarsCanvas = () => {
   return (
     <div className="absolute inset-0 z-[10]">
       <Canvas camera={{ position: [0, 0, 0.7] }}> 
+      <Suspense fallback={<Loader />}>
         <Stars />
+      </Suspense>
       </Canvas>
     </div>
   );

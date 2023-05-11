@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense  } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -7,6 +7,7 @@ import {
   Preload,
   useTexture,
 } from "@react-three/drei";
+
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
@@ -17,7 +18,7 @@ const Ball = (props) => {
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
+        <icosahedronGeometry args={[1,1]} />
         <meshStandardMaterial
           color="#fff8eb"
           polygonOffset
@@ -30,12 +31,13 @@ const Ball = (props) => {
           scale={1}
           map={decal}
           flatShading
+          opacity={0.9}
         />
       </mesh>
     </Float>
   );
 };
-//Limitar la rotacion de la esfera a 45 grados
+//Limitar la rotación de la esfera a 45 grados
 const BallCanvas = ({ icon }) => {
   return (
     <Canvas
@@ -48,7 +50,7 @@ const BallCanvas = ({ icon }) => {
           enableZoom={false} // desactivar el zoom
           enablePan={true} // desactivar el desplazamiento
 
-          //establecer angulo de rotacion
+          //establecer angulo de rotación
           minAzimuthAngle={-Math.PI / 4}
           maxAzimuthAngle={Math.PI / 4}
           minPolarAngle={Math.PI/2 - Math.PI/18} // limitar el ángulo polar mínimo
@@ -62,7 +64,7 @@ const BallCanvas = ({ icon }) => {
         <Ball imgUrl={icon} />
       </Suspense>
 
-      <Preload all />
+
     </Canvas>
   );
 };

@@ -171,10 +171,11 @@ const technologies = [
     name: "Three JS",
     icon: threejs,
   },
+  /*
   {
     name: "figma",
     icon: figma,
-  },
+  },*/
 ];
 
 const skills = [
@@ -294,13 +295,13 @@ const experiences = [
 
 const now = [
   {
-    title: "Estudiante universitario de programación en (UTN-Villa Maria)",
+    title: "Estudiante Universitario De Programación (UTN-Villa Maria-Turno Noche)",
   },
   {
-    title: "Cursando AWS Cloud Computing (UTN -- Buenos Aires)",
+    title: "Terminando Curso AWS Cloud Computing (UTN - Buenos Aires)",
   },
 ];
-
+/*
 const testimonials = [
   {
     testimonial:
@@ -327,7 +328,7 @@ const testimonials = [
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
-
+*/
 const projects = [
   {
     name: "E-commerce",
@@ -430,6 +431,6 @@ export {
   skills,
   experiences,
   now,
-  testimonials,
+//  testimonials,
   projects,
 };

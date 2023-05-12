@@ -17,14 +17,14 @@ const Now = () => {
 
           <ul className="now__content__text__list list-disc">
             {now.map((item, index) => (
-              <li key={index} className="now__content__text__list__item m-1 text-white 32px">
+              <li key={index} className="now__content__text__list__item m-1 text-white 32px capitalize">
 
                   {item.title}.
 
             
               </li>
             ))}
-          </ul>
+          </ul> 
 
       </motion.div>
 

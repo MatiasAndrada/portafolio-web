@@ -20,17 +20,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-slate-200 text-[17px] max-w-3xl leading-[30px]"
       >
-        Soy un apasionado del desarrollo de software y tengo experiencia en
-        programación tanto en el front-end como en el back-end. Me he
-        especializado en el desarrollo de aplicaciones web y he trabajado con
-        varios frameworks y lenguajes de programación. También cuento con
-        habilidades en edición de multimedia, lo que me permite crear contenido
-        de alta calidad y atractivo. Siempre estoy buscando aprender nuevas
-        herramientas y tecnologías para mejorar mis habilidades y estar
-        actualizado. Soy un apasionado de trabajar en equipo y aplicar las
-        mejores prácticas para lograr soluciones eficientes y escalables. Estoy
-        siempre abierto a nuevas oportunidades y listo para enfrentar desafíos
-        en proyectos emocionantes.
+        Soy un apasionado desarrollador de software full-stack con experiencia en una amplia variedad de lenguajes de programación y frameworks. Me especializo en el desarrollo de aplicaciones web y me apasiona trabajar en equipo para crear soluciones eficientes y escalables. Además de mis habilidades en programación, también tengo experiencia en edición de multimedia, lo que me permite crear contenido de alta calidad y atractivo. Me gusta estar siempre actualizado y aprender nuevas tecnologías para mejorar mis habilidades y conocimientos. Soy una persona adaptable y me encanta enfrentar desafíos en proyectos emocionantes. Me encantaría ser parte de un equipo que valore el trabajo en equipo y aplique las mejores prácticas para crear soluciones innovadoras.
       </motion.p>
     </>
   );

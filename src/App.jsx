@@ -21,6 +21,7 @@ const LazyNow = lazy(() => import("./components/Now"));
 const LazyTech = lazy(() => import("./components/Tech"));
 const LazyWorks = lazy(() => import("./components/Works"));
 const Contact = lazy(() => import("./components/Contact"));
+const Footer = lazy(() => import("./components/Footer"))
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
         <LazyWorks />
       </Suspense>
       <Contact />
+      <Footer/>
     </BrowserRouter>
   );
 };

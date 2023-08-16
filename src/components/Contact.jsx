@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -20,9 +22,14 @@ const Contact = () => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!form.name || !form.email || !form.message) {
+      toast.error("Por favor, complete todos los campos.");
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -41,7 +48,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Mensaje enviado con éxito, muchas gracias. Me contactare con usted a la brevedad");
+          toast.success("Mensaje enviado con éxito, muchas gracias. Me contactaré con usted a la brevedad.");
 
           setForm({
             name: "",
@@ -53,21 +60,24 @@ const Contact = () => {
           setLoading(false);
 
           console.log(error);
-          alert("Hubo un error al enviar el mensaje. Intente nuevamente.");
+          toast.error("Hubo un error al enviar el mensaje. Intente nuevamente.");
         }
       );
   };
+
 
   return (
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
+
+
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75]  bg-opacity-60 bg-slate-900  backdrop-blur-sm p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Envíame un correo</p>
-        <h3 className={styles.sectionHeadText}>Contacto.</h3>
+        <h3 className={styles.sectionHeadText}>Contacto</h3>
 
         <form
           ref={formRef}
@@ -75,35 +85,35 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Tu nombre</span>
+            <span className="text-white font-medium mb-4">Tu nombre:</span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="nombre"
+
               className="bg-tertiary py-4 px-6 placeholder:text-slate-200 text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Correo</span>
+            <span className="text-white font-medium mb-4">Correo:</span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="correo"
+
               className="bg-tertiary py-4 px-6 placeholder:text-slate-200 text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Mensaje o consulta</span>
+            <span className="text-white font-medium mb-4">Mensaje o consulta:</span>
             <textarea
               rows={7}
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Que tienes para decirme?"
+              placeholder="Tienes algo para decirme?"
               className="bg-tertiary py-4 px-6 placeholder:text-slate-200 text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -114,7 +124,19 @@ const Contact = () => {
           >
             {loading ? "Enviando..." : "Enviar"}
           </button>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
         </form>
+
       </motion.div>
 
       <motion.div

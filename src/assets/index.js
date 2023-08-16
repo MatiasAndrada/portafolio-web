@@ -24,6 +24,12 @@ import nginx from "./tech/nginx.png";
 import socket from "./tech/socket.png";
 import figma from "./tech/figma.png";
 import threejs from "./tech/threejs.svg";
+import adonis from "./tech/adonis.png";
+import aws from "./tech/aws.png";
+import docker from "./tech/docker.png";
+import jquery from "./tech/jquery.png";
+import kubernetes from "./tech/kubernetes.png"
+import sass from "./tech/sass.png"
 //!experience
 import fullStack from "./companies/fullStack.png";
 import shopify from "./companies/shopify.png";
@@ -62,6 +68,13 @@ export {
   socket,
   figma,
   threejs,
+  adonis,
+  aws,
+  docker,
+  jquery,
+  kubernetes,
+  sass,
+  //!experience
   fullStack,
   shopify,
   beer,
@@ -69,4 +82,5 @@ export {
   eCommerce,
   chatApp,
   playMovie
+
 }

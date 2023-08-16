@@ -13,14 +13,17 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introducción</p>
-        <h2 className={styles.sectionHeadText}>Acerca de mí.</h2>
+        <h2 className={styles.sectionHeadText}>Acerca de mí</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-slate-200 text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-slate-200 text-[19px] max-w-4xl leading-[30px]"
       >
-        Soy un apasionado desarrollador de software full-stack con experiencia en una amplia variedad de lenguajes de programación y frameworks. Me especializo en el desarrollo de aplicaciones web y me apasiona trabajar en equipo para crear soluciones eficientes y escalables. Además de mis habilidades en programación, también tengo experiencia en edición de multimedia, lo que me permite crear contenido de alta calidad y atractivo. Me gusta estar siempre actualizado y aprender nuevas tecnologías para mejorar mis habilidades y conocimientos. Soy una persona adaptable y me encanta enfrentar desafíos en proyectos emocionantes. Me encantaría ser parte de un equipo que valore el trabajo en equipo y aplique las mejores prácticas para crear soluciones innovadoras.
+        Soy un apasionado desarrollador de software full-stack con amplia experiencia en diversos lenguajes de programación y frameworks. Mi especialización se centra en el desarrollo de aplicaciones web.
+        Estoy constantemente actualizándose en nuevas tecnologías y mejores prácticas, tengo conocimiento en AWS para diseñar y desarrollar soluciones de software, ademas de planes de migración hacia la nube, especialmente en lo que respecta a aplicaciones a gran escala.
+        Destaco por mi capacidad para colaborar eficazmente en equipos multidisciplinarios, donde valoro la colaboración entre los miembros del equipo para lograr resultados exitosos.
+        Estoy seguro de que mi pasión por la programación junto con aprendizaje continuo, me permiten enfocarme en soluciones eficientes orientándome en la excelencia para contribuir significativamente a su organización.
       </motion.p>
     </>
   );

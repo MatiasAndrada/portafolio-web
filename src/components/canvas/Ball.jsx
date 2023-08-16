@@ -48,7 +48,7 @@ const BallCanvas = ({ icon }) => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false} // desactivar el zoom
-          enablePan={true} // desactivar el desplazamiento
+          enablePan={false} // desactivar el desplazamiento
 
           //establecer angulo de rotación
           minAzimuthAngle={-Math.PI / 4}

@@ -1,10 +1,10 @@
 //#cSpell: disable
 import {
-//!certificates 
-webDesignCertificate,
-javascriptCertificate,
-reactjsCertificate,
-backendCertificate,
+  //!certificates
+  webDesignCertificate,
+  javascriptCertificate,
+  reactjsCertificate,
+  backendCertificate,
 
   //!tech
   html,
@@ -19,10 +19,10 @@ backendCertificate,
   express,
   nginx,
   socket,
-  figma,
-  threejs,
+  //figma,
+  //threejs,
+  //beer,
   fullStack,
-  beer,
   me,
   //!projects
   eCommerce,
@@ -73,7 +73,7 @@ const certificates = [
     items: [
       "Sintaxis y gramática de JavaScript",
       "Manipulación del DOM",
-      "Eventos y manejo de eventos",  
+      "Eventos y manejo de eventos",
       "Funciones y objetos",
       "Asincronía y callbacks",
       "Promesas y async/await",
@@ -167,11 +167,12 @@ const technologies = [
     name: "socket.io",
     icon: socket,
   },
+  /*
   {
     name: "Three JS",
     icon: threejs,
   },
-  /*
+
   {
     name: "figma",
     icon: figma,
@@ -182,77 +183,95 @@ const skills = [
   {
     title: "Bases de datos",
     items: [
-      "MongoDB",
-      "MySQL",
-      "SQLite",
-      "Firebase",
-      "DynamoDB(AWS)",
-      "Redis",
-      "Kenex y Sequalize(ORM)",
+      "SQL: MySQL, PostgreSQL, SQLite, RDS, Aurora",
+      "NoSQL: MongoDB, Firebase, DynamoDB",
+      "ORM: Sequelize, Mongoose",
+      "Gestion de sesiones: Redis, cookie-session, express-session",
     ],
   },
   {
-    title: "Arquitectura y metodologías ágiles de software",
+    title: "Arquitectura Y Patrones de diseño",
     items: [
-      "BEM",
-      "Atomic Design",
-      "CDD (Component Driven Development)",
-      "TDD (Test Driven Development)",
-      "Mocks",
+      "DAO (Data Access Object)",
+      "DTO (Data Transfer Object)",
       "MVC(Html on wire y Data on wire)",
-      "Patron DAO Y DTO",
-      "Patron Observer",
       "Patron Singleton",
       "Patron Factory",
-      "Patron Strategy",
-    ],
-  },
-  {
-    title: "Herramientas de automatización y construcción",
-    items: ["Webpack", "Babel", "Gulp", "NPM y Yarn", "Deno", "Adonis"],
-  },
-  {
-    title: "Pruebas y testing",
-    items: ["TDD", "Mocks", "Jest", "Enzyme", "Mocha", "Chai"],
-  },
-  {
-    title: "Seguridad y autenticación",
-    items: [
-      "JOI",
-      "HELMET",
-      "JWT",
-      "OAuth",
-      "Passwordless",
-      "Passport",
-      "Helmet",
-      "bcrypt",
-      "Cookies",
-      "Sessions",
+      //"Patron Observer",
+      //"Patron Strategy",
     ],
   },
   {
     title: "Desarrollo de aplicaciones",
-    items: ["SPA", "PWA", "MVC", "REST", "GraphQL", "Websockets"],
+    items: [
+      "SPA (Single Page Application)",
+      "PWA (Progressive Web App)",
+      "MVC (Model-View-Controller)",
+      "REST",
+      "GraphQL",
+      "Websockets",
+    ],
+  },
+  {
+    title: "Herramientas de automatización y construcción",
+    items: [
+      "Vite",
+      "Adonis",
+      "Webpack",
+      "Babel",
+      "Gulp",
+      "Npm y Yarn",
+      //"Deno"
+    ],
+  },
+  {
+    title: "Metodologías agiles",
+    items: [
+      "Atomic Design",
+      "CDD (Component Driven Development)",
+      "TDD (Test Driven Development)",
+      "BEM (Block Element Modifier)",
+    ]
+  },
+  {
+    title: "Frameworks De Pruebas y testing",
+    items: [
+      "Jest",
+      "Artillery",
+      "Autocannon",
+      "0x",
+      "Mocks",
+      "Profiler",
+      "Mocha",
+    ],
+  },
+  {
+    title: "Seguridad y autenticación",
+    items: [
+      "AWS Cognito y Secrets Manager",
+      "Passport",
+      "OAuth",
+      "Passwordless",
+      "JSON Web Tokens",
+      "bcrypt",
+      "Helmet",
+      "Cors",
+    ],
   },
   {
     title: "DevOps y despliegue",
     items: [
-      "Heroku",
-      "Glitch",
-      "MongoAtlas",
-      "AWS",
-      "Cluster",
-      "Proxies y Load Balancers",
-      "Nginx",
-      "Docker",
-      "Kubernetes",
-      "Cors",
+      "AWS - EC2, ECS, EKS, EBS",
+      "Clusters y Servidores",
+      "Proxy y Proxy inverso",
+      "Docker y kubernetes",
+      "pm2 y forever (gestor de procesos NodeJS)",
     ],
   },
 ];
 
 const experiences = [
-  {
+  /*{
     title: "Editor de multimedia y contenido de marca",
     company_name: "Huata-Haruu - Cerveceria Artesanal.",
     icon: beer,
@@ -264,6 +283,7 @@ const experiences = [
       "También utilicé Adobe Photoshop para la creación y edición de gráficos y animaciones, incluyendo la creación de diseños de logotipos y la edición de imágenes para su uso en redes sociales y otros canales de marketing digital.",
     ],
   },
+  */
   {
     title: "Desarrollador Web Freelance",
     company_name: "Mi propia empresa",
@@ -295,11 +315,15 @@ const experiences = [
 
 const now = [
   {
-    title: "Estudiante Universitario De Programación (UTN-Villa Maria-Turno Noche)",
+    title:
+      "Estudiante Universitario De Programación (UTN-Villa Maria-Turno Noche)",
   },
   {
-    title: "Terminando Curso AWS Cloud Computing (UTN - Buenos Aires)",
+    title: "Terminado - Curso AWS Cloud Computing (UTN - Virtual)",
   },
+  {
+    title: "Microsoft Learn: Azure Cloud Development Challenge"
+  }
 ];
 /*
 const testimonials = [
@@ -405,7 +429,8 @@ const projects = [
   */
   {
     name: "Play Movie",
-    description: "En esta aplicación de películas desarrollada en React, se utiliza la API de omdbapi para obtener información de películas y mostrarlas. La aplicación permite a los usuarios buscar películas por título y ver detalles de como el reparto, la calificación, el resumen, actores, etc. Además, la aplicación cuenta con un sistema de autenticación para que los usuarios puedan crear cuentas y guardar películas en su lista de favoritos.",
+    description:
+      "En esta aplicación de películas desarrollada en React, se utiliza la API de omdbapi para obtener información de películas y mostrarlas. La aplicación permite a los usuarios buscar películas por título y ver detalles de como el reparto, la calificación, el resumen, actores, etc. Además, la aplicación cuenta con un sistema de autenticación para que los usuarios puedan crear cuentas y guardar películas en su lista de favoritos.",
     tags: [
       {
         name: "react",
@@ -431,6 +456,6 @@ export {
   skills,
   experiences,
   now,
-//  testimonials,
+  //  testimonials,
   projects,
 };

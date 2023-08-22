@@ -9,6 +9,7 @@ import webDesignCertificate from "./certificates/web-design-128.png";
 import javascriptCertificate from "./certificates/javascript-128.png";
 import reactjsCertificate from "./certificates/react-128.png";
 import backendCertificate from "./certificates/backend-128.png";
+import awsCertificate from "./certificates/aws-128.png";
 //!tech
 import html from "./tech/html.png";
 import css from "./tech/css.png";
@@ -48,6 +49,7 @@ export {
   javascriptCertificate,
   reactjsCertificate,
   backendCertificate,
+  awsCertificate,
   //!images
 
   github,

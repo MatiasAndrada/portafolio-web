@@ -1,4 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense, memo } from 'react';
+import { motion } from 'framer-motion';
 
 const LazyCirclesCanvas = lazy(() => import('./canvas/Circles'));
 
@@ -36,14 +37,15 @@ const Background = () => {
     <div>
       {isMobile && <MemoizedCirclesCanvas style={{ opacity: 1 }} />}
       {!isMobile && (
-        <div
-          style={{
-            opacity: showCanvas ? 1 : 0,
-            transition: 'opacity 0.1s ease-in-out',
-          }}
-        >
+        <div style={{ opacity: showCanvas ? 1 : 0 }}>
           <Suspense fallback={<div>Loading...</div>}>
-            <LazyCirclesCanvas />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }} // Estado inicial: invisible y ligeramente desplazado hacia abajo
+              animate={{ opacity: showCanvas ? 1 : 0, y: showCanvas ? 0 : 20 }} // Animación de entrada/salida
+              transition={{ duration: 0.5, ease: "easeInOut" }} // Duración y tipo de transición
+            >
+              <LazyCirclesCanvas />
+            </motion.div>
           </Suspense>
         </div>
       )}

@@ -1,10 +1,12 @@
-import React from "react";
+import React, {lazy} from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
 import { BallCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { technologies, skills } from "../constants";
+
+
 
 const Tech = () => {
   return (
@@ -14,6 +16,7 @@ const Tech = () => {
         <h2 className={styles.sectionHeadText}>Skills</h2>
       </motion.div>
       <div className="flex flex-row flex-wrap justify-center gap-10  text-center">
+
         {technologies.map((technology) => (
           <div className="w-28 h-28" key={technology.name}>
             <BallCanvas icon={technology.icon} />
@@ -21,7 +24,7 @@ const Tech = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-row flex-wrap justify-center  gap-10 mt-32">
+      <div className="flex flex-row flex-wrap justify-ce  nter  gap-10 mt-32">
       <p className={`${styles.sectionSubText} mt-12 `}>Otros conocimientos:</p>
         {skills.map((skill, index) => (
           <div className=" overflow-hidden bg-opacity-60 bg-gray-900  backdrop-blur-sm p-4 rounded-lg shadow-lg w-fit max-w-4xl" key={index

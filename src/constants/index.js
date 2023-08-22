@@ -5,10 +5,11 @@ import {
   javascriptCertificate,
   reactjsCertificate,
   backendCertificate,
+  awsCertificate,
 
   //!tech
-  html,
-  css,
+  //html,
+  //css,
   javascript,
   git,
   tailwind,
@@ -19,9 +20,16 @@ import {
   express,
   nginx,
   socket,
+  aws,
+  adonis,
+  docker,
+  jquery,
+  kubernetes,
+  sass,
   //figma,
   //threejs,
   //beer,
+  //!experiences
   fullStack,
   me,
   //!projects
@@ -97,7 +105,7 @@ const certificates = [
     link: "https://www.example.com/e-commerce",
   },
   {
-    title: "Backend",
+    title: "Back-end",
     description:
       "He aprendido a programar en Javascript del lado del servidor utilizando técnicas asincrónicas y trabajando con Bases de datos SQL y NoSQL dominando la gestión de los datos de forma eficiente y con facilidad de escalabilidad. También he aprendido sobre la arquitectura de servidor y el modelo MVC. Además, testear y monitorear aplicaciones REST, y dominar la tecnología Websockets, He normalizado/denormalizado datos en formato JSON, he manejado patrones de diseño y code style para aplicaciones de alta concurrencia. Por último, puedo implementar proyectos en la nube a través de plataformas como Heroku, Glitch, MongoAtlas y AWS.",
     items: [
@@ -116,9 +124,54 @@ const certificates = [
     image: backendCertificate,
     link: "https://www.coderhouse.com/certificados/63f5609005d81e000e838b34",
   },
+  {
+    title: "Aws Cloud Computing",
+    description:
+      "El curso de AWS Cloud Computing abarca una amplia gama de temas esenciales para la creación y gestión efectiva de infraestructuras en la nube utilizando Amazon Web Services. Desde los fundamentos de la nube y la configuración de cuentas seguras hasta la orquestación de contenedores con ECS y EKS, así como la optimización de recursos mediante herramientas como CloudWatch, el curso explora la configuración de redes virtuales, migraciones a la nube, escalabilidad, tolerancia a fallos y servicios avanzados como Lambda y DynamoDB. Al finalizar, los participantes obtienen habilidades sólidas para diseñar, implementar y administrar aplicaciones y recursos en AWS, aprovechando su potencial para impulsar la innovación y la eficiencia en entornos en la nube.",
+    items: [
+      "IAM (Identity and Access Management)",
+      "EC2 (Elastic Compute Cloud)",
+      "S3 (Simple Storage Service)",
+      "RDS (Relational Database Service)",
+      "VPC (Virtual Private Cloud)",
+      "ECS (Elastic Container Service)",
+      "EKS (Elastic Kubernetes Service)",
+      "CloudWatch",
+      "Auto Scaling",
+      "Elastic Load Balancing",
+      "Lambda",
+      "DynamoDB",
+      "CloudFormation",
+      "CloudTrail",
+      "Route 53",
+      "SNS (Simple Notification Service)",
+      "SQS (Simple Queue Service)",
+      "Kinesis",
+      "Glacier",
+      "Direct Connect",
+      "API Gateway",
+      "Redshift",
+      "Elastic Beanstalk",
+      "Athena",
+      "Glue",
+      "Step Functions",
+      "Batch",
+      "Elasticache",
+      "CodePipeline",
+      "CodeDeploy",
+      "Cognito",
+      "Elasticsearch Service",
+      "KMS (Key Management Service)",
+      "WAF (Web Application Firewall)",
+    ],
+    image: awsCertificate,
+    link: "",
+  },
 ];
 
 const technologies = [
+  ,
+  /*
   {
     name: "HTML 5",
     icon: html,
@@ -126,8 +179,7 @@ const technologies = [
   {
     name: "CSS 3",
     icon: css,
-  },
-  {
+  }*/ {
     name: "JavaScript",
     icon: javascript,
   },
@@ -138,6 +190,10 @@ const technologies = [
   {
     name: "Tailwind CSS",
     icon: tailwind,
+  },
+  {
+    name: "sass",
+    icon: sass,
   },
   {
     name: "React JS",
@@ -167,6 +223,27 @@ const technologies = [
     name: "socket.io",
     icon: socket,
   },
+  {
+    name: "aws",
+    icon: aws,
+  },
+  {
+    name: "Adonis",
+    icon: adonis,
+  },
+  {
+    name: "docker",
+    icon: docker,
+  },
+  {
+    name: "jquery",
+    icon: jquery,
+  },
+  {
+    name: "kubernetes",
+    icon: kubernetes,
+  },
+
   /*
   {
     name: "Three JS",
@@ -231,7 +308,7 @@ const skills = [
       "CDD (Component Driven Development)",
       "TDD (Test Driven Development)",
       "BEM (Block Element Modifier)",
-    ]
+    ],
   },
   {
     title: "Frameworks De Pruebas y testing",
@@ -289,12 +366,12 @@ const experiences = [
     company_name: "Mi propia empresa",
     icon: me,
     iconBg: "#E6DEDD",
-    date: "2021 - Feb 2022",
+    date: "Ene 2021 - Jun 2022",
     points: [
       "Diseñé y desarrollé páginas web para contenido de marca, utilizando HTML, CSS y JavaScript",
       "Utilicé herramientas como AdobeXD para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página antes de la implementación.",
       "Implementé técnicas de SEO para mejorar el posicionamiento de las páginas en los motores de búsqueda y aumentar la visibilidad de los sitios web de los clientes.",
-      "Realicé pruebas exhaustivas de calidad en las páginas para asegurarme de que estuvieran libres de errores y fueran compatibles con diferentes navegadores y dispositivos.",
+      "Realicé pruebas de calidad en las páginas para asegurarme de que estuvieran libres de errores y fueram responsive ademas de compatibles con diferentes navegadores.",
     ],
   },
   {
@@ -304,7 +381,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Ene 2023 - Presente",
     points: [
-      "Desarrollo de aplicaciones web utilizando tecnologías como React, Node.js, Express, MongoDB",
+      "Desarrolle de aplicaciones web utilizando tecnologías como React, Node.js, Express, MongoDB",
       "Trabajar en colaboración con equipos multifuncionales, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad y soluciones escalables.",
       "Adquirí habilidades valiosas en el diseño y desarrollo de  API RESTful y GraphQL, así como en la evaluación y selección de tecnologías y herramientas para mejorar el rendimiento y la eficiencia del desarrollo.",
       "También me familiaricé con metodologías ágiles de desarrollo de software.",
@@ -316,14 +393,11 @@ const experiences = [
 const now = [
   {
     title:
-      "Estudiante Universitario De Programación (UTN-Villa Maria-Turno Noche)",
+      "Cursando Tecnicartura Universitaria en Programación (UTN-Villa Maria - Turno Noche)",
   },
   {
-    title: "Terminado - Curso AWS Cloud Computing (UTN - Virtual)",
+    title: "Microsoft Learn: Azure Cloud Development Challenge",
   },
-  {
-    title: "Microsoft Learn: Azure Cloud Development Challenge"
-  }
 ];
 /*
 const testimonials = [
@@ -357,7 +431,7 @@ const projects = [
   {
     name: "E-commerce",
     description:
-      "Utiliza la arquitectura repository y cuenta con un sistema de gestión de base de datos con DAO, ofreciendo la posibilidad de elegir entre mongoDB, txt y Firebase. Tiene una lista de productos y un panel de administrador para ver el carrito por usuario. El sistema de autenticación que utiliza es Passport con encriptación y  la posibilidad de foto de perfil,  cuenta con un sistema de mensajes y logs.",
+      "Utiliza la arquitectura repository con un sistema de gestión de base de datos con DAO, ofreciendo la posibilidad de elegir entre mongoDB, txt y Firebase. Ademas cuenta con un DTO para mejorar la seguridad y la transferencia con el cliente. Tiene una lista de productos y un panel de administrador para ver el carrito por usuario. El sistema de autenticación que utiliza es Passport con encriptación y  la posibilidad de foto de perfil,  cuenta con un sistema de mensajes y logs.",
     tags: [
       {
         name: "express",

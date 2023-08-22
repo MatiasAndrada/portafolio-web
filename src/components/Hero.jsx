@@ -4,8 +4,8 @@ import { StarsCanvas } from "./canvas";
 
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
+  const [isMobile, setIsMobile] = useState(true);
+  const [shouldRenderStars, setShouldRenderStars] = useState(true); // Nuevo estado
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -14,12 +14,23 @@ const Hero = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si el scroll es mayor a la altura de la pantalla menos 200px, shouldRenderStars es false
+      if (window.scrollY > window.innerHeight - 200) {
+        setShouldRenderStars(false);
+      } else {
+        setShouldRenderStars(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section className="relative w-full h-screen mx-auto">
-      {!isMobile && (
+      { !isMobile && (
         <div className="absolute inset-0">
           <StarsCanvas />
         </div>

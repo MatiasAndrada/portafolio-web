@@ -1,48 +1,43 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 
-const Stars = (props) => {
+const Stars = () => {
   const ref = useRef();
-  const [points, setPoints] = React.useState([]);
-  const workerRef = useRef();
+  const [points, setPoints] = useState([]);
 
   useEffect(() => {
-    // Crear el Web Worker y almacenarlo en el ref
-    workerRef.current = new Worker(new URL('./StarsWorker.js', import.meta.url), {
+    const worker = new Worker(new URL('./StarsWorker.js', import.meta.url), {
       type: 'module',
     });
 
-    workerRef.current.onmessage = (event) => {
+    worker.onmessage = (event) => {
       const receivedPositions = event.data;
       setPoints(receivedPositions);
     };
 
-    workerRef.current.postMessage('generatePositions');
+    worker.postMessage('generatePositions');
 
-    // Limpiar el Web Worker al desmontar
+
     return () => {
-      if (workerRef.current) {
-        workerRef.current.terminate();
-      }
+      worker.terminate();
     };
   }, []);
 
   useFrame((state, delta) => {
-      if (ref.current) {
-        ref.current.rotation.x -= delta / 10;
-        ref.current.rotation.y -= delta / 15;
-      }
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 10;
+      ref.current.rotation.y -= delta / 15;
     }
-  );
+  });
 
   return (
     <group>
-      <Points ref={ref} positions={points} {...props}>
+      <Points ref={ref} positions={points}>
         <PointMaterial
           transparent
           color='#f272c8'
-          size={0.002}
+          size={0.006}
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -51,29 +46,35 @@ const Stars = (props) => {
   );
 };
 
-
-
 const StarsCanvas = () => {
+  const [shouldRenderStars, setShouldRenderStars] = useState(true);
+
 
   useEffect(() => {
-    //controlar el contexto del proceso para que cuando se desplaza a la altura de pantalla -200 px se termine el proceso y en caso de volver a subir se vuelva a iniciar
     const handleScroll = () => {
-      const rect = document.getElementById("starsCanvas").getBoundingClientRect();
-      if (rect.top <= window.innerHeight - 200 && rect.bottom >= 0) {
-        canvasRef.current.start();
+      if (window.scrollY > window.innerHeight - 200) {
+        setShouldRenderStars(false);
       } else {
-        canvasRef.current.stop();
+        setShouldRenderStars(true);
       }
-    }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    setShouldRenderStars(true); // Reiniciar al montar el componente
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
-
   return (
-    <div className="absolute inset-0 z-[10]">
-      <Canvas camera={{ position: [0, 0, 0.7] }}>
-        <Stars />
-      </Canvas>
-    </div>
+    shouldRenderStars && (
+      <div className="absolute inset-0 z-[10]">
+        <Canvas camera={{ position: [0, 0, 0.7] }}>
+          <Stars />
+        </Canvas>
+      </div>
+    )
   );
 };
 

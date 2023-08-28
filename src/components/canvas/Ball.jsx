@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect,useRef } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -10,7 +10,7 @@ import {
 
 import CanvasLoader from "../Loader";
 
-const Ball = React.memo((props) => {
+const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
 
   return (
@@ -36,44 +36,19 @@ const Ball = React.memo((props) => {
       </mesh>
     </Float>
   );
-})
-
+};
 //Limitar la rotación de la esfera a 45 grados
 const BallCanvas = ({ icon }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const isMounted = useRef(false);
-
-  useEffect(() => {
-    if (!isMounted.current) {
-      isMounted.current = true;
-    }
-
-    const handleScroll = () => {
-      const rect = document.getElementById("ballCanvas").getBoundingClientRect();
-      setIsVisible(rect.top <= window.innerHeight && rect.bottom >= 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      console.log("Componente desmontado"); // Se ejecutará al desmontar el componente
-    };
-  }, []);
-
   return (
-    <div id="ballCanvas" style={{ height: "85%", overflow: "hidden" }}>
-      {isVisible && (
-        <Canvas
-          frameloop="demand"
-          dpr={[1, 2]}
-        >
+    <Canvas
+      frameloop="demand"
+      dpr={[1, 2]}
+      gl={{ preserveDrawingBuffer: true }}
+    >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false} // desactivar el zoom
-          enablePan={false} // desactivar el desplazamiento
-
+          enablePan={true} // desactivar el desplazamiento
 
           //establecer angulo de rotación
           minAzimuthAngle={-Math.PI / 4}
@@ -82,7 +57,7 @@ const BallCanvas = ({ icon }) => {
           maxPolarAngle={Math.PI / 2 + Math.PI / 18} // limitar el ángulo polar máximo
 
           enableDamping={true} // habilitar el efecto de amortiguamiento
-          dampingFactor={0.01} // establecer la cantidad de amortiguamiento
+          dampingFactor={0.05} // establecer la cantidad de amortiguamiento
           target={[0, 0, 0]} // establecer un punto de enfoque fijo en el centro de la escena
         />
 
@@ -91,8 +66,6 @@ const BallCanvas = ({ icon }) => {
 
 
     </Canvas>
-      )}
-    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { SectionWrapper } from "../hoc";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
@@ -28,4 +29,6 @@ const Footer = () => {
     );
 };
 
+
+/* export default SectionWrapper(Footer, "footer"); */
 export default Footer;

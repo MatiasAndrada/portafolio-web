@@ -1,6 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense, memo } from 'react';
 import { motion } from 'framer-motion';
-
 const LazyCirclesCanvas = lazy(() => import('./canvas/Circles'));
 
 const MemoizedCirclesCanvas = memo(() => <LazyCirclesCanvas />);
@@ -42,7 +41,7 @@ const Background = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }} // Estado inicial: invisible y ligeramente desplazado hacia abajo
               animate={{ opacity: showCanvas ? 1 : 0, y: showCanvas ? 0 : 20 }} // Animación de entrada/salida
-              transition={{ duration: 0.5, ease: "easeInOut" }} // Duración y tipo de transición
+              transition={{ duration: 0.3, ease: "easeInOut" }} // Duración y tipo de transición
             >
               <LazyCirclesCanvas />
             </motion.div>

@@ -1,7 +1,7 @@
 import React from "react";
 import{ Html, useProgress } from "@react-three/drei";
 
-const Loader = () => {
+export const CanvasLoader = () => {
   const { progress } = useProgress();
   return (
     <Html>
@@ -21,4 +21,11 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export const CanvasSpinner = () => {
+  //spinner with tailwindcss
+  return (
+    <div className="flex justify-center items-center h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-t-4 border-blue-500"></div>
+  </div>
+  );
+};

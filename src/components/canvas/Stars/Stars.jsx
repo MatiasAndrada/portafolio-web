@@ -1,6 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
+import {CanvasSpinner} from '../../Loader';
 
 const Stars = () => {
   const ref = useRef();
@@ -33,11 +34,11 @@ const Stars = () => {
 
   return (
     <group>
-      <Points ref={ref} positions={points}>
+      <Points ref={ref} positions={points} >
         <PointMaterial
           transparent
           color='#f272c8'
-          size={0.006}
+          size={0.004} // reducir el tamaño de los puntos
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -45,7 +46,6 @@ const Stars = () => {
     </group>
   );
 };
-
 const StarsCanvas = () => {
   const [shouldRenderStars, setShouldRenderStars] = useState(true);
 
@@ -69,11 +69,13 @@ const StarsCanvas = () => {
 
   return (
     shouldRenderStars && (
-      <div className="absolute inset-0 z-[10]">
-        <Canvas camera={{ position: [0, 0, 0.7] }}>
-          <Stars />
-        </Canvas>
-      </div>
+    <div className="absolute inset-0 z-[10]">
+      <Canvas camera={{ position: [0, 0, 1] }}> 
+      <Suspense fallback={<CanvasSpinner />}>
+        <Stars />
+      </Suspense>
+      </Canvas>
+    </div>
     )
   );
 };

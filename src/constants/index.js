@@ -21,9 +21,9 @@ import {
   nginx,
   socket,
   aws,
-  adonis,
+/*   adonis, */
   docker,
-  jquery,
+/*   jquery, */
   kubernetes,
   sass,
   //figma,
@@ -165,7 +165,7 @@ const certificates = [
       "WAF (Web Application Firewall)",
     ],
     image: awsCertificate,
-    link: "",
+    link: "https://sigead.utnba.centrodeelearning.com/alumnos/validar_certificado",
   },
 ];
 
@@ -227,18 +227,18 @@ const technologies = [
     name: "aws",
     icon: aws,
   },
-  {
+/*   {
     name: "Adonis",
     icon: adonis,
-  },
+  }, */
   {
     name: "docker",
     icon: docker,
   },
-  {
+/*   {
     name: "jquery",
     icon: jquery,
-  },
+  }, */
   {
     name: "kubernetes",
     icon: kubernetes,
@@ -369,9 +369,9 @@ const experiences = [
     date: "Ene 2021 - Jun 2022",
     points: [
       "Diseñé y desarrollé páginas web para contenido de marca, utilizando HTML, CSS y JavaScript",
-      "Utilicé herramientas como AdobeXD para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página antes de la implementación.",
+      "Utilicé herramientas como AdobeXD para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página.",
       "Implementé técnicas de SEO para mejorar el posicionamiento de las páginas en los motores de búsqueda y aumentar la visibilidad de los sitios web de los clientes.",
-      "Realicé pruebas de calidad en las páginas para asegurarme de que estuvieran libres de errores y fueram responsive ademas de compatibles con diferentes navegadores.",
+      "Realicé  pruebas de calidad en las páginas web para garantizar que estuvieran libres de errores y fueran responsivas, además de ser compatibles con diversos navegadores.",
     ],
   },
   {
@@ -382,10 +382,10 @@ const experiences = [
     date: "Ene 2023 - Presente",
     points: [
       "Desarrolle de aplicaciones web utilizando tecnologías como React, Node.js, Express, MongoDB",
-      "Trabajar en colaboración con equipos multifuncionales, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad y soluciones escalables.",
+      "Trabajar en colaboración con equipos, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad y soluciones escalables.",
       "Adquirí habilidades valiosas en el diseño y desarrollo de  API RESTful y GraphQL, así como en la evaluación y selección de tecnologías y herramientas para mejorar el rendimiento y la eficiencia del desarrollo.",
-      "También me familiaricé con metodologías ágiles de desarrollo de software.",
-      "Trabajar en proyectos que involucran bases de datos relacionales y no relacionales, como MySQL y MongoDB, así como en la implementación de estrategias de seguridad y autenticación para proteger la información de los usuarios.",
+      "También me familiaricé con muchas metodologías ágiles de desarrollo de software.",
+      "Trabajar en proyectos que involucran bases de datos relacionales y no relacionales, así como en la implementación de estrategias de seguridad y autenticación para proteger la información de los usuarios.",
     ],
   },
 ];

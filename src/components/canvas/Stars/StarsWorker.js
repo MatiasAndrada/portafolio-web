@@ -2,9 +2,9 @@
 import PoissonDiskSampling from 'poisson-disk-sampling';
 
 const pds = new PoissonDiskSampling({
-  shape: [1, 1, 0.8],
-  minDistance: 0.2,
-  maxTries: 30,
+  shape: [1, 1, 0.9], // tamaño de la caja
+  minDistance: 0.2, //cantidad de estrellas
+  maxTries: 5, // cantidad de intentos
 });
 
 const generatePositions = () => {

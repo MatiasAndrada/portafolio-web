@@ -6,21 +6,22 @@ import {
   // Experience,
   // Now,
   // Feedbacks,
-  // Tech,
+   //Tech,
   // Works,
+  //Contact,
   Hero,
   Navbar,
   Background,
-} from "./components";
 
+  CanvasSpinner 
+} from "./components";
 const LazyAbout = lazy(() => import("./components/About"));
 const LazyCertificate = lazy(() => import("./components/Certificate"));
 const LazyExperience = lazy(() => import("./components/Experience"));
 const LazyNow = lazy(() => import("./components/Now"));
-//const LazyFeedbacks = lazy(() => import("./components/Feedbacks"));
 const LazyTech = lazy(() => import("./components/Tech"));
 const LazyWorks = lazy(() => import("./components/Works"));
-const Contact = lazy(() => import("./components/Contact"));
+const LazyContact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"))
 
 
@@ -31,17 +32,16 @@ const App = () => {
       <Navbar />
       <Hero />
       <Background />
-      <Suspense >
+      <Suspense fallback={<CanvasSpinner />}>
         <LazyAbout />
         <LazyCertificate />
         <LazyExperience />
         <LazyNow />
-
         <LazyTech />
         <LazyWorks />
+        <LazyContact /> 
+        <Footer/>
       </Suspense>
-      <Contact />
-      <Footer/>
     </BrowserRouter>
   );
 };

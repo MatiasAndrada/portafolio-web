@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { certificates } from "../constants";
-import eyeSVG from "../assets/certificates/eye.svg";
+//react-icons eye
+import {FaEye} from "react-icons/fa";
 
 const CertificateCard = ({ title, image, link }) => {
   useEffect(() => {
@@ -50,7 +51,7 @@ const CertificateCard = ({ title, image, link }) => {
           <div className="flex items-center flex-row justify-around h-full ">
             <h3 className="front__title text-white">{title}</h3>
             <a className="front__link" href={link} target="_blank">
-              <img src={eyeSVG} alt="viewCertificate"  width={"64px"} height={"64px"}/>
+              <FaEye className="front__icon" />
             </a>
           </div>
         </div>
@@ -80,3 +81,4 @@ const Certificate = () => {
 };
 
 export default SectionWrapper(Certificate, "certificate");
+/* export default Certificate; */

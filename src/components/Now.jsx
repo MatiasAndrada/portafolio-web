@@ -30,3 +30,4 @@ const Now = () => {
 };
 
 export default SectionWrapper(Now, "now");
+/* export default Now; */

@@ -18,7 +18,7 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen mx-auto">
-      { !isMobile && (
+      {!isMobile && (
         <div className="absolute inset-0">
           <StarsCanvas />
         </div>
@@ -37,10 +37,8 @@ const Hero = () => {
         </motion.div>
 
         <div className="flex flex-col justify-start ">
-          {/*
           <h1 className="name">Matías Andrada.</h1>
           <h3 className="role ">Desarrollador Full Stack Junior.</h3>
-      */}
         </div>
       </div>
 

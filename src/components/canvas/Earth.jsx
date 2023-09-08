@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useMemo, Suspense } from "react";
+import { CanvasLoader } from "../Loader";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
   const object = useMemo(() => earth.scene, [earth.scene]);
+/*   const object = earth.scene; */
 
   return (
     <primitive object={object} scale={2.5} position-y={0} rotation-y={0} />
@@ -12,25 +14,8 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const rect = document.getElementById("earthCanvas").getBoundingClientRect();
-      setIsVisible(rect.top <= window.innerHeight && rect.bottom >= 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div id="earthCanvas" style={{ height: "100%", overflow: "hidden", alignItems: "center" }}>
-      {isVisible && (
         <Canvas
           shadows
           frameloop="demand"
@@ -43,6 +28,7 @@ const EarthCanvas = () => {
             position: [-4, 3, 6],
           }}
         >
+                <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             autoRotate
             enableZoom={false}
@@ -51,10 +37,9 @@ const EarthCanvas = () => {
             minPolarAngle={Math.PI / 2}
           />
           <Earth />
-
+          </Suspense>
           <Preload all />
         </Canvas>
-      )}
     </div>
   );
 };

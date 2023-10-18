@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { StarsCanvas } from "./canvas";
-
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { StarsCanvas } from './canvas'
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(true)
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-
+      setIsMobile(window.innerWidth < 768)
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   return (
     <section className="relative w-full h-screen mx-auto">
@@ -47,12 +44,12 @@ const Hero = () => {
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
               animate={{
-                y: [0, 24, 0],
+                y: [0, 24, 0]
               }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: "loop",
+                repeatType: 'loop'
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />
@@ -60,7 +57,7 @@ const Hero = () => {
         </a>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

@@ -1,6 +1,4 @@
 {
-    "cSpell.words": [
-        "Actualmente",
-        "yqpagk"
-    ]
+  "cSpell.words": ["Actualmente", "yqpagk"],
+  "eslint.format.enable": true
 }

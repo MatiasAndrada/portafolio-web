@@ -1,20 +1,20 @@
-import React, { useEffect } from "react";
-import { SectionWrapper } from "../hoc";
-import { motion } from "framer-motion";
-import { textVariant } from "../utils/motion";
-import { styles } from "../styles";
-import { certificates } from "../constants";
-//react-icons eye
-import {FaEye} from "react-icons/fa";
+import React, { useEffect } from 'react'
+import { SectionWrapper } from '../hoc'
+import { motion } from 'framer-motion'
+import { textVariant } from '../utils/motion'
+import { styles } from '../styles'
+import { certificates } from '../constants'
+// react-icons eye
+import { FaEye } from 'react-icons/fa'
 
 const CertificateCard = ({ title, image, link }) => {
   useEffect(() => {
-    const elements = document.getElementsByClassName("card");
-    const shadow = document.getElementsByClassName("back");
+    const elements = document.getElementsByClassName('card')
+    const shadow = document.getElementsByClassName('back')
     for (let i = 0; i < elements.length; i++) {
-      shadow[i].classList.add(`back--color${i}`);
+      shadow[i].classList.add(`back--color${i}`)
     }
-  });
+  })
 
   return (
     <div className="card">
@@ -38,7 +38,7 @@ const CertificateCard = ({ title, image, link }) => {
               ></g>
               \
             </svg>
-            <img src={image} alt={title} width={"120px"} height={"120px"}/>
+            <img src={image} alt={title} width={'120px'} height={'120px'} />
             <strong>{title}</strong>
           </div>
         </div>
@@ -50,20 +50,24 @@ const CertificateCard = ({ title, image, link }) => {
           </div>
           <div className="flex items-center flex-row justify-around h-full ">
             <h3 className="front__title text-white">{title}</h3>
-            <a className="front__link" href={link} target="_blank">
+            <a
+              className="front__link"
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaEye className="front__icon" />
             </a>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Certificate = () => {
   return (
     <>
-
       <motion.div variants={textVariant()} className="certificate__container">
         <p className={styles.sectionSubText}>Mis certificaciones:</p>
 
@@ -77,8 +81,8 @@ const Certificate = () => {
         ))}
       </motion.div>
     </>
-  );
-};
+  )
+}
 
-export default SectionWrapper(Certificate, "certificate");
+export default SectionWrapper(Certificate, 'certificate')
 /* export default Certificate; */

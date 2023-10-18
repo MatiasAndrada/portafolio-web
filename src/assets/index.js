@@ -1,16 +1,16 @@
-//#cSpell:disable
-//!images
+// #cSpell:disable
+//! images
 
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-//!certificates
+//! certificates
 import webDesignCertificate from "./certificates/web-design-128.png";
 import javascriptCertificate from "./certificates/javascript-128.png";
 import reactjsCertificate from "./certificates/react-128.png";
 import backendCertificate from "./certificates/backend-128.png";
 import awsCertificate from "./certificates/aws-128.png";
-//!tech
+//! tech
 import html from "./tech/html.png";
 import css from "./tech/css.png";
 import javascript from "./tech/javascript.png";
@@ -29,33 +29,31 @@ import adonis from "./tech/adonis.png";
 import aws from "./tech/aws.png";
 import docker from "./tech/docker.png";
 import jquery from "./tech/jquery.png";
-import kubernetes from "./tech/kubernetes.png"
-import sass from "./tech/sass.png"
-//!experience
+import kubernetes from "./tech/kubernetes.png";
+import sass from "./tech/sass.png";
+//! experience
 import fullStack from "./companies/fullStack.png";
 import shopify from "./companies/shopify.png";
 import beer from "./companies/beer.png";
 import me from "./companies/me.png";
-//!projects
+//! projects
 import eCommerce from "./projects/e-Commerce/e-commerce(1).png";
 import chatApp from "./projects/chatApp/chatApp(1).png";
 import playMovie from "./projects/playMovie/PlayMovie(2).png";
-
-
+import spaceXmirror from "./projects/spaceXmirror/spaceXmirror.png";
 
 export {
-  //!certificates
+  //! certificates
   webDesignCertificate,
   javascriptCertificate,
   reactjsCertificate,
   backendCertificate,
   awsCertificate,
-  //!images
-
+  //! images
   github,
   menu,
   close,
-  //!tech
+  //! tech
   html,
   css,
   javascript,
@@ -76,13 +74,14 @@ export {
   jquery,
   kubernetes,
   sass,
-  //!experience
+  //! experience
   fullStack,
   shopify,
   beer,
   me,
+  //! projects
   eCommerce,
   chatApp,
-  playMovie
-
-}
+  playMovie,
+  spaceXmirror,
+};

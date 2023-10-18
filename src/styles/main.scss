@@ -8,18 +8,13 @@
 @use "./sections/Hero.scss";
 @use "./sections/Background.scss";
 @use "./sections/Certificate.scss";
-@use "./sections/Tech.scss";
 @use "./sections/Footer.scss";
 //@use "./sections/Service.scss";
 //@use "./pages/Contact.scss";
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
 
 * {
   margin: 0;
@@ -27,9 +22,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-
 }
-  
 
 .hash-span {
   margin-top: -100px;
@@ -37,15 +30,10 @@
   display: block;
 }
 
-
-
 html {
   background: rgb(0, 0, 0);
-
 }
 
-
-  
 ::-webkit-scrollbar {
   width: 10px; /* Ancho de la barra de desplazamiento */
   background-color: #000000; /* Fondo negro */
@@ -53,5 +41,5 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background-color: #ffffff; /* Color de la barra de desplazamiento */
-  border-radius: 5px; /* Borde redondeado */  
+  border-radius: 5px; /* Borde redondeado */
 }

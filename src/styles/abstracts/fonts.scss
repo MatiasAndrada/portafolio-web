@@ -1,35 +1,40 @@
-
 @font-face {
-    font-family: 'Dancing Script' ;
-    font-weight: 900;
-    src: local('Dancing Script'), url(/src/assets/fonts/DancingScript-VariableFont_wght.ttf) format("truetype");
-    font-display: swap;
-
-
-  }
+  font-family: "Dancing Script";
+  font-weight: 900;
+  src:
+    local("Dancing Script"),
+    url(/src/assets/fonts/DancingScript-VariableFont_wght.ttf)
+      format("truetype");
+  font-display: swap;
+}
 @font-face {
-    font-family: 'Coolvetica-it';
-    font-weight: 900;
-    src: local("Coolvetica-it"), url(/src/assets/fonts/coolvetica-it.otf) format("truetype");
-    font-display: swap;
-};
-
-@font-face {
-    font-family: 'Coolvetica-condensed';
-    font-weight: 900;
-    src: local('Coolvetica-condensed'), url(/src/assets/fonts/coolvetica-condensed.otf) format("truetype");
-    font-display: swap;
-}; 
-@font-face{
-    font-family: 'gothic-style';
-    font-weight: 900;
-    src: local('gothic-style'), url(/src/assets/fonts/Nightcore.ttf) format("truetype");
-    font-display: swap;
+  font-family: "Coolvetica-it";
+  font-weight: 900;
+  src:
+    local("Coolvetica-it"),
+    url(/src/assets/fonts/coolvetica-it.otf) format("truetype");
+  font-display: swap;
 }
 
-$font-title: 'Dancing Script';
-$font-subtitle-it: 'Coolvetica-it';
-$font-subtitle-condensed: 'Coolvetica-condensed';
-$font-paragraph: 'Heebo';
-$font-gothic: 'gothic-style';
+@font-face {
+  font-family: "Coolvetica-condensed";
+  font-weight: 900;
+  src:
+    local("Coolvetica-condensed"),
+    url(/src/assets/fonts/coolvetica-condensed.otf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "gothic-style";
+  font-weight: 900;
+  src:
+    local("gothic-style"),
+    url(/src/assets/fonts/Nightcore.ttf) format("truetype");
+  font-display: swap;
+}
 
+$font-title: "Dancing Script";
+$font-subtitle-it: "Coolvetica-it";
+$font-subtitle-condensed: "Coolvetica-condensed";
+$font-paragraph: "Heebo";
+$font-gothic: "gothic-style";

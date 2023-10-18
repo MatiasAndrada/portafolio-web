@@ -1,15 +1,15 @@
-//#cSpell: disable
+// #cSpell: disable
 import {
-  //!certificates
+  // !certificates
   webDesignCertificate,
   javascriptCertificate,
   reactjsCertificate,
   backendCertificate,
   awsCertificate,
 
-  //!tech
-  //html,
-  //css,
+  // !tech
+  // html,
+  // css,
   javascript,
   git,
   tailwind,
@@ -21,156 +21,156 @@ import {
   nginx,
   socket,
   aws,
-/*   adonis, */
+  /*   adonis, */
   docker,
-/*   jquery, */
+  /*   jquery, */
   kubernetes,
   sass,
-  //figma,
-  //threejs,
-  //beer,
-  //!experiences
+  // figma,
+  // threejs,
+  // beer,
+  //! experiences
   fullStack,
   me,
-  //!projects
+  //! projects
   eCommerce,
-  chatApp,
+  // chatApp,
   playMovie,
-} from "../assets";
+  spaceXmirror
+} from '../assets'
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
+    id: 'about',
+    title: 'About'
   },
   {
-    id: "work",
-    title: "Work",
+    id: 'work',
+    title: 'Work'
   },
   {
-    id: "skills",
-    title: "Skills",
+    id: 'skills',
+    title: 'Skills'
   },
   {
-    id: "contact",
-    title: "Contact",
-  },
-];
+    id: 'contact',
+    title: 'Contact'
+  }
+]
 
 const certificates = [
   {
-    title: "Desarrollo Web",
+    title: 'Desarrollo Web',
     description:
-      "Adquirí conocimientos en herramientas de optimización de sitios web, como el uso de GIT y preprocesadores como SASS. Aprendí a aplicar Bootstrap y comprendí la importancia del SEO. También aprendí a subir mi sitio a un servidor y a interactuar con él. Finalmente, ademas a presentar un presupuesto y atender a mi cliente final.",
+      'Adquirí conocimientos en herramientas de optimización de sitios web, como el uso de GIT y preprocesadores como SASS. Aprendí a aplicar Bootstrap y comprendí la importancia del SEO. También aprendí a subir mi sitio a un servidor y a interactuar con él. Finalmente, ademas a presentar un presupuesto y atender a mi cliente final.',
     items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "jQuery",
-      "Bootstrap",
-      "React",
-      "Angular",
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'jQuery',
+      'Bootstrap',
+      'React',
+      'Angular'
     ],
     image: webDesignCertificate,
-    link: "https://www.coderhouse.com/certificados/61cdec542bed53003d8455e1",
+    link: 'https://www.coderhouse.com/certificados/61cdec542bed53003d8455e1'
   },
   {
-    title: "JavaScript",
+    title: 'JavaScript',
     description:
-      "Puedo crear aplicaciones de todo tipo, aplicando casos prácticos en mis desarrollos. Además, aprendí a utilizar librerías como jQuery entre muchas otras  y técnicas de desarrollo para crear aplicaciones modernas con AJAX. Ahora soy capaz de crear soluciones web interactivas y trasladar mis conocimientos a cualquier framework JavaScript.",
+      'Puedo crear aplicaciones de todo tipo, aplicando casos prácticos en mis desarrollos. Además, aprendí a utilizar librerías como jQuery entre muchas otras  y técnicas de desarrollo para crear aplicaciones modernas con AJAX. Ahora soy capaz de crear soluciones web interactivas y trasladar mis conocimientos a cualquier framework JavaScript.',
     items: [
-      "Sintaxis y gramática de JavaScript",
-      "Manipulación del DOM",
-      "Eventos y manejo de eventos",
-      "Funciones y objetos",
-      "Asincronía y callbacks",
-      "Promesas y async/await",
+      'Sintaxis y gramática de JavaScript',
+      'Manipulación del DOM',
+      'Eventos y manejo de eventos',
+      'Funciones y objetos',
+      'Asincronía y callbacks',
+      'Promesas y async/await'
     ],
     image: javascriptCertificate,
-    link: "https://www.coderhouse.com/certificados/624c3073fa5d58001aa9d6a4",
+    link: 'https://www.coderhouse.com/certificados/624c3073fa5d58001aa9d6a4'
   },
   {
-    title: "ReactJS",
+    title: 'ReactJS',
     description:
-      "Aprendí a programar por componentes utilizando JavaScript, tanto en su versión estándar como en ES6, También adquirí conocimientos sobre el uso de flujos de datos y el manejo de rutas en aplicaciones SPA. Ademas a utilizar el virtual DOM. Estoy  en condiciones de desarrollar cualquier proyecto con Javascript y React.",
+      'Aprendí a programar por componentes utilizando JavaScript, tanto en su versión estándar como en ES6, También adquirí conocimientos sobre el uso de flujos de datos y el manejo de rutas en aplicaciones SPA. Ademas a utilizar el virtual DOM. Estoy  en condiciones de desarrollar cualquier proyecto con Javascript y React.',
     items: [
-      "Componentes y props",
-      "Estado y ciclo de vida",
-      "Manejo de formularios",
-      "React Router",
-      "Redux",
-      "Testing con Jest y Enzyme",
+      'Componentes y props',
+      'Estado y ciclo de vida',
+      'Manejo de formularios',
+      'React Router',
+      'Redux',
+      'Testing con Jest y Enzyme'
     ],
     image: reactjsCertificate,
-    link: "https://www.example.com/e-commerce",
+    link: 'https://www.example.com/e-commerce'
   },
   {
-    title: "Back-end",
+    title: 'Back-end',
     description:
-      "He aprendido a programar en Javascript del lado del servidor utilizando técnicas asincrónicas y trabajando con Bases de datos SQL y NoSQL dominando la gestión de los datos de forma eficiente y con facilidad de escalabilidad. También he aprendido sobre la arquitectura de servidor y el modelo MVC. Además, testear y monitorear aplicaciones REST, y dominar la tecnología Websockets, He normalizado/denormalizado datos en formato JSON, he manejado patrones de diseño y code style para aplicaciones de alta concurrencia. Por último, puedo implementar proyectos en la nube a través de plataformas como Heroku, Glitch, MongoAtlas y AWS.",
+      'He aprendido a programar en Javascript del lado del servidor utilizando técnicas asincrónicas y trabajando con Bases de datos SQL y NoSQL dominando la gestión de los datos de forma eficiente y con facilidad de escalabilidad. También he aprendido sobre la arquitectura de servidor y el modelo MVC. Además, testear y monitorear aplicaciones REST, y dominar la tecnología Websockets, He normalizado/denormalizado datos en formato JSON, he manejado patrones de diseño y code style para aplicaciones de alta concurrencia. Por último, puedo implementar proyectos en la nube a través de plataformas como Heroku, Glitch, MongoAtlas y AWS.',
     items: [
-      "NodeJS",
-      "Express",
-      "Hbs, Pug, Ejs",
-      "MongoDB",
-      "Firebase",
-      "MySQL",
-      "Websockets",
-      "Sequelize",
-      "APIs RESTFul y GraphQL",
-      "Autenticación y Seguridad",
-      "Escalabilidad y Rendimiento",
+      'NodeJS',
+      'Express',
+      'Hbs, Pug, Ejs',
+      'MongoDB',
+      'Firebase',
+      'MySQL',
+      'Websockets',
+      'Sequelize',
+      'APIs RESTFul y GraphQL',
+      'Autenticación y Seguridad',
+      'Escalabilidad y Rendimiento'
     ],
     image: backendCertificate,
-    link: "https://www.coderhouse.com/certificados/63f5609005d81e000e838b34",
+    link: 'https://www.coderhouse.com/certificados/63f5609005d81e000e838b34'
   },
   {
-    title: "Aws Cloud Computing",
+    title: 'AWS Cloud Computing',
     description:
-      "El curso de AWS Cloud Computing abarca una amplia gama de temas esenciales para la creación y gestión efectiva de infraestructuras en la nube utilizando Amazon Web Services. Desde los fundamentos de la nube y la configuración de cuentas seguras hasta la orquestación de contenedores con ECS y EKS, así como la optimización de recursos mediante herramientas como CloudWatch, el curso explora la configuración de redes virtuales, migraciones a la nube, escalabilidad, tolerancia a fallos y servicios avanzados como Lambda y DynamoDB. Al finalizar, los participantes obtienen habilidades sólidas para diseñar, implementar y administrar aplicaciones y recursos en AWS, aprovechando su potencial para impulsar la innovación y la eficiencia en entornos en la nube.",
+      'El curso de AWS Cloud Computing abarca una amplia gama de temas esenciales para la creación y gestión efectiva de infraestructuras en la nube utilizando Amazon Web Services. Desde los fundamentos de la nube y la configuración de cuentas seguras hasta la orquestación de contenedores con ECS y EKS, así como la optimización de recursos mediante herramientas como CloudWatch, el curso explora la configuración de redes virtuales, migraciones a la nube, escalabilidad, tolerancia a fallos y servicios avanzados como Lambda y DynamoDB. Al finalizar, los participantes obtienen habilidades sólidas para diseñar, implementar y administrar aplicaciones y recursos en AWS, aprovechando su potencial para impulsar la innovación y la eficiencia en entornos en la nube.',
     items: [
-      "IAM (Identity and Access Management)",
-      "EC2 (Elastic Compute Cloud)",
-      "S3 (Simple Storage Service)",
-      "RDS (Relational Database Service)",
-      "VPC (Virtual Private Cloud)",
-      "ECS (Elastic Container Service)",
-      "EKS (Elastic Kubernetes Service)",
-      "CloudWatch",
-      "Auto Scaling",
-      "Elastic Load Balancing",
-      "Lambda",
-      "DynamoDB",
-      "CloudFormation",
-      "CloudTrail",
-      "Route 53",
-      "SNS (Simple Notification Service)",
-      "SQS (Simple Queue Service)",
-      "Kinesis",
-      "Glacier",
-      "Direct Connect",
-      "API Gateway",
-      "Redshift",
-      "Elastic Beanstalk",
-      "Athena",
-      "Glue",
-      "Step Functions",
-      "Batch",
-      "Elasticache",
-      "CodePipeline",
-      "CodeDeploy",
-      "Cognito",
-      "Elasticsearch Service",
-      "KMS (Key Management Service)",
-      "WAF (Web Application Firewall)",
+      'IAM (Identity and Access Management)',
+      'EC2 (Elastic Compute Cloud)',
+      'S3 (Simple Storage Service)',
+      'RDS (Relational Database Service)',
+      'VPC (Virtual Private Cloud)',
+      'ECS (Elastic Container Service)',
+      'EKS (Elastic Kubernetes Service)',
+      'CloudWatch',
+      'Auto Scaling',
+      'Elastic Load Balancing',
+      'Lambda',
+      'DynamoDB',
+      'CloudFormation',
+      'CloudTrail',
+      'Route 53',
+      'SNS (Simple Notification Service)',
+      'SQS (Simple Queue Service)',
+      'Kinesis',
+      'Glacier',
+      'Direct Connect',
+      'API Gateway',
+      'Redshift',
+      'Elastic Beanstalk',
+      'Athena',
+      'Glue',
+      'Step Functions',
+      'Batch',
+      'Elasticache',
+      'CodePipeline',
+      'CodeDeploy',
+      'Cognito',
+      'Elasticsearch Service',
+      'KMS (Key Management Service)',
+      'WAF (Web Application Firewall)'
     ],
     image: awsCertificate,
-    link: "https://sigead.utnba.centrodeelearning.com/alumnos/validar_certificado",
-  },
-];
+    link: 'https://sigead.utnba.centrodeelearning.com/alumnos/validar_certificado'
+  }
+]
 
 const technologies = [
-  ,
   /*
   {
     name: "HTML 5",
@@ -179,70 +179,70 @@ const technologies = [
   {
     name: "CSS 3",
     icon: css,
-  }*/ {
-    name: "JavaScript",
-    icon: javascript,
+  } */ {
+    name: 'JavaScript',
+    icon: javascript
   },
   {
-    name: "Git",
-    icon: git,
+    name: 'Git',
+    icon: git
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: 'Tailwind CSS',
+    icon: tailwind
   },
   {
-    name: "sass",
-    icon: sass,
+    name: 'sass',
+    icon: sass
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: 'React JS',
+    icon: reactjs
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: 'Redux Toolkit',
+    icon: redux
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: 'Node JS',
+    icon: nodejs
   },
   {
-    name: "Handlebars",
-    icon: handlebars,
+    name: 'Handlebars',
+    icon: handlebars
   },
   {
-    name: "Express JS",
-    icon: express,
+    name: 'Express JS',
+    icon: express
   },
   {
-    name: "Nginx",
-    icon: nginx,
+    name: 'Nginx',
+    icon: nginx
   },
   {
-    name: "socket.io",
-    icon: socket,
+    name: 'socket.io',
+    icon: socket
   },
   {
-    name: "aws",
-    icon: aws,
+    name: 'AWS',
+    icon: aws
   },
-/*   {
-    name: "Adonis",
-    icon: adonis,
-  }, */
+  /*   {
+      name: "Adonis",
+      icon: adonis,
+    }, */
   {
-    name: "docker",
-    icon: docker,
+    name: 'docker',
+    icon: docker
   },
-/*   {
-    name: "jquery",
-    icon: jquery,
-  }, */
+  /*   {
+      name: "jquery",
+      icon: jquery,
+    }, */
   {
-    name: "kubernetes",
-    icon: kubernetes,
-  },
+    name: 'kubernetes',
+    icon: kubernetes
+  }
 
   /*
   {
@@ -253,55 +253,56 @@ const technologies = [
   {
     name: "figma",
     icon: figma,
-  },*/
-];
+  }, */
+]
 
 const skills = [
   {
-    title: "Bases de datos",
+    title: 'Bases de datos',
     items: [
-      "SQL: MySQL, PostgreSQL, SQLite, RDS, Aurora",
-      "NoSQL: MongoDB, Firebase, DynamoDB",
-      "ORM: Sequelize, Mongoose",
-      "Gestion de sesiones: Redis, cookie-session, express-session",
-    ],
+      'SQL: MySQL, PostgreSQL, SQLite, RDS, Aurora',
+      'NoSQL: MongoDB, Firebase, DynamoDB',
+      'ORM: Sequelize, Mongoose',
+      'Gestion de sesiones: Redis, cookie-session, express-session'
+    ]
   },
   {
-    title: "Arquitectura Y Patrones de diseño",
+    title: 'Arquitectura Y Patrones de diseño',
     items: [
-      "DAO (Data Access Object)",
-      "DTO (Data Transfer Object)",
-      "MVC(Html on wire y Data on wire)",
-      "Patron Singleton",
-      "Patron Factory",
-      //"Patron Observer",
-      //"Patron Strategy",
-    ],
+      'DAO (Data Access Object)',
+      'DTO (Data Transfer Object)',
+      'MVC(Html on wire y Data on wire)',
+      'Patron Singleton',
+      'Patron Factory'
+      // "Patron Observer",
+      // "Patron Strategy",
+    ]
   },
   {
-    title: "Desarrollo de aplicaciones",
+    title: 'Desarrollo de aplicaciones',
     items: [
-      "SPA (Single Page Application)",
-      "PWA (Progressive Web App)",
-      "MVC (Model-View-Controller)",
-      "REST",
-      "GraphQL",
-      "Websockets",
-    ],
+      'SPA (Single Page Application)',
+      'PWA (Progressive Web App)',
+      'MVC (Model-View-Controller)',
+      'REST',
+      'GraphQL',
+      'Websockets'
+    ]
   },
   {
-    title: "Herramientas de automatización y construcción",
+    title: 'Herramientas de automatización y construcción',
     items: [
-      "Vite",
-      "Adonis",
-      "Webpack",
-      "Babel",
-      "Gulp",
-      "Npm y Yarn",
-      //"Deno"
-    ],
+      'Astro',
+      'Vite',
+      'Adonis',
+      'Webpack',
+      'Babel',
+      'Gulp',
+      'Npm y Yarn'
+      // "Deno"
+    ]
   },
-  {
+  /*   {
     title: "Metodologías agiles",
     items: [
       "Atomic Design",
@@ -309,7 +310,9 @@ const skills = [
       "TDD (Test Driven Development)",
       "BEM (Block Element Modifier)",
     ],
-  },
+  }, */
+
+  /*
   {
     title: "Frameworks De Pruebas y testing",
     items: [
@@ -322,7 +325,8 @@ const skills = [
       "Mocha",
     ],
   },
-  {
+*/
+  /*   {
     title: "Seguridad y autenticación",
     items: [
       "AWS Cognito y Secrets Manager",
@@ -334,21 +338,21 @@ const skills = [
       "Helmet",
       "Cors",
     ],
-  },
+  }, */
   {
-    title: "DevOps y despliegue",
+    title: 'DevOps y despliegue',
     items: [
-      "AWS - EC2, ECS, EKS, EBS",
-      "Clusters y Servidores",
-      "Proxy y Proxy inverso",
-      "Docker y kubernetes",
-      "pm2 y forever (gestor de procesos NodeJS)",
-    ],
-  },
-];
+      'AWS - EC2, ECS, EKS, EBS',
+      'Clusters y Servidores',
+      'Proxy y Proxy inverso',
+      'Docker y kubernetes',
+      'pm2 y forever (gestor de procesos NodeJS)'
+    ]
+  }
+]
 
 const experiences = [
-  /*{
+  /* {
     title: "Editor de multimedia y contenido de marca",
     company_name: "Huata-Haruu - Cerveceria Artesanal.",
     icon: beer,
@@ -362,43 +366,40 @@ const experiences = [
   },
   */
   {
-    title: "Desarrollador Web Freelance",
-    company_name: "Mi propia empresa",
+    title: 'Desarrollador Web Freelance',
+    company_name: 'Mi propia empresa',
     icon: me,
-    iconBg: "#E6DEDD",
-    date: "Ene 2021 - Jun 2022",
+    iconBg: '#E6DEDD',
+    date: 'Ene 2021 - Jun 2022',
     points: [
-      "Diseñé y desarrollé páginas web para contenido de marca, utilizando HTML, CSS y JavaScript",
-      "Utilicé herramientas como AdobeXD para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página.",
-      "Implementé técnicas de SEO para mejorar el posicionamiento de las páginas en los motores de búsqueda y aumentar la visibilidad de los sitios web de los clientes.",
-      "Realicé  pruebas de calidad en las páginas web para garantizar que estuvieran libres de errores y fueran responsivas, además de ser compatibles con diversos navegadores.",
-    ],
+      'Diseñé y desarrollé páginas web para contenido de marca, utilizando HTML, CSS y JavaScript',
+      'Utilicé herramientas como AdobeXD para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página.',
+      'Implementé técnicas de SEO para mejorar el posicionamiento de las páginas en los motores de búsqueda y aumentar la visibilidad de los sitios web de los clientes.',
+      'Realicé  pruebas de calidad en las páginas web para garantizar que estuvieran libres de errores y fueran responsivas, además de ser compatibles con diversos navegadores.'
+    ]
   },
   {
-    title: "Full stack Developer",
-    company_name: "MERN Stack",
+    title: 'Full stack Developer',
+    company_name: 'MERN Stack',
     icon: fullStack,
-    iconBg: "#E6DEDD",
-    date: "Ene 2023 - Presente",
+    iconBg: '#E6DEDD',
+    date: 'Ene 2023 - Presente',
     points: [
-      "Desarrolle de aplicaciones web utilizando tecnologías como React, Node.js, Express, MongoDB",
-      "Trabajar en colaboración con equipos, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad y soluciones escalables.",
-      "Adquirí habilidades valiosas en el diseño y desarrollo de  API RESTful y GraphQL, así como en la evaluación y selección de tecnologías y herramientas para mejorar el rendimiento y la eficiencia del desarrollo.",
-      "También me familiaricé con muchas metodologías ágiles de desarrollo de software.",
-      "Trabajar en proyectos que involucran bases de datos relacionales y no relacionales, así como en la implementación de estrategias de seguridad y autenticación para proteger la información de los usuarios.",
-    ],
-  },
-];
+      'Desarrolle de aplicaciones web utilizando tecnologías como React, Node.js, Express, MongoDB',
+      'Trabajar en colaboración con equipos, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad y soluciones escalables.',
+      'Adquirí habilidades valiosas en el diseño y desarrollo de  API RESTful y GraphQL, así como en la evaluación y selección de tecnologías y herramientas para mejorar el rendimiento y la eficiencia del desarrollo.',
+      'También me familiaricé con muchas metodologías ágiles de desarrollo de software.',
+      'Trabajar en proyectos que involucran bases de datos relacionales y no relacionales, así como en la implementación de estrategias de seguridad y autenticación para proteger la información de los usuarios.'
+    ]
+  }
+]
 
 const now = [
   {
     title:
-      "Cursando Tecnicartura Universitaria en Programación (UTN-Villa Maria - Turno Noche)",
-  },
-  {
-    title: "Microsoft Learn: Azure Cloud Development Challenge",
-  },
-];
+      'Cursando Tecnicatura Universitaria en Programación (UTN-Villa Maria - Turno Noche)'
+  }
+]
 /*
 const testimonials = [
   {
@@ -429,35 +430,36 @@ const testimonials = [
 */
 const projects = [
   {
-    name: "E-commerce",
+    name: 'E-commerce',
     description:
-      "Utiliza la arquitectura repository con un sistema de gestión de base de datos con DAO, ofreciendo la posibilidad de elegir entre mongoDB, txt y Firebase. Ademas cuenta con un DTO para mejorar la seguridad y la transferencia con el cliente. Tiene una lista de productos y un panel de administrador para ver el carrito por usuario. El sistema de autenticación que utiliza es Passport con encriptación y  la posibilidad de foto de perfil,  cuenta con un sistema de mensajes y logs.",
+      'Utiliza la arquitectura repository con un sistema de gestión de base de datos con DAO, ofreciendo la posibilidad de elegir entre mongoDB, txt y Firebase. Ademas cuenta con un DTO para mejorar la seguridad y la transferencia con el cliente. Tiene una lista de productos y un panel de administrador para ver el carrito por usuario. El sistema de autenticación que utiliza es Passport con encriptación y  la posibilidad de foto de perfil,  cuenta con un sistema de mensajes y logs.',
     tags: [
       {
-        name: "express",
-        color: "blue-text-gradient",
+        name: 'express',
+        color: 'blue-text-gradient'
       },
       {
-        name: "dao",
-        color: "green-text-gradient",
+        name: 'dao',
+        color: 'green-text-gradient'
       },
       {
-        name: "restApi",
-        color: "pink-text-gradient",
+        name: 'restApi',
+        color: 'pink-text-gradient'
       },
       {
-        name: "passport",
-        color: "orange-text-gradient",
+        name: 'passport',
+        color: 'orange-text-gradient'
       },
       {
-        name: "repository",
-        color: "purple-text-gradient",
-      },
+        name: 'repository',
+        color: 'purple-text-gradient'
+      }
     ],
     image: eCommerce,
-    source_code_link: "https://github.com/MatiasAndrada/backend-practice-final",
+    source_code_link: 'https://github.com/MatiasAndrada/backend-practice-final',
+    source_demo_link: 'https://github.com/MatiasAndrada/backend-practice-final'
   },
-  {
+  /*   {
     name: "Chat App",
     description:
       "Este es un proyecto en el que desarrollé una aplicación de chat en tiempo real utilizando Node.js, Socket.io y MongoDB.",
@@ -477,6 +479,28 @@ const projects = [
     ],
     image: chatApp,
     source_code_link: "https://github.com/",
+  }, */
+  {
+    name: 'SpaceXMirror',
+    description:
+      'Un espejo inteligente con información de SpaceX. Utiliza astro como tecnologia para acelerar su desarrollo. Cuenta con paginacion en la api y filtros. Ademas de una galeria de imagenes',
+    tags: [
+      {
+        name: 'astro',
+        color: 'pink-text-gradient'
+      },
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient'
+      },
+      {
+        name: 'tailwind',
+        color: 'green-text-gradient'
+      }
+    ],
+    image: spaceXmirror,
+    source_code_link: 'https://github.com/MatiasAndrada/spaceXmirror',
+    source_demo_link: 'https://spacexmirror.space/'
   },
   /*
   {
@@ -502,27 +526,28 @@ const projects = [
   },
   */
   {
-    name: "Play Movie",
+    name: 'Play Movie',
     description:
-      "En esta aplicación de películas desarrollada en React, se utiliza la API de omdbapi para obtener información de películas y mostrarlas. La aplicación permite a los usuarios buscar películas por título y ver detalles de como el reparto, la calificación, el resumen, actores, etc. Además, la aplicación cuenta con un sistema de autenticación para que los usuarios puedan crear cuentas y guardar películas en su lista de favoritos.",
+      'En esta aplicación de películas desarrollada en React, se utiliza la API de omdbapi para obtener información de películas y mostrarlas. La aplicación permite a los usuarios buscar películas por título y ver detalles de como el reparto, la calificación, el resumen, actores, etc. Además, la aplicación cuenta con un sistema de autenticación para que los usuarios puedan crear cuentas y guardar películas en su lista de favoritos.',
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: 'react',
+        color: 'blue-text-gradient'
       },
       {
-        name: "api",
-        color: "green-text-gradient",
+        name: 'api',
+        color: 'green-text-gradient'
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+        name: 'scss',
+        color: 'pink-text-gradient'
+      }
     ],
     image: playMovie,
-    source_code_link: "https://github.com/MatiasAndrada/playMovie",
-  },
-];
+    source_code_link: 'https://github.com/MatiasAndrada/playMovie',
+    source_demo_link: 'https://playmovie.website'
+  }
+]
 
 export {
   certificates,
@@ -531,5 +556,5 @@ export {
   experiences,
   now,
   //  testimonials,
-  projects,
-};
+  projects
+}

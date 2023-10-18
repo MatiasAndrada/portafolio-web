@@ -1,15 +1,15 @@
-import React, { useRef, useEffect, useState, Suspense } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Points, PointMaterial } from '@react-three/drei';
-import {CanvasSpinner} from '../../Loader';
+import React, { useRef, useEffect, useState, Suspense } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Points, PointMaterial } from "@react-three/drei";
+import { CanvasSpinner } from "../../Loader";
 
 const Stars = () => {
   const ref = useRef();
   const [points, setPoints] = useState([]);
 
   useEffect(() => {
-    const worker = new Worker(new URL('./StarsWorker.js', import.meta.url), {
-      type: 'module',
+    const worker = new Worker(new URL("./StarsWorker.js", import.meta.url), {
+      type: "module",
     });
 
     worker.onmessage = (event) => {
@@ -17,8 +17,7 @@ const Stars = () => {
       setPoints(receivedPositions);
     };
 
-    worker.postMessage('generatePositions');
-
+    worker.postMessage("generatePositions");
 
     return () => {
       worker.terminate();
@@ -34,10 +33,10 @@ const Stars = () => {
 
   return (
     <group>
-      <Points ref={ref} positions={points} >
+      <Points ref={ref} positions={points}>
         <PointMaterial
           transparent
-          color='#f272c8'
+          color="#f272c8"
           size={0.004} // reducir el tamaño de los puntos
           sizeAttenuation={true}
           depthWrite={false}
@@ -49,7 +48,6 @@ const Stars = () => {
 const StarsCanvas = () => {
   const [shouldRenderStars, setShouldRenderStars] = useState(true);
 
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > window.innerHeight - 200) {
@@ -59,23 +57,23 @@ const StarsCanvas = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     setShouldRenderStars(true); // Reiniciar al montar el componente
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     shouldRenderStars && (
-    <div className="absolute inset-0 z-[10]">
-      <Canvas camera={{ position: [0, 0, 1] }}> 
-      <Suspense fallback={<CanvasSpinner />}>
-        <Stars />
-      </Suspense>
-      </Canvas>
-    </div>
+      <div className="absolute inset-0 z-[10]">
+        <Canvas camera={{ position: [0, 0, 1] }}>
+          <Suspense fallback={<CanvasSpinner />}>
+            <Stars />
+          </Suspense>
+        </Canvas>
+      </div>
     )
   );
 };

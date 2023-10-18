@@ -15,7 +15,7 @@ const SectionWrapper = (Component, idName) => {
             observer.disconnect();
           }
         },
-        { threshold: 0.5 } // Adjust the threshold as needed
+        { threshold: 0.5 }, // Adjust the threshold as needed
       );
 
       const target = document.getElementById(idName);

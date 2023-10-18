@@ -1,6 +1,6 @@
 @use "../abstracts/vars" as *;
 @use "../abstracts/fonts" as *;
-@use '../abstracts/mixins' as *;
+@use "../abstracts/mixins" as *;
 @use "../abstracts/functions" as fn;
 
 .certificate__container {
@@ -12,7 +12,6 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 3em;
-
 }
 
 .card {
@@ -54,27 +53,35 @@
 }
 
 .back--color0::before {
-  background-image: linear-gradient(315deg,
-      map-get($colors, E) 0%,
-      map-get($colors, D) 74%);
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, E) 0%,
+    map-get($colors, D) 74%
+  );
 }
 
 .back--color1::before {
-  background-image: linear-gradient(315deg,
-      map-get($colors, B) 0%,
-      map-get($colors, G) 74%);
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, B) 0%,
+    map-get($colors, G) 74%
+  );
 }
 
 .back--color2::before {
-  background-image: linear-gradient(315deg,
-      map-get($colors, E) 0%,
-      map-get($colors, B) 74%);
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, E) 0%,
+    map-get($colors, B) 74%
+  );
 }
 
 .back--color3::before {
-  background-image: linear-gradient(315deg,
-      map-get($colors, G) 0%,
-      map-get($colors, F) 74%);
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, G) 0%,
+    map-get($colors, F) 74%
+  );
 }
 
 .back::before {
@@ -131,7 +138,7 @@
     text-transform: uppercase;
     margin-left: 1em;
   }
-  &__link{
+  &__link {
     margin-right: 10px;
     padding: 5px;
   }
@@ -145,18 +152,17 @@
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+  }
+  &__icon {
+    font-size: 32px;
+    color: white;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
 }
-&__icon{
-  font-size: 32px;
-  color: white;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-}
-
 
 .front .img {
   position: absolute;

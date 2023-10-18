@@ -51,7 +51,7 @@ const CircleCanvas = () => {
     }
 
     const createCircles = () => {
-      const numCircles = Math.floor(canvas.width * canvas.height / 85000);
+      const numCircles = Math.floor((canvas.width * canvas.height) / 85000);
       circles.length = 0;
       for (let i = 0; i < numCircles; i++) {
         const radius = getRandomInt(10, 50);
@@ -73,7 +73,7 @@ const CircleCanvas = () => {
     const animate = () => {
       requestAnimationFrame(animate);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      circles.forEach(circle => circle.update());
+      circles.forEach((circle) => circle.update());
     };
 
     animate();
@@ -91,11 +91,11 @@ const CircleCanvas = () => {
     };
   }, []);
 
-  return(
-  <div className="background">
-    <canvas ref={canvasRef}></canvas>;
-  </div>
-  )
+  return (
+    <div className="background">
+      <canvas ref={canvasRef}></canvas>;
+    </div>
+  );
 };
 
 export default CircleCanvas;

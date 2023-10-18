@@ -1,15 +1,13 @@
-@use '../abstracts/vars' as *;
-@use '../abstracts/fonts' as *;
-@use '../abstracts/mixins' as *;
-@use '../abstracts/functions' as fn;
-
-
+@use "../abstracts/vars" as *;
+@use "../abstracts/fonts" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as fn;
 
 .name {
   font-size: map-get($headings, h1);
 
   font-family: $font-title;
-//  letter-spacing: 1px;
+  //  letter-spacing: 1px;
   color: $text-color-light;
   animation-duration: 2s;
   animation-delay: 0.25s;
@@ -48,7 +46,6 @@
     opacity: 1;
   }
 }
-
 
 @include respond-to(sm) {
   .name {

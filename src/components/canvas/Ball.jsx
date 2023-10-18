@@ -48,7 +48,7 @@ const BallCanvas = ({ icon }) => {
   return (
     <Canvas
       frameloop="demand"
-      dpr={[1, isMobile ? 1: 2]} // Reduce la resolución en dispositivos móviles
+      dpr={[1, isMobile ? 1 : 2]} // Reduce la resolución en dispositivos móviles
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>

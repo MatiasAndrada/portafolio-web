@@ -11,6 +11,7 @@ import {
   // html,
   // css,
   javascript,
+  typescript,
   git,
   tailwind,
   reactjs,
@@ -184,6 +185,10 @@ const technologies = [
     icon: javascript
   },
   {
+    name: 'TypeScript',
+    icon: typescript
+  },
+  {
     name: 'Git',
     icon: git
   },
@@ -326,19 +331,19 @@ const skills = [
     ],
   },
 */
-  /*   {
-    title: "Seguridad y autenticación",
+  {
+    title: 'Seguridad y autenticación',
     items: [
-      "AWS Cognito y Secrets Manager",
-      "Passport",
-      "OAuth",
-      "Passwordless",
-      "JSON Web Tokens",
-      "bcrypt",
-      "Helmet",
-      "Cors",
-    ],
-  }, */
+      'AWS Cognito y Secrets Manager',
+      'Passport',
+      'OAuth',
+      'Passwordless',
+      'JSON Web Tokens',
+      'bcrypt',
+      'Helmet',
+      'Cors'
+    ]
+  },
   {
     title: 'DevOps y despliegue',
     items: [

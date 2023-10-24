@@ -35,7 +35,7 @@ const Hero = () => {
 
         <div className="flex flex-col justify-start ">
           <h1 className="name">Matías Andrada.</h1>
-          <h3 className="role ">Desarrollador Full Stack Junior.</h3>
+          <h3 className="role ">Desarrollador Full Stack{/*  Junior */}.</h3>
         </div>
       </div>
 

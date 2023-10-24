@@ -1,46 +1,47 @@
 // #cSpell:disable
 //! images
 
-import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
+import github from './github.png'
+import menu from './menu.svg'
+import close from './close.svg'
 //! certificates
-import webDesignCertificate from "./certificates/web-design-128.png";
-import javascriptCertificate from "./certificates/javascript-128.png";
-import reactjsCertificate from "./certificates/react-128.png";
-import backendCertificate from "./certificates/backend-128.png";
-import awsCertificate from "./certificates/aws-128.png";
+import webDesignCertificate from './certificates/web-design-128.png'
+import javascriptCertificate from './certificates/javascript-128.png'
+import reactjsCertificate from './certificates/react-128.png'
+import backendCertificate from './certificates/backend-128.png'
+import awsCertificate from './certificates/aws-128.png'
 //! tech
-import html from "./tech/html.png";
-import css from "./tech/css.png";
-import javascript from "./tech/javascript.png";
-import git from "./tech/git.png";
-import tailwind from "./tech/tailwind.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import nodejs from "./tech/nodejs.png";
-import handlebars from "./tech/handlebars.png";
-import express from "./tech/express.png";
-import nginx from "./tech/nginx.png";
-import socket from "./tech/socket.png";
-import figma from "./tech/figma.png";
-import threejs from "./tech/threejs.svg";
-import adonis from "./tech/adonis.png";
-import aws from "./tech/aws.png";
-import docker from "./tech/docker.png";
-import jquery from "./tech/jquery.png";
-import kubernetes from "./tech/kubernetes.png";
-import sass from "./tech/sass.png";
+import html from './tech/html.png'
+import css from './tech/css.png'
+import javascript from './tech/javascript.png'
+import typescript from './tech/typescript.png'
+import git from './tech/git.png'
+import tailwind from './tech/tailwind.png'
+import reactjs from './tech/reactjs.png'
+import redux from './tech/redux.png'
+import nodejs from './tech/nodejs.png'
+import handlebars from './tech/handlebars.png'
+import express from './tech/express.png'
+import nginx from './tech/nginx.png'
+import socket from './tech/socket.png'
+import figma from './tech/figma.png'
+import threejs from './tech/threejs.svg'
+import adonis from './tech/adonis.png'
+import aws from './tech/aws.png'
+import docker from './tech/docker.png'
+import jquery from './tech/jquery.png'
+import kubernetes from './tech/kubernetes.png'
+import sass from './tech/sass.png'
 //! experience
-import fullStack from "./companies/fullStack.png";
-import shopify from "./companies/shopify.png";
-import beer from "./companies/beer.png";
-import me from "./companies/me.png";
+import fullStack from './companies/fullStack.png'
+import shopify from './companies/shopify.png'
+import beer from './companies/beer.png'
+import me from './companies/me.png'
 //! projects
-import eCommerce from "./projects/e-Commerce/e-commerce(1).png";
-import chatApp from "./projects/chatApp/chatApp(1).png";
-import playMovie from "./projects/playMovie/PlayMovie(2).png";
-import spaceXmirror from "./projects/spaceXmirror/spaceXmirror.png";
+import eCommerce from './projects/e-Commerce/e-commerce(1).png'
+import chatApp from './projects/chatApp/chatApp(1).png'
+import playMovie from './projects/playMovie/PlayMovie(2).png'
+import spaceXmirror from './projects/spaceXmirror/spaceXmirror.png'
 
 export {
   //! certificates
@@ -57,6 +58,7 @@ export {
   html,
   css,
   javascript,
+  typescript,
   git,
   tailwind,
   reactjs,
@@ -83,5 +85,5 @@ export {
   eCommerce,
   chatApp,
   playMovie,
-  spaceXmirror,
-};
+  spaceXmirror
+}

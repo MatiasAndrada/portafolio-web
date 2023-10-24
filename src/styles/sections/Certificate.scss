@@ -53,35 +53,27 @@
 }
 
 .back--color0::before {
-  background-image: linear-gradient(
-    315deg,
-    map-get($colors, E) 0%,
-    map-get($colors, D) 74%
-  );
+  background-image: linear-gradient(315deg,
+      map-get($colors, E) 0%,
+      map-get($colors, D) 74%);
 }
 
 .back--color1::before {
-  background-image: linear-gradient(
-    315deg,
-    map-get($colors, B) 0%,
-    map-get($colors, G) 74%
-  );
+  background-image: linear-gradient(315deg,
+      map-get($colors, B) 0%,
+      map-get($colors, G) 74%);
 }
 
 .back--color2::before {
-  background-image: linear-gradient(
-    315deg,
-    map-get($colors, E) 0%,
-    map-get($colors, B) 74%
-  );
+  background-image: linear-gradient(315deg,
+      map-get($colors, E) 0%,
+      map-get($colors, B) 74%);
 }
 
 .back--color3::before {
-  background-image: linear-gradient(
-    315deg,
-    map-get($colors, G) 0%,
-    map-get($colors, F) 74%
-  );
+  background-image: linear-gradient(315deg,
+      map-get($colors, G) 0%,
+      map-get($colors, F) 74%);
 }
 
 .back::before {
@@ -134,14 +126,16 @@
     text-shadow: fn.shadow(map-get($colors, B));
     letter-spacing: 9px;
     font-size: map-get($headings, h3);
-    font-family: $font-subtitle-condensed;
+    font-family: $font-subtitle-it;
     text-transform: uppercase;
     margin-left: 1em;
   }
+
   &__link {
     margin-right: 10px;
     padding: 5px;
   }
+
   &__link:hover {
     background-color: map-get($colors, B);
 
@@ -153,6 +147,7 @@
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
   }
+
   &__icon {
     font-size: 32px;
     color: white;

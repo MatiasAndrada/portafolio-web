@@ -1,23 +1,21 @@
-import React, { useMemo, Suspense } from "react";
-import { CanvasLoader } from "../Loader";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import React, { useMemo, Suspense } from 'react'
+import { CanvasLoader } from '../Loader'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
 const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
-  const object = useMemo(() => earth.scene, [earth.scene]);
+  const earth = useGLTF('./planet/scene.gltf')
+  const object = useMemo(() => earth.scene, [earth.scene])
   /*   const object = earth.scene; */
 
-  return (
-    <primitive object={object} scale={2.5} position-y={0} rotation-y={0} />
-  );
-};
+  return <primitive object={object} scale={2.5} position-y={0} rotation-y={0} />
+}
 
 const EarthCanvas = () => {
   return (
     <div
       id="earthCanvas"
-      style={{ height: "100%", overflow: "hidden", alignItems: "center" }}
+      style={{ height: '100%', overflow: 'hidden', alignItems: 'center' }}
     >
       <Canvas
         shadows
@@ -28,7 +26,7 @@ const EarthCanvas = () => {
           fov: 45,
           near: 0.1,
           far: 150,
-          position: [-4, 3, 6],
+          position: [-4, 3, 6]
         }}
       >
         <Suspense fallback={<CanvasLoader />}>
@@ -44,7 +42,7 @@ const EarthCanvas = () => {
         <Preload all />
       </Canvas>
     </div>
-  );
-};
+  )
+}
 
-export default EarthCanvas;
+export default EarthCanvas

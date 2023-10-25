@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="footerContent">
         <div className="iconContainer">
           <a
-            href="https://github.com/tu-usuario-de-github"
+            href="https://github.com/MatiasAndrada"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         <div className="iconContainer">
           <a
-            href="https://www.linkedin.com/in/tu-perfil-de-linkedin"
+            href="https://www.linkedin.com/in/matias-andrada-810900217/"
             target="_blank"
             rel="noopener noreferrer"
           >

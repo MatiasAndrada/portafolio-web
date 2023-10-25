@@ -39,15 +39,23 @@ const Navbar = () => {
       <div className="navbar w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-12 sm:gap-6"
           onClick={() => {
             setActive('')
             window.scrollTo(0, 0)
           }}
         >
-          <h1 className="navbar__right text-white md:text-5xl sm:text-3xl">
-            ()
-          </h1>
+          <div className="w-10 sm:w-32">
+            <motion.h1
+              initial={{ opacity: 0 }} // Estado inicial con opacidad 0
+              animate={{ opacity: 1 }} // Estado final con opacidad 1
+              transition={{ delay: 0.4 }} // Retraso de
+              className="navbar__right text-white sm:text-5xl text-3xl"
+              id="alas"
+            >
+              ()
+            </motion.h1>
+          </div>
 
           <motion.div
             className="text-white text-[18px] font-bold cursor-pointer flex"

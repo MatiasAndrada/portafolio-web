@@ -2,6 +2,7 @@ import React, { useState, useEffect, lazy, Suspense, memo } from 'react'
 import { motion } from 'framer-motion'
 const LazyCirclesCanvas = lazy(() => import('./canvas/Circles'))
 
+// Componente memoizado para evitar que se vuelva a renderizar si no cambian sus props
 const MemoizedCirclesCanvas = memo(() => <LazyCirclesCanvas />)
 
 const Background = () => {

@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
-import viteCompression from "vite-plugin-compression";
-import reactRefresh from "@vitejs/plugin-react-refresh";
+import { defineConfig } from 'vite'
+import viteCompression from 'vite-plugin-compression'
+import reactRefresh from '@vitejs/plugin-react-refresh'
 
 export default defineConfig({
   plugins: [
@@ -8,17 +8,17 @@ export default defineConfig({
 
     viteCompression({
       // habilitar la compresión Brotli y gzip
-      algorithm: "brotli,gzip",
+      algorithm: 'brotli,gzip',
       // Reglas para comprimir archivos
       include:
         /\.(css|js|html|json|xml|txt|svg|png|jpg|jpeg|webp|gif|bin|gltf)$/i,
       // Configuración de compresión para gzip
       gzip: {
-        filename: "[path].gz[query]",
-        level: 9,
+        filename: '[path].gz[query]',
+        level: 9
       },
       // usar la misma extensión que los archivos fuente
-      ext: ".gz",
+      ext: '.gz',
 
       // incluir archivos de mayor tamaño para la compresión (en bytes)
       threshold: 10240,
@@ -32,8 +32,8 @@ export default defineConfig({
         // el modo de compresión, que puede ser 0 (genérico) o 1 (texto)
         mode: 0,
         // la extensión que se agregará a los archivos comprimidos con Brotli
-        extension: "br",
-      },
-    }),
-  ],
-});
+        extension: 'br'
+      }
+    })
+  ]
+})

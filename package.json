@@ -30,9 +30,11 @@
     "vite-plugin-compression": "^0.5.1"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.22.15",
     "@emotion/is-prop-valid": "^1.2.1",
     "@types/react": "^18.0.27",
     "autoprefixer": "^10.4.14",
+    "babel-eslint": "^10.1.0",
     "depcheck": "^1.4.3",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",

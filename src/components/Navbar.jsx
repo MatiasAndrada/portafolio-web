@@ -45,7 +45,8 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <div className="w-10 sm:w-32">
+          {/*ALAS*/}
+          {/*           <div className="w-10 sm:w-32"> 
             <motion.h1
               initial={{ opacity: 0 }} // Estado inicial con opacidad 0
               animate={{ opacity: 1 }} // Estado final con opacidad 1
@@ -55,8 +56,7 @@ const Navbar = () => {
             >
               ()
             </motion.h1>
-          </div>
-
+          </div> */}
           <motion.div
             className="text-white text-[18px] font-bold cursor-pointer flex"
             animate={scrolled ? 'right' : 'left'}

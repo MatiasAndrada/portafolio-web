@@ -1,28 +1,53 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useState } from 'react'
+import { Canvas } from '@react-three/fiber'
 import {
   Decal,
   Float,
   OrbitControls,
   Preload,
-  useTexture,
-} from "@react-three/drei";
+  useTexture
+} from '@react-three/drei'
 
-import { CanvasLoader } from "../Loader";
+import { CanvasLoader } from '../Loader'
 
 const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+  const [decal] = useTexture([props.imgUrl])
   return (
     <Float speed={1.75} rotationIntensity={0.2} floatIntensity={0.2}>
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
+      {/*       <ambientLight intensity={0.25} />
+      <directionalLight position={[0, 0, 0.05]} /> */}
       <mesh scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial
+        {/*         <meshNormalMaterial //A material that maps the normal vectors to RGB colors.
+
+
           color="#fff8eb"
           roughness={0.5} // Reduce la reflexión
           metalness={0.1} // Reduce la apariencia metálica
-        />
+          wireframe={true}
+        /> */}
+
+        {/* <meshStandardMaterial //more realistic material
+            color="#fff"
+            roughness={0.5} // Reduce la reflexión
+            metalness={0.1} // Reduce la apariencia metálica
+          /> */}
+
+        {props.isMobile ? (
+          <meshBasicMaterial
+            color="#fff8eb"
+            roughness={0.5} // Reduce la reflexión
+            metalness={0.1} // Reduce la apariencia metálica
+          />
+        ) : (
+          <meshLambertMaterial
+            color="#fff8eb"
+            roughness={0.5} // Reduce la reflexión
+            metalness={0.1} // Reduce la apariencia metálica
+            clipShadows={true} //para que se vea el plano de sombra
+          />
+        )}
+
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
@@ -33,17 +58,18 @@ const Ball = (props) => {
         />
       </mesh>
     </Float>
-  );
-};
+  )
+}
 
 const BallCanvas = ({ icon }) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
+  console.log('🦇 ~ BallCanvas ~ isMobile:', isMobile)
 
   useEffect(() => {
     // Detecta si se trata de un dispositivo móvil por el ancho de pantalla
-    const screenWidth = window.innerWidth;
-    setIsMobile(screenWidth <= 500); // Cambia el valor según tus necesidades
-  }, []);
+    const screenWidth = window.innerWidth
+    setIsMobile(screenWidth <= 500) // Cambia el valor según tus necesidades
+  }, [])
 
   return (
     <Canvas
@@ -52,6 +78,12 @@ const BallCanvas = ({ icon }) => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
+        {!isMobile && (
+          <>
+            <ambientLight intensity={0.25} />
+            <directionalLight position={[0, 0, 0.03]} />
+          </>
+        )}
         <OrbitControls
           enableZoom={false}
           enablePan={false}
@@ -63,10 +95,10 @@ const BallCanvas = ({ icon }) => {
           dampingFactor={0.05}
           target={[0, 0, 0]}
         />
-        {icon && <Ball imgUrl={icon} />}
+        {icon && <Ball imgUrl={icon} isMobile={isMobile} />}
       </Suspense>
     </Canvas>
-  );
-};
+  )
+}
 
-export default BallCanvas;
+export default BallCanvas

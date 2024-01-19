@@ -17,6 +17,7 @@ import typescript from './tech/typescript.png'
 import git from './tech/git.png'
 import tailwind from './tech/tailwind.png'
 import reactjs from './tech/reactjs.png'
+import nextjs from './tech/nextjs.png'
 import redux from './tech/redux.png'
 import nodejs from './tech/nodejs.png'
 import handlebars from './tech/handlebars.png'
@@ -41,7 +42,8 @@ import eCommerce from './projects/e-Commerce/e-commerce(1).png'
 import chatApp from './projects/chatApp/chatApp(1).png'
 import playMovie from './projects/playMovie/PlayMovie(2).png'
 import spaceXmirror from './projects/spaceXmirror/spaceXmirror.png'
-
+//! LOADERS
+import loader1 from './loaders/loader.gif'
 export {
   //! certificates
   webDesignCertificate,
@@ -61,6 +63,7 @@ export {
   git,
   tailwind,
   reactjs,
+  nextjs,
   redux,
   nodejs,
   handlebars,
@@ -84,5 +87,7 @@ export {
   eCommerce,
   chatApp,
   playMovie,
-  spaceXmirror
+  spaceXmirror,
+  //! LOADERS
+  loader1
 }

@@ -15,6 +15,7 @@ import {
   git,
   tailwind,
   reactjs,
+  nextjs,
   redux,
   nodejs,
   handlebars,
@@ -37,7 +38,9 @@ import {
   eCommerce,
   // chatApp,
   playMovie,
-  spaceXmirror
+  spaceXmirror,
+  //! loaders
+  loader1
 } from '../assets'
 
 export const navLinks = [
@@ -189,6 +192,30 @@ const technologies = [
     icon: typescript
   },
   {
+    name: 'React JS',
+    icon: reactjs
+  },
+  {
+    name: 'React Native',
+    icon: reactjs
+  },
+  {
+    name: 'Next JS',
+    icon: nextjs
+  },
+  /*   
+  name: 'Redux Toolkit',
+  icon: redux
+}, */
+  {
+    name: 'Node JS',
+    icon: nodejs
+  },
+  {
+    name: 'Express JS',
+    icon: express
+  },
+  {
     name: 'Git',
     icon: git
   },
@@ -201,37 +228,19 @@ const technologies = [
     icon: sass
   },
   {
-    name: 'React JS',
-    icon: reactjs
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: redux
-  },
-  {
-    name: 'Node JS',
-    icon: nodejs
-  },
-  {
     name: 'Handlebars',
     icon: handlebars
   },
-  {
-    name: 'Express JS',
-    icon: express
-  },
-  {
+
+  /*   {
     name: 'Nginx',
     icon: nginx
-  },
-  {
+  }, */
+  /*   {
     name: 'socket.io',
     icon: socket
-  },
-  {
-    name: 'AWS',
-    icon: aws
-  },
+  }, */
+
   /*   {
       name: "Adonis",
       icon: adonis,
@@ -240,14 +249,18 @@ const technologies = [
     name: 'docker',
     icon: docker
   },
+  {
+    name: 'AWS',
+    icon: aws
+  }
   /*   {
       name: "jquery",
       icon: jquery,
     }, */
-  {
+  /*   {
     name: 'kubernetes',
     icon: kubernetes
-  }
+  } */
 
   /*
   {
@@ -267,7 +280,7 @@ const skills = [
     items: [
       'SQL: MySQL, PostgreSQL, SQLite, RDS, Aurora',
       'NoSQL: MongoDB, Firebase, DynamoDB',
-      'ORM: Sequelize, Mongoose',
+      'ORM: Prisma,Sequelize, Mongoose',
       'Gestion de sesiones: Redis, cookie-session, express-session'
     ]
   },
@@ -276,7 +289,7 @@ const skills = [
     items: [
       'DAO (Data Access Object)',
       'DTO (Data Transfer Object)',
-      'MVC(Html on wire y Data on wire)',
+      'MVC(Model-View-Controller)',
       'Patron Singleton',
       'Patron Factory'
       // "Patron Observer",
@@ -288,22 +301,28 @@ const skills = [
     items: [
       'SPA (Single Page Application)',
       'PWA (Progressive Web App)',
-      'MVC (Model-View-Controller)',
-      'REST',
-      'GraphQL',
+      'SSR (Server Side Rendering)',
+      'CSR (Client Side Rendering)',
+      'Desarrollo de aplicaciones móviles',
+      'APIs RESTful',
+      'APIs GraphQL',
       'Websockets'
     ]
   },
   {
-    title: 'Herramientas de automatización y construcción',
+    title: 'Herramientas de automatización y bibliotecas',
     items: [
+      'Redux',
+      'Zustand',
+      'Socket.io',
       'Astro',
       'Vite',
-      'Adonis',
-      'Webpack',
-      'Babel',
-      'Gulp',
+      /*       'Adonis', */
+      /*       'Webpack',
+      'Babel', */
+      /*       'Gulp', */
       'Npm y Yarn'
+
       // "Deno"
     ]
   },
@@ -335,6 +354,7 @@ const skills = [
     title: 'Seguridad y autenticación',
     items: [
       'AWS Cognito y Secrets Manager',
+      'NextAuth.js',
       'Passport',
       'OAuth',
       'Passwordless',
@@ -378,9 +398,10 @@ const experiences = [
     date: 'Ene 2021 - Jun 2022',
     points: [
       'Diseñé y desarrollé páginas web para contenido de marca, utilizando HTML, CSS y JavaScript',
+      'Creé sitios web personalizados para clientes, incluyendo una página de inicio, una página de contacto y una página de servicios.',
       'Utilicé herramientas como AdobeXD para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página.',
       'Implementé técnicas de SEO para mejorar el posicionamiento de las páginas en los motores de búsqueda y aumentar la visibilidad de los sitios web de los clientes.',
-      'Realicé  pruebas de calidad en las páginas web para garantizar que estuvieran libres de errores y fueran responsivas, además de ser compatibles con diversos navegadores.'
+      'Realicé pruebas de calidad en las páginas web para garantizar que estuvieran libres de errores y fueran responsivas, además de ser compatibles con diversos navegadores.'
     ]
   },
   {
@@ -388,13 +409,13 @@ const experiences = [
     company_name: 'MERN Stack',
     icon: fullStack,
     iconBg: '#E6DEDD',
-    date: 'Ene 2023 - Presente',
+    date: 'Mar 2023 -  Oct 2023',
     points: [
       'Desarrolle de aplicaciones web utilizando tecnologías como React, Node.js, Express, MongoDB',
       'Trabajar en colaboración con equipos, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad y soluciones escalables.',
       'Adquirí habilidades valiosas en el diseño y desarrollo de  API RESTful y GraphQL, así como en la evaluación y selección de tecnologías y herramientas para mejorar el rendimiento y la eficiencia del desarrollo.',
-      'También me familiaricé con muchas metodologías ágiles de desarrollo de software.',
-      'Trabajar en proyectos que involucran bases de datos relacionales y no relacionales, así como en la implementación de estrategias de seguridad y autenticación para proteger la información de los usuarios.'
+      'También me familiaricé con muchas metodologías ágiles de desarrollo de software.'
+      /*       'Trabajar en proyectos que involucran bases de datos relacionales y no relacionales, así como en la implementación de estrategias de seguridad y autenticación para proteger la información de los usuarios.' */
     ]
   }
 ]
@@ -402,7 +423,15 @@ const experiences = [
 const now = [
   {
     title:
-      'Cursando Tecnicatura Universitaria en Programación (UTN-Villa Maria - Turno Noche)'
+      'Cursando 2do año Tecnicatura Universitaria en Programación (UTN-Villa Maria - turno noche)'
+  },
+  {
+    title:
+      'Realizando curso de especilizacion en NextJS (Coderhouse - 1 mes para finalizar)'
+  },
+  {
+    title:
+      'Realizando curso de especilizacion en React Native (Coderhouse - 2 meses para finalizar)'
   }
 ]
 /*
@@ -551,6 +580,28 @@ const projects = [
     image: playMovie,
     source_code_link: 'https://github.com/MatiasAndrada/playMovie',
     source_demo_link: 'https://playmovie.website'
+  },
+  {
+    name: 'ProjectAdmin - 60%',
+    description:
+      'En esta aplicacion de NextJS en donde tambien se utiliza NextAuthJS para la autenticacion y la base de datos de postgresql con el ORM Prisma. La aplicacion permite a los usuarios crear proyectos, grupos de tareas, tareas individules. Ademas de poder ver los proyectos que le fueron asignados y asignar tareas a otros usuarios.',
+    tags: [
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient'
+      },
+      {
+        name: 'prisma',
+        color: 'green-text-gradient'
+      },
+      {
+        name: 'nextAuth',
+        color: 'pink-text-gradient'
+      }
+    ],
+    image: loader1,
+    source_code_link: '',
+    source_demo_link: ''
   }
 ]
 

@@ -13,30 +13,41 @@ const About = () => {
         <p className={styles.sectionSubText}>Introducción</p>
         <h2 className={styles.sectionHeadText}>Acerca de mí</h2>
       </motion.div>
-
-      <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-slate-200 text-[19px] max-w-4xl leading-[30px]"
-      >
-        Soy un desarrollador web especializado en aplicaciones front-end y
-        back-end, con experiencia en diversos frameworks y lenguajes de
-        programación. Actualmente, estoy cursando un programa de Técnico
-        Superior en Programación en la UTN para continuar ampliando mis
-        habilidades. Mi enfoque se centra en la creación de soluciones
-        eficientes y escalables, incluyendo planes de migración a la nube cuando
-        sea necesario, y también tengo experiencia en la edición de contenido
-        multimedia atractivo. Estoy preparado para aportar mis habilidades
-        técnicas a equipos de desarrollo web.
-        {/*         Soy un apasionado desarrollador full-stack con enfoque en aplicaciones
+      <div className="flex flex-col xl:flex-row items-center justify-evenly">
+        <motion.p
+          variants={fadeIn('', '', 0.1, 1)}
+          className=" indent-8 px-6 mt-4 subpixel-antialiased  text-slate-200 text-[19px] leading-[30px]"
+        >
+          Soy un desarrollador full stack especializado en diferentes
+          aplicaciones SPA's y PWA's ya sean con renderizado del lado cliente o
+          servidor, ademas de que tengo conocimientos en aplicaciones móviles
+          nativas, con experiencia en diversos frameworks y lenguajes de
+          programación. Actualmente, estoy cursando la Tecnicatura Superior en
+          Programación en la UTN para continuar ampliando mis habilidades. Mi
+          enfoque se centra en la creación de soluciones eficientes y
+          escalables, junto a la administración en la nube de AWS y las
+          diferentes modalidades de migración
+          {/* , también tengo
+        experiencia programas de edición de multimedia */}
+          . Estoy preparado para aportar mis habilidades técnicas en equipos de
+          desarrollo.
+          {/*         Soy un apasionado desarrollador full-stack con enfoque en aplicaciones
         web y amplia experiencia en diversos lenguajes y frameworks.
         Actualmente, estoy estudiando técnico superior en programación en la UTN
         y mantengo un constante aprendizaje en nuevas tecnologías y mejores
         prácticas de desarrollo. Mi especialización en AWS para diseñar y
         desarrollar soluciones de software, ademas de planes de migración hacia
         la nube. Valoro el trabajo en equipo. */}
-        {/* , especialmente en lo que respecta a aplicaciones a gran escala. */}
-        {/*         Comprometido con la excelencia y la innovación en el desarrollo de software. */}
-      </motion.p>
+          {/* , especialmente en lo que respecta a aplicaciones a gran escala. */}
+          {/*         Comprometido con la excelencia y la innovación en el desarrollo de software. */}
+        </motion.p>
+        <motion.img
+          variants={fadeIn('', '', 0.1, 1)}
+          src="/me/me.jpeg"
+          alt="About me"
+          className="w-72 h-72 md:w-96 md:h-96 lg:w-96 lg:h-96 xl:w-96 xl:h-96 mt-8 rounded-full  "
+        />
+      </div>
     </>
   )
 }

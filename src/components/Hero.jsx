@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { StarsCanvas } from './canvas'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(true)
@@ -16,12 +17,12 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       {!isMobile && (
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 -z-50">
           <StarsCanvas />
         </div>
       )}
 
-      <div className="absolute inset-0 bottom-[100px] max-w-7xl mx-auto px-5 flex flex-row items-center gap-5">
+      <div className=" absolute inset-0 bottom-[100px] max-w-7xl mx-auto px-5 flex flex-row items-center gap-5">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,7 +36,28 @@ const Hero = () => {
 
         <div className="flex flex-col justify-start ">
           <h1 className="name">Matías Andrada.</h1>
-          <h3 className="role ">Desarrollador Full Stack{/*  Junior */}.</h3>
+          <div className="flex items-center subtitle">
+            <h3 className="role mr-6 ">
+              Desarrollador Full Stack{/*  Junior */}.
+            </h3>
+            <a
+              href="https://github.com/MatiasAndrada"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="icon" />
+            </a>
+
+            <div className="iconContainer">
+              <a
+                href="https://www.linkedin.com/in/matias-andrada-810900217/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="icon" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

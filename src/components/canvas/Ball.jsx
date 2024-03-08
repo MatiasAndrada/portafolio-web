@@ -63,7 +63,6 @@ const Ball = (props) => {
 
 const BallCanvas = ({ icon }) => {
   const [isMobile, setIsMobile] = useState(false)
-  console.log('🦇 ~ BallCanvas ~ isMobile:', isMobile)
 
   useEffect(() => {
     // Detecta si se trata de un dispositivo móvil por el ancho de pantalla

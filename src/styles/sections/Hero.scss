@@ -1,7 +1,7 @@
-@use "../abstracts/vars" as *;
-@use "../abstracts/fonts" as *;
-@use "../abstracts/mixins" as *;
-@use "../abstracts/functions" as fn;
+@use '../abstracts/vars' as *;
+@use '../abstracts/fonts' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as fn;
 
 .name {
   font-size: map-get($headings, h1);
@@ -11,18 +11,8 @@
   color: $text-color-light;
   animation-duration: 2s;
   animation-delay: 0.25s;
-  animation-name: slideIn;
+  animation-name: opacity;
   text-shadow: fn.shadow(map-get($colors, B));
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 .role {
@@ -30,14 +20,17 @@
   font-family: $font-subtitle-it;
   color: $text-color-light;
   justify-items: start;
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-name: role;
-  animation-delay: 2s;
-  animation-duration: 2.5s;
 }
 
-@keyframes role {
+.subtitle {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: opacity;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+
+@keyframes opacity {
   from {
     opacity: 0;
   }

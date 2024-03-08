@@ -1,4 +1,3 @@
-// #cSpell: disable
 import {
   // !certificates
   webDesignCertificate,
@@ -39,6 +38,7 @@ import {
   // chatApp,
   playMovie,
   spaceXmirror,
+  projectAdmin,
   //! loaders
   loader1
 } from '../assets'
@@ -112,7 +112,7 @@ const certificates = [
   {
     title: 'Back-end',
     description:
-      'He aprendido a programar en Javascript del lado del servidor utilizando técnicas asincrónicas y trabajando con Bases de datos SQL y NoSQL dominando la gestión de los datos de forma eficiente y con facilidad de escalabilidad. También he aprendido sobre la arquitectura de servidor y el modelo MVC. Además, testear y monitorear aplicaciones REST, y dominar la tecnología Websockets, He normalizado/denormalizado datos en formato JSON, he manejado patrones de diseño y code style para aplicaciones de alta concurrencia. Por último, puedo implementar proyectos en la nube a través de plataformas como Heroku, Glitch, MongoAtlas y AWS.',
+      'He aprendido a programar en Javascript del lado del servidor utilizando técnicas asincrónicas y trabajando con Bases de datos SQL y NoSQL dominando la gestión de los datos de forma eficiente y con facilidad de escalabilidad. También he aprendido sobre la arquitectura de servidor y el modelo MVC. Además, testear y monitorear aplicaciones REST, y dominar la tecnología Websocket, He normalizado/denormalizado datos en formato JSON, he manejado patrones de diseño y code style para aplicaciones de alta concurrencia. Por último, puedo implementar proyectos en la nube a través de plataformas como, MongoAtlas y AWS entre otras.',
     items: [
       'NodeJS',
       'Express',
@@ -120,7 +120,7 @@ const certificates = [
       'MongoDB',
       'Firebase',
       'MySQL',
-      'Websockets',
+      'Websocket',
       'Sequelize',
       'APIs RESTFul y GraphQL',
       'Autenticación y Seguridad',
@@ -192,7 +192,7 @@ const technologies = [
     icon: typescript
   },
   {
-    name: 'React JS',
+    name: 'ReactJS',
     icon: reactjs
   },
   {
@@ -200,7 +200,7 @@ const technologies = [
     icon: reactjs
   },
   {
-    name: 'Next JS',
+    name: 'NextJS',
     icon: nextjs
   },
   /*   
@@ -208,11 +208,11 @@ const technologies = [
   icon: redux
 }, */
   {
-    name: 'Node JS',
+    name: 'NodeJS',
     icon: nodejs
   },
   {
-    name: 'Express JS',
+    name: 'ExpressJS',
     icon: express
   },
   {
@@ -220,7 +220,7 @@ const technologies = [
     icon: git
   },
   {
-    name: 'Tailwind CSS',
+    name: 'TailwindCSS',
     icon: tailwind
   },
   {
@@ -281,7 +281,7 @@ const skills = [
       'SQL: MySQL, PostgreSQL, SQLite, RDS, Aurora',
       'NoSQL: MongoDB, Firebase, DynamoDB',
       'ORM: Prisma,Sequelize, Mongoose',
-      'Gestion de sesiones: Redis, cookie-session, express-session'
+      'Gestión de sesiones: Redis, cookie-session, express-session'
     ]
   },
   {
@@ -303,10 +303,10 @@ const skills = [
       'PWA (Progressive Web App)',
       'SSR (Server Side Rendering)',
       'CSR (Client Side Rendering)',
-      'Desarrollo de aplicaciones móviles',
+      'Desarrollo de aplicaciones móviles nativas',
       'APIs RESTful',
       'APIs GraphQL',
-      'Websockets'
+      'Websocket'
     ]
   },
   {
@@ -370,7 +370,7 @@ const skills = [
       'AWS - EC2, ECS, EKS, EBS',
       'Clusters y Servidores',
       'Proxy y Proxy inverso',
-      'Docker y kubernetes',
+      'Docker y Kubernetes',
       'pm2 y forever (gestor de procesos NodeJS)'
     ]
   }
@@ -398,8 +398,8 @@ const experiences = [
     date: 'Ene 2021 - Jun 2022',
     points: [
       'Diseñé y desarrollé páginas web para contenido de marca, utilizando HTML, CSS y JavaScript',
-      'Creé sitios web personalizados para clientes, incluyendo una página de inicio, una página de contacto y una página de servicios.',
-      'Utilicé herramientas como AdobeXD para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página.',
+      'Creé sitios web personalizados para clientes, desarrollando páginas de inicio, contacto y de servicios.',
+      'Utilicé herramientas como AdobeXD o Figma para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página.',
       'Implementé técnicas de SEO para mejorar el posicionamiento de las páginas en los motores de búsqueda y aumentar la visibilidad de los sitios web de los clientes.',
       'Realicé pruebas de calidad en las páginas web para garantizar que estuvieran libres de errores y fueran responsivas, además de ser compatibles con diversos navegadores.'
     ]
@@ -412,9 +412,9 @@ const experiences = [
     date: 'Mar 2023 -  Oct 2023',
     points: [
       'Desarrolle de aplicaciones web utilizando tecnologías como React, Node.js, Express, MongoDB',
-      'Trabajar en colaboración con equipos, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad y soluciones escalables.',
-      'Adquirí habilidades valiosas en el diseño y desarrollo de  API RESTful y GraphQL, así como en la evaluación y selección de tecnologías y herramientas para mejorar el rendimiento y la eficiencia del desarrollo.',
-      'También me familiaricé con muchas metodologías ágiles de desarrollo de software.'
+      'Trabajar en colaboración con equipos, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad con soluciones escalables.',
+      'Adquirí habilidades en el desarrollo de  API RESTful y GraphQL, así como en la evaluación, selección de tecnologías y herramientas para mejorar la  eficiencia del desarrollo junto al rendimiento',
+      'También me familiaricé con muchas metodologías ágiles en el desarrollo de software.'
       /*       'Trabajar en proyectos que involucran bases de datos relacionales y no relacionales, así como en la implementación de estrategias de seguridad y autenticación para proteger la información de los usuarios.' */
     ]
   }
@@ -423,15 +423,15 @@ const experiences = [
 const now = [
   {
     title:
-      'Cursando 2do año Tecnicatura Universitaria en Programación (UTN-Villa Maria - turno noche)'
+      'Cursando 2do año Tecnicatura Universitaria en Programación (UTN-Villa María - turno noche)'
   },
   {
     title:
-      'Realizando curso de especilizacion en NextJS (Coderhouse - 1 mes para finalizar)'
+      'Finalizado curso de NextJS (CoderHouse - En espera de certificación)'
   },
   {
     title:
-      'Realizando curso de especilizacion en React Native (Coderhouse - 2 meses para finalizar)'
+      'Realizando curso de especialización en React Native (CoderHouse - 2 semanas para finalizar)'
   }
 ]
 /*
@@ -464,35 +464,36 @@ const testimonials = [
 */
 const projects = [
   {
-    name: 'E-commerce',
+    name: 'ProjectAdmin - beta',
     description:
-      'Utiliza la arquitectura repository con un sistema de gestión de base de datos con DAO, ofreciendo la posibilidad de elegir entre mongoDB, txt y Firebase. Ademas cuenta con un DTO para mejorar la seguridad y la transferencia con el cliente. Tiene una lista de productos y un panel de administrador para ver el carrito por usuario. El sistema de autenticación que utiliza es Passport con encriptación y  la posibilidad de foto de perfil,  cuenta con un sistema de mensajes y logs.',
+      'En esta aplicación de NextJS para la administración de tareas en equipos de trabajo. También se utiliza NextAuthJS para la autenticación con Oauth con proveedores como Github, Google, también es posible con credenciales, la app mantiene la sincronización de las sesiones y las cuentas vinculadas a un único usuario. En la base de datos se utiliza PrismaORM por lo que es agnóstica a la base de datos. La app permite a los usuarios crear proyectos, grupos de tareas, tareas individuales. Ademas de poder ver los proyectos que le fueron asignados y asignar tareas a otros usuarios. Desplegada en Vercel.',
     tags: [
       {
-        name: 'express',
+        name: 'NextJS',
         color: 'blue-text-gradient'
       },
       {
-        name: 'dao',
+        name: 'PrismaORM',
         color: 'green-text-gradient'
       },
       {
-        name: 'restApi',
+        name: 'NextAuth',
         color: 'pink-text-gradient'
       },
       {
-        name: 'passport',
+        name: 'SSR',
         color: 'orange-text-gradient'
       },
       {
-        name: 'repository',
+        name: 'Typescript',
         color: 'purple-text-gradient'
       }
     ],
-    image: eCommerce,
-    source_code_link: 'https://github.com/MatiasAndrada/backend-practice-final',
-    source_demo_link: 'https://github.com/MatiasAndrada/backend-practice-final'
+    image: projectAdmin,
+    source_code_link: 'https://github.com/MatiasAndrada/nextjs-adminProject',
+    source_demo_link: 'https://projectadmin.vercel.app'
   },
+
   /*   {
     name: "Chat App",
     description:
@@ -517,18 +518,18 @@ const projects = [
   {
     name: 'SpaceXMirror',
     description:
-      'Un espejo inteligente con información de SpaceX. Utiliza astro como tecnologia para acelerar su desarrollo. Cuenta con paginacion en la api y filtros. Ademas de una galeria de imagenes',
+      'Un espejo inteligente con información de SpaceX. Utiliza astro como tecnología para acelerar su desarrollo. Cuenta con paginación en la api y filtros. Ademas de una galería de imágenes',
     tags: [
       {
-        name: 'astro',
+        name: 'Astro',
         color: 'pink-text-gradient'
       },
       {
-        name: 'typescript',
+        name: 'Typescript',
         color: 'blue-text-gradient'
       },
       {
-        name: 'tailwind',
+        name: 'Tailwind',
         color: 'green-text-gradient'
       }
     ],
@@ -565,15 +566,15 @@ const projects = [
       'En esta aplicación de películas desarrollada en React, se utiliza la API de omdbapi para obtener información de películas y mostrarlas. La aplicación permite a los usuarios buscar películas por título y ver detalles de como el reparto, la calificación, el resumen, actores, etc. Además, la aplicación cuenta con un sistema de autenticación para que los usuarios puedan crear cuentas y guardar películas en su lista de favoritos.',
     tags: [
       {
-        name: 'react',
+        name: 'ReactJS',
         color: 'blue-text-gradient'
       },
       {
-        name: 'api',
+        name: 'API',
         color: 'green-text-gradient'
       },
       {
-        name: 'scss',
+        name: 'Sass',
         color: 'pink-text-gradient'
       }
     ],
@@ -582,26 +583,34 @@ const projects = [
     source_demo_link: 'https://playmovie.website'
   },
   {
-    name: 'ProjectAdmin - 60%',
+    name: 'E-commerce',
     description:
-      'En esta aplicacion de NextJS en donde tambien se utiliza NextAuthJS para la autenticacion y la base de datos de postgresql con el ORM Prisma. La aplicacion permite a los usuarios crear proyectos, grupos de tareas, tareas individules. Ademas de poder ver los proyectos que le fueron asignados y asignar tareas a otros usuarios.',
+      'Utiliza la arquitectura repository con un sistema de gestión de base de datos con DAO, ofreciendo la posibilidad de elegir entre mongoDB, txt y Firebase. Ademas cuenta con un DTO para mejorar la seguridad y la transferencia con el cliente. Tiene una lista de productos y un panel de administrador para ver el carrito por usuario. El sistema de autenticación que utiliza es Passport con encriptación y  la posibilidad de foto de perfil,  cuenta con un sistema de mensajes y logs.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'Express',
         color: 'blue-text-gradient'
       },
       {
-        name: 'prisma',
+        name: 'DAO',
         color: 'green-text-gradient'
       },
       {
-        name: 'nextAuth',
+        name: 'RestAPI',
         color: 'pink-text-gradient'
+      },
+      {
+        name: 'Passport',
+        color: 'orange-text-gradient'
+      },
+      {
+        name: 'Repository',
+        color: 'purple-text-gradient'
       }
     ],
-    image: loader1,
-    source_code_link: 'https://github.com/MatiasAndrada/nextjs-adminProject',
-    source_demo_link: ''
+    image: eCommerce,
+    source_code_link: 'https://github.com/MatiasAndrada/backend-practice-final',
+    source_demo_link: 'https://github.com/MatiasAndrada/backend-practice-final'
   }
 ]
 

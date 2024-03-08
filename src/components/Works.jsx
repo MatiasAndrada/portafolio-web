@@ -32,18 +32,18 @@ const ProjectCard = ({
           />
 
           {/* Contenedor para los iconos */}
-          <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-between items-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 card-img_hover">
+          <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-between items-between opacity-0 group-hover:opacity-100 transition-opacity duration-400 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, '_blank')}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute top-3 right-3 transition-transform transform translate-x-0 group-hover:translate-x-[-5px]"
+              className="black-gradient w-14 h-14 rounded-full flex justify-center items-center cursor-pointer absolute top-3 right-3 transition-transform transform translate-x-0 group-hover:translate-x-[-5px]"
             >
-              <FaGithub className="object-contain text-white" />
+              <FaGithub className="w-10 h-10 hover:w-12 hover:h-12  text-white" />
             </div>
             <div
               onClick={() => window.open(source_demo_link, '_blank')}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute top-3 left-3 transition-transform transform translate-x-0 group-hover:translate-x-5"
+              className="black-gradient w-16 h-16 rounded-full flex justify-center items-center cursor-pointer absolute top-3 left-3 transition-transform transform translate-x-0 group-hover:translate-x-5"
             >
-              <FaEye className="object-contain text-white" />
+              <FaEye className="w-10 h-10 hover:w-12 hover:h-12  text-white" />
             </div>
           </div>
         </div>

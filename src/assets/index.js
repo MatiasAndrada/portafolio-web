@@ -1,4 +1,4 @@
-// #cSpell:disable
+/* #cSpell:disable */
 //! images
 import github from './github.png'
 import menu from './menu.svg'
@@ -9,6 +9,8 @@ import javascriptCertificate from './certificates/javascript-128.png'
 import reactjsCertificate from './certificates/react-128.png'
 import backendCertificate from './certificates/backend-128.png'
 import awsCertificate from './certificates/aws-128.png'
+import nextCertificate from './certificates/nextjs.png'
+import desarrolloAppCertificate from './certificates/desarrollo-aplicaciones-128.png'
 //! tech
 import html from './tech/html.png'
 import css from './tech/css.png'
@@ -38,12 +40,12 @@ import shopify from './companies/shopify.png'
 import beer from './companies/beer.png'
 import me from './companies/me.png'
 //! projects
-import eCommerce from './projects/e-Commerce/e-commerce(1).png'
-import chatApp from './projects/chatApp/chatApp(1).png'
-import playMovie from './projects/playMovie/PlayMovie(2).png'
+import eCommerce from './projects/e-Commerce/e-commerce-1.png'
+import chatApp from './projects/chatApp/chatApp-1.png'
+import playMovie from './projects/playMovie/PlayMovie-2.png'
 import spaceXmirror from '././projects/spaceXmirror/spaceXmirror.png'
 import projectAdmin from './projects/projectAdmin/task-groups.png'
-//! LOADERS
+//! loaders
 import loader1 from './loaders/loader.gif'
 export {
   //! certificates
@@ -52,6 +54,8 @@ export {
   reactjsCertificate,
   backendCertificate,
   awsCertificate,
+  nextCertificate,
+  desarrolloAppCertificate,
   //! images
   github,
   menu,
@@ -90,6 +94,6 @@ export {
   playMovie,
   spaceXmirror,
   projectAdmin,
-  //! LOADERS
+  //! loaders
   loader1
 }

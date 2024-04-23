@@ -1,32 +1,28 @@
 @font-face {
-  font-family: "Dancing Script";
+  font-family: 'Dancing Script';
   font-weight: 900;
-  src:
-    local("Dancing Script"),
-    url(/src/assets/fonts/DancingScript-VariableFont_wght.ttf) format("truetype");
+  src: local('Dancing Script'),
+    url(/src/assets/fonts/DancingScript-VariableFont_wght.ttf)
+      format('truetype');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Coolvetica-it";
+  font-family: 'Coolvetica-it';
   font-weight: 900;
-  src:
-    local("Coolvetica-it"),
-    url(/src/assets/fonts/coolvetica-it.otf) format("truetype");
+  src: local('Coolvetica-it'),
+    url(/src/assets/fonts/coolvetica-it.otf) format('truetype');
   font-display: swap;
 }
-
-
 
 @font-face {
-  font-family: "gothic-style"; //Alas
+  font-family: 'gothic-style'; //Alas
   font-weight: 900;
-  src:
-    local("gothic-style"),
-    url(/src/assets/fonts/Nightcore.ttf) format("truetype");
+  src: local('gothic-style'),
+    url(/src/assets/fonts/Nightcore.ttf) format('truetype');
   font-display: swap;
 }
 
-$font-title: "Dancing Script";
-$font-subtitle-it: "Coolvetica-it";
-$font-gothic: "gothic-style";
+$font-title: 'Dancing Script';
+$font-subtitle-it: 'Coolvetica-it';
+$font-gothic: 'gothic-style';

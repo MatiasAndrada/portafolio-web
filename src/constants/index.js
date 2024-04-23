@@ -5,7 +5,8 @@ import {
   reactjsCertificate,
   backendCertificate,
   awsCertificate,
-
+  nextCertificate,
+  desarrolloAppCertificate,
   // !tech
   // html,
   // css,
@@ -95,7 +96,7 @@ const certificates = [
     link: 'https://www.coderhouse.com/certificados/624c3073fa5d58001aa9d6a4'
   },
   {
-    title: 'ReactJS',
+    title: 'React.js',
     description:
       'Aprendí a programar por componentes utilizando JavaScript, tanto en su versión estándar como en ES6, También adquirí conocimientos sobre el uso de flujos de datos y el manejo de rutas en aplicaciones SPA. Ademas a utilizar el virtual DOM. Estoy  en condiciones de desarrollar cualquier proyecto con Javascript y React.',
     items: [
@@ -170,7 +171,24 @@ const certificates = [
       'WAF (Web Application Firewall)'
     ],
     image: awsCertificate,
+    cod: 'CER-G6KFOJXF-1030583',
     link: 'https://sigead.utnba.centrodeelearning.com/alumnos/validar_certificado'
+  },
+  {
+    title: 'Next.js',
+    description:
+      'En este curso aprenderás los fundamentos del Server Side Rendering. Crearás una aplicación web auto administrable con NextJS, interactuando con servicios de autenticación y bases de datos, con óptimos resultados en optimización de SEO.',
+    items: [],
+    image: nextCertificate,
+    link: 'https://www.coderhouse.com/ar/certificados/65e9017682e54de735329c41?lang=es'
+  },
+  {
+    title: 'Desarrollo de aplicaciones (React Native)',
+    description:
+      'En este curso aprenderás los conocimientos y bases para crear aplicaciones bridge con capacidad de despliegue tanto para Android como iOS, utilizando React Native, Javascript y un software de prototipado como Sketch o Adobe Xd. Te conectarás a APIs y aprenderás la capacidad de sync con Firebase o Realm db. Al finalizar este curso estarás en condiciones de desarrollar, implementar y desplegar tu propia aplicación móvil.',
+    items: [],
+    image: desarrolloAppCertificate,
+    link: 'https://www.coderhouse.com/ar/certificados/661b1a67a9be799635fb3bc4?lang=es'
   }
 ]
 
@@ -423,15 +441,7 @@ const experiences = [
 const now = [
   {
     title:
-      'Cursando 2do año Tecnicatura Universitaria en Programación (UTN-Villa María - turno noche)'
-  },
-  {
-    title:
-      'Finalizado curso de NextJS (CoderHouse - En espera de certificación)'
-  },
-  {
-    title:
-      'Realizando curso de especialización en React Native (CoderHouse - 2 semanas para finalizar)'
+      'Cursando 1er año Tecnicatura Universitaria en Programación (UTN-Villa María - turno noche)'
   }
 ]
 /*

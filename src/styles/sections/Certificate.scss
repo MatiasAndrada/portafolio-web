@@ -1,7 +1,7 @@
-@use "../abstracts/vars" as *;
-@use "../abstracts/fonts" as *;
-@use "../abstracts/mixins" as *;
-@use "../abstracts/functions" as fn;
+@use '../abstracts/vars' as *;
+@use '../abstracts/fonts' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as fn;
 
 .certificate__container {
   height: auto;
@@ -20,7 +20,7 @@
   height: 230px;
   width: 300px;
   border-radius: map-get($b-radius, large);
-  box-shadow: 0px 2px 7px 1px #050505f6;
+  /*   box-shadow: 0px 2px 7px 1px #050505f6; */
 }
 
 .content {
@@ -28,7 +28,7 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 300ms;
-  box-shadow: 0px 2px 7px 1px #050505cd;
+  /*   box-shadow: 0px 2px 7px 1px #050505cd; */
   border-radius: map-get($b-radius, large);
 }
 
@@ -47,49 +47,86 @@
 .back {
   width: 100%;
   height: 100%;
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .back--color0::before {
-  background-image: linear-gradient(315deg,
-      map-get($colors, E) 0%,
-      map-get($colors, D) 74%);
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, E) 0%,
+    map-get($colors, D) 74%
+  );
 }
 
 .back--color1::before {
-  background-image: linear-gradient(315deg,
-      map-get($colors, B) 0%,
-      map-get($colors, G) 74%);
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, B) 0%,
+    map-get($colors, G) 74%
+  );
 }
 
 .back--color2::before {
-  background-image: linear-gradient(315deg,
-      map-get($colors, E) 0%,
-      map-get($colors, B) 74%);
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, E) 0%,
+    map-get($colors, B) 74%
+  );
 }
 
 .back--color3::before {
-  background-image: linear-gradient(315deg,
-      map-get($colors, G) 0%,
-      map-get($colors, F) 74%);
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, G) 0%,
+    map-get($colors, F) 74%
+  );
+}
+.back--color4::before {
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, D) 0%,
+    map-get($colors, C) 74%
+  );
+}
+.back--color5::before {
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, F) 0%,
+    map-get($colors, B) 74%
+  );
+}
+.back--color6::before {
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, G) 0%,
+    map-get($colors, C) 74%
+  );
+}
+.back--color7::before {
+  background-image: linear-gradient(
+    315deg,
+    map-get($colors, D) 0%,
+    map-get($colors, E) 74%
+  );
 }
 
 .back::before {
   position: absolute;
-  content: " ";
+  content: ' ';
   display: block;
   width: 120px;
   height: 250%;
   animation: rotation_481 5000ms infinite linear;
+  -webkit-animation: rotation_481 5000ms infinite linear;
 }
 
 .back-content {
   position: absolute;
   width: 99%;
   height: 99%;
-  background-color: #000000;
+  background-color: hsl(227.14deg 16.67% 16.47%);
   border-radius: map-get($b-radius, large);
   color: white;
   display: flex;
@@ -119,16 +156,22 @@
 
 .front {
   transform: rotateY(180deg);
-  background-color: #00000074;
+  background-color: hsla(225, 7%, 11%, 0.644);
   color: white;
 
   &__title {
-    text-shadow: fn.shadow(map-get($colors, B));
-    letter-spacing: 9px;
-    font-size: map-get($headings, h3);
+    color: $text-color-light;
+    text-align: center;
+    font-size: map-get($headings, h4);
     font-family: $font-subtitle-it;
     text-transform: uppercase;
-    margin-left: 1em;
+  }
+  &__cod {
+    color: $text-color-light;
+    text-align: center;
+    font-size: map-get($headings, h5);
+
+    text-transform: uppercase;
   }
 
   &__link {
@@ -158,7 +201,7 @@
     -o-transition: all 0.5s ease;
   }
 }
-
+/* 
 .front .img {
   position: absolute;
   z-index: -10;
@@ -210,4 +253,4 @@
   100% {
     transform: translateY(0px);
   }
-}
+} */

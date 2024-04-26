@@ -1,19 +1,20 @@
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import {
-  // About,
-  // Certificate,
-  // Experience,
-  // Now,
+  /*   About as LazyAbout,
+  Certificate as LazyCertificate,
+  Experience as LazyExperience,
+  Now as LazyNow,
   // Feedbacks,
-  //Tech,
-  // Works,
-  //Contact,
+  Tech as LazyTech,
+  Works as LazyWorks,
+  Contact as LazyContact, */
   Hero,
   Navbar,
   Background,
   CanvasSpinner
 } from './components'
+
 const LazyAbout = lazy(() => import('./components/About'))
 const LazyCertificate = lazy(() => import('./components/Certificate'))
 const LazyExperience = lazy(() => import('./components/Experience'))

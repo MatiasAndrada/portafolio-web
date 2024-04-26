@@ -11,7 +11,6 @@ const CertificateCard = ({ title, image, link, cod }) => {
   useEffect(() => {
     const elements = document.getElementsByClassName('card')
     const shadow = document.getElementsByClassName('back')
-    console.log('🦇  useEffect  elements.length:', elements.length)
     for (let i = 0; i < elements.length; i++) {
       shadow[i].classList.add(`back--color${i}`)
     }

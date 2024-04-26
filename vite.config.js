@@ -5,7 +5,6 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
 export default defineConfig({
   plugins: [
     reactRefresh(),
-
     viteCompression({
       // habilitar la compresión Brotli y gzip
       algorithm: 'brotli,gzip',

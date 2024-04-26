@@ -336,7 +336,8 @@ const skills = [
       'Astro',
       'Vite',
       /*       'Adonis', */
-      /*       'Webpack',
+      'Webpack',
+      /*
       'Babel', */
       /*       'Gulp', */
       'Npm y Yarn'

@@ -58,7 +58,6 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false)
-
           console.log(error)
           toast.error('Hubo un error al enviar el mensaje. Intente nuevamente.')
         }

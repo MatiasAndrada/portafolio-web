@@ -40,9 +40,9 @@ import shopify from './companies/shopify.png'
 import beer from './companies/beer.png'
 import me from './companies/me.png'
 //! projects
-import eCommerce from './projects/e-Commerce/e-commerce-1.png'
+import eCommerce from './projects/e-commerce/e-commerce-1.png'
 import chatApp from './projects/chatApp/chatApp-1.png'
-import playMovie from './projects/playMovie/PlayMovie-2.png'
+import playMovie from './projects/playMovie/playMovie-2.png'
 import spaceXmirror from '././projects/spaceXmirror/spaceXmirror.png'
 import projectAdmin from './projects/projectAdmin/task-groups.png'
 //! loaders

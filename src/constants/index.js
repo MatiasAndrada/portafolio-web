@@ -442,7 +442,7 @@ const experiences = [
 const now = [
   {
     title:
-      'Cursando 1er año Tecnicatura Universitaria en Programación (UTN-Villa María - turno noche)'
+      'Cursando 2do año Tecnicatura Universitaria en Programación (UTN Villa María - turno noche)'
   }
 ]
 /*
@@ -592,8 +592,8 @@ const projects = [
     image: playMovie,
     source_code_link: 'https://github.com/MatiasAndrada/playMovie',
     source_demo_link: 'https://playmovie.website'
-  },
-  {
+  }
+  /*   {
     name: 'E-commerce',
     description:
       'Utiliza la arquitectura repository con un sistema de gestión de base de datos con DAO, ofreciendo la posibilidad de elegir entre mongoDB, txt y Firebase. Ademas cuenta con un DTO para mejorar la seguridad y la transferencia con el cliente. Tiene una lista de productos y un panel de administrador para ver el carrito por usuario. El sistema de autenticación que utiliza es Passport con encriptación y  la posibilidad de foto de perfil,  cuenta con un sistema de mensajes y logs.',
@@ -622,7 +622,7 @@ const projects = [
     image: eCommerce,
     source_code_link: 'https://github.com/MatiasAndrada/backend-practice-final',
     source_demo_link: 'https://github.com/MatiasAndrada/backend-practice-final'
-  }
+  } */
 ]
 
 export {

@@ -31,7 +31,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <p className="footerText">&copy; 2023 Matías Andrada</p>
+      {/*       <p className="footerText">&copy; 2023 Matías Andrada</p> */}
     </motion.footer>
   )
 }

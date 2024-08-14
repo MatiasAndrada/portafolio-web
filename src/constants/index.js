@@ -591,7 +591,7 @@ const projects = [
     ],
     image: playMovie,
     source_code_link: 'https://github.com/MatiasAndrada/playMovie',
-    source_demo_link: 'https://playmovie.website'
+    source_demo_link: 'https://playmovie-web.pages.dev/'
   }
   /*   {
     name: 'E-commerce',

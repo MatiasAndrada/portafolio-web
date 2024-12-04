@@ -18,13 +18,14 @@ const About = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className=" indent-8 px-6 mt-4 subpixel-antialiased  text-slate-200 text-[19px] leading-[30px]"
         >
-          Soy un desarrollador full stack especializado en diferentes
-          aplicaciones SPA's y PWA's con renderizado del lado cliente o el
-          servidor, ademas de tengo conocimientos en aplicaciones móviles
-          nativas, con experiencia en diversos frameworks y lenguajes de
-          programación. también en administración de la nube de AWS para
-          diferentes tareas. Actualmente, estoy cursando 2do año la Tecnicatura
-          en Programación en la UTN para continuar ampliando mis habilidades.
+          Soy un desarrollador full stack y futuro programador superior
+          especializado en diferentes aplicaciones SPA's y PWA's con renderizado
+          del lado cliente o el servidor, ademas de tengo conocimientos en
+          aplicaciones móviles nativas, con experiencia en diversos frameworks y
+          lenguajes de programación. también en administración de la nube de AWS
+          para diferentes tareas. Actualmente, estoy cursando el último
+          cuatrimestre de la Técnico Superior en Programación en la UTN para
+          continuar ampliando mis habilidades.
           {/* Mi enfoque se
           centra en la creación de soluciones eficientes y escalables, junto a
           la administración en la nube de AWS y las diferentes modalidades de

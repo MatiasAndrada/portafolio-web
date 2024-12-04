@@ -442,7 +442,7 @@ const experiences = [
 const now = [
   {
     title:
-      'Cursando 2do año Tecnicatura Universitaria en Programación (UTN Villa María - turno noche)'
+      'Cursando último cuatrimestre de Tecnicatura Universitaria en Programación (UTN Villa María - turno noche)'
   }
 ]
 /*

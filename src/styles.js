@@ -5,7 +5,7 @@ const styles = {
   sectionHeadText:
     'text-white font-black capitalize md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]',
   sectionSubText:
-    'sm:text-[20px] text-[24px] text-secondary uppercase tracking-wider font-bold',
+    'sm:text-[24px] text-[28px] text-secondary uppercase tracking-wider font-bold',
   sectionTitleListText:
     'bg-sky-800 text-orange-700 sm:text-[18px] text-[14px] uppercase tracking-wider rounded-2xl',
   sectionItemListText:

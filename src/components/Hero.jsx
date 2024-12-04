@@ -40,15 +40,15 @@ const Hero = () => {
             <h3 className="role mr-6 ">
               Desarrollador Full Stack{/*  Junior */}.
             </h3>
-            <a
-              href="https://github.com/MatiasAndrada"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="icon" />
-            </a>
 
             <div className="iconContainer">
+              <a
+                href="https://github.com/MatiasAndrada"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="icon" />
+              </a>
               <a
                 href="https://www.linkedin.com/in/matias-andrada-810900217/"
                 target="_blank"

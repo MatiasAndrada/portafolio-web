@@ -298,22 +298,22 @@ const skills = [
     items: [
       'SQL: MySQL, PostgreSQL, SQLite, RDS, Aurora',
       'NoSQL: MongoDB, Firebase, DynamoDB',
-      'ORM: Prisma,Sequelize, Mongoose',
+      'ORM: Prisma, Sequelize, Mongoose',
       'Gestión de sesiones: Redis, cookie-session, express-session'
     ]
   },
-  {
+  /*   {
     title: 'Arquitectura Y Patrones de diseño',
     items: [
       'DAO (Data Access Object)',
       'DTO (Data Transfer Object)',
       'MVC(Model-View-Controller)',
       'Patron Singleton',
-      'Patron Factory'
-      // "Patron Observer",
-      // "Patron Strategy",
+      'Patron Factory',
+      "Patron Observer",
+      "Patron Strategy",
     ]
-  },
+  }, */
   {
     title: 'Desarrollo de aplicaciones',
     items: [
@@ -324,19 +324,19 @@ const skills = [
       'Desarrollo de aplicaciones móviles nativas',
       'APIs RESTful',
       'APIs GraphQL',
-      'Websocket'
+      'Websockets'
     ]
   },
   {
-    title: 'Herramientas de automatización y bibliotecas',
+    title: 'Herramientas y bibliotecas',
     items: [
       'Redux',
       'Zustand',
-      'Socket.io',
+      /*       'Socket.io', */
       'Astro',
       'Vite',
       /*       'Adonis', */
-      'Webpack',
+      /*       'Webpack', */
       /*
       'Babel', */
       /*       'Gulp', */
@@ -379,7 +379,7 @@ const skills = [
       'Passwordless',
       'JSON Web Tokens',
       'bcrypt',
-      'Helmet',
+      /*       'Helmet', */
       'Cors'
     ]
   },
@@ -389,8 +389,8 @@ const skills = [
       'AWS - EC2, ECS, EKS, EBS',
       'Clusters y Servidores',
       'Proxy y Proxy inverso',
-      'Docker y Kubernetes',
-      'pm2 y forever (gestor de procesos NodeJS)'
+      'Docker y Kubernetes'
+      /*       'pm2 y forever (gestor de procesos NodeJS)' */
     ]
   }
 ]

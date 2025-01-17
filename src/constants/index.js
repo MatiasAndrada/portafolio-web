@@ -201,10 +201,10 @@ const technologies = [
   {
     name: "CSS 3",
     icon: css,
-  } */ {
+  } */ /*  {
     name: 'JavaScript',
     icon: javascript
-  },
+  }, */
   {
     name: 'TypeScript',
     icon: typescript
@@ -245,10 +245,10 @@ const technologies = [
     name: 'sass',
     icon: sass
   },
-  {
+  /*   {
     name: 'Handlebars',
     icon: handlebars
-  },
+  }, */
 
   /*   {
     name: 'Nginx',
@@ -298,8 +298,8 @@ const skills = [
     items: [
       'SQL: MySQL, PostgreSQL, SQLite, RDS, Aurora',
       'NoSQL: MongoDB, Firebase, DynamoDB',
-      'ORM: Prisma, Sequelize, Mongoose',
-      'Gestión de sesiones: Redis, cookie-session, express-session'
+      'ORM: Prisma, Sequelize, ',
+      'Gestión de sesiones: Redis, cookie-session, express-session, JWT'
     ]
   },
   /*   {
@@ -327,24 +327,17 @@ const skills = [
       'Websockets'
     ]
   },
-  {
+  /*   {
     title: 'Herramientas y bibliotecas',
     items: [
       'Redux',
       'Zustand',
-      /*       'Socket.io', */
       'Astro',
       'Vite',
-      /*       'Adonis', */
-      /*       'Webpack', */
-      /*
-      'Babel', */
-      /*       'Gulp', */
       'Npm y Yarn'
-
-      // "Deno"
+      "Deno"
     ]
-  },
+  }, */
   /*   {
     title: "Metodologías agiles",
     items: [
@@ -368,28 +361,31 @@ const skills = [
       "Mocha",
     ],
   },
-*/
+
   {
     title: 'Seguridad y autenticación',
     items: [
       'AWS Cognito y Secrets Manager',
-      'NextAuth.js',
+      'Auth.js',
       'Passport',
       'OAuth',
       'Passwordless',
       'JSON Web Tokens',
       'bcrypt',
-      /*       'Helmet', */
       'Cors'
     ]
   },
+  */
   {
     title: 'DevOps y despliegue',
     items: [
       'AWS - EC2, ECS, EKS, EBS',
       'Clusters y Servidores',
       'Proxy y Proxy inverso',
-      'Docker y Kubernetes'
+      'Docker y Kubernetes',
+      'CI/CD',
+      /*       'Github Actions', */
+      'Balanceadores de carga'
       /*       'pm2 y forever (gestor de procesos NodeJS)' */
     ]
   }

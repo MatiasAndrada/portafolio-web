@@ -529,7 +529,7 @@ const projects = [
   {
     name: 'SpaceXMirror',
     description:
-      'Un espejo inteligente con información de SpaceX. Utiliza astro como tecnología para acelerar su desarrollo. Cuenta con paginación en la api y filtros. Ademas de una galería de imágenes',
+      'Un espejo con información de SpaceX. Utiliza astro como tecnología. Cuenta con paginación en la api y filtros. Ademas de una galería de imágenes',
     tags: [
       {
         name: 'Astro',
@@ -546,7 +546,7 @@ const projects = [
     ],
     image: spaceXmirror,
     source_code_link: 'https://github.com/MatiasAndrada/spaceXmirror',
-    source_demo_link: 'https://spacexmirror.space/'
+    source_demo_link: 'https://spacexmirror-bq3.pages.dev/'
   },
   /*
   {

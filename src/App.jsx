@@ -25,7 +25,7 @@ const App = () => {
       <Suspense fallback={<CanvasSpinner />}>
         <About />
         <Certificate />
-        <Experience />
+        {/*         <Experience /> */}
         <Now />
         <LazyTech />
         <Works />

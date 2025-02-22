@@ -18,22 +18,23 @@ import javascript from './tech/javascript.png'
 import typescript from './tech/typescript.png'
 import git from './tech/git.png'
 import tailwind from './tech/tailwind.png'
-import reactjs from './tech/reactjs.png'
+import reactjs from './tech/reactjs.webp'
 import nextjs from './tech/nextjs.png'
 import redux from './tech/redux.png'
 import nodejs from './tech/nodejs.png'
-import handlebars from './tech/handlebars.png'
-import express from './tech/express.png'
-import nginx from './tech/nginx.png'
+import handlebars from './tech/handlebars.webp'
+import express from './tech/express.webp'
+import nginx from './tech/nginx.webp'
 import socket from './tech/socket.png'
 import figma from './tech/figma.png'
 import threejs from './tech/threejs.svg'
 import adonis from './tech/adonis.png'
-import aws from './tech/aws.png'
-import docker from './tech/docker.png'
-import jquery from './tech/jquery.png'
-import kubernetes from './tech/kubernetes.png'
-import sass from './tech/sass.png'
+import aws from './tech/aws.webp'
+import docker from './tech/docker.webp'
+import jquery from './tech/jquery.webp'
+import kubernetes from './tech/kubernetes.webp'
+import sass from './tech/sass.webp'
+import graphQL from './tech/graphql.webp'
 //! experience
 import fullStack from './companies/fullStack.png'
 import shopify from './companies/shopify.png'
@@ -83,6 +84,7 @@ export {
   jquery,
   kubernetes,
   sass,
+  graphQL,
   //! experience
   fullStack,
   shopify,

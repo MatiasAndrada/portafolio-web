@@ -18,16 +18,17 @@ import {
   nextjs,
   redux,
   nodejs,
-  handlebars,
+  /*   handlebars, */
   express,
-  nginx,
-  socket,
+  /*   nginx,
+  socket, */
   aws,
   /*   adonis, */
   docker,
   /*   jquery, */
-  kubernetes,
+  /*   kubernetes, */
   sass,
+  graphQL,
   // figma,
   // threejs,
   // beer,
@@ -78,7 +79,7 @@ const certificates = [
       'Angular'
     ],
     image: webDesignCertificate,
-    link: 'https://www.coderhouse.com/certificados/61cdec542bed53003d8455e1'
+    link: 'https://pub.coderhouse.com/legacy-certificates/61cdec542bed53003d8455e1?lang=es'
   },
   {
     title: 'JavaScript',
@@ -93,7 +94,7 @@ const certificates = [
       'Promesas y async/await'
     ],
     image: javascriptCertificate,
-    link: 'https://www.coderhouse.com/certificados/624c3073fa5d58001aa9d6a4'
+    link: 'https://pub.coderhouse.com/legacy-certificates/624c3073fa5d58001aa9d6a4?lang=es'
   },
   {
     title: 'React.js',
@@ -128,7 +129,7 @@ const certificates = [
       'Escalabilidad y Rendimiento'
     ],
     image: backendCertificate,
-    link: 'https://www.coderhouse.com/certificados/63f5609005d81e000e838b34'
+    link: 'https://pub.coderhouse.com/legacy-certificates/63f5609005d81e000e838b34?lang=es'
   },
   {
     title: 'AWS Cloud Computing',
@@ -180,7 +181,7 @@ const certificates = [
       'En este curso aprenderás los fundamentos del Server Side Rendering. Crearás una aplicación web auto administrable con NextJS, interactuando con servicios de autenticación y bases de datos, con óptimos resultados en optimización de SEO.',
     items: [],
     image: nextCertificate,
-    link: 'https://www.coderhouse.com/ar/certificados/65e9017682e54de735329c41?lang=es'
+    link: 'https://pub.coderhouse.com/legacy-certificates/65e9017682e54de735329c41?lang=es'
   },
   {
     title: 'Desarrollo de aplicaciones (React Native)',
@@ -188,7 +189,7 @@ const certificates = [
       'En este curso aprenderás los conocimientos y bases para crear aplicaciones bridge con capacidad de despliegue tanto para Android como iOS, utilizando React Native, Javascript y un software de prototipado como Sketch o Adobe Xd. Te conectarás a APIs y aprenderás la capacidad de sync con Firebase o Realm db. Al finalizar este curso estarás en condiciones de desarrollar, implementar y desplegar tu propia aplicación móvil.',
     items: [],
     image: desarrolloAppCertificate,
-    link: 'https://www.coderhouse.com/ar/certificados/661b1a67a9be799635fb3bc4?lang=es'
+    link: 'https://pub.coderhouse.com/legacy-certificates/661b1a67a9be799635fb3bc4?lang=es'
   }
 ]
 
@@ -221,10 +222,10 @@ const technologies = [
     name: 'NextJS',
     icon: nextjs
   },
-  /*   
-  name: 'Redux Toolkit',
-  icon: redux
-}, */
+  {
+    name: 'Redux',
+    icon: redux
+  },
   {
     name: 'NodeJS',
     icon: nodejs
@@ -270,6 +271,10 @@ const technologies = [
   {
     name: 'AWS',
     icon: aws
+  },
+  {
+    name: 'GraphQL',
+    icon: graphQL
   }
   /*   {
       name: "jquery",

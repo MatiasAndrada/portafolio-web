@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../abstracts/vars' as *;
 @use '../abstracts/fonts' as *;
 @use '../abstracts/mixins' as *;
@@ -19,7 +20,7 @@
   overflow: visible;
   height: 230px;
   width: 300px;
-  border-radius: map-get($b-radius, large);
+  border-radius: map.get($b-radius, large);
   /*   box-shadow: 0px 2px 7px 1px #050505f6; */
 }
 
@@ -29,7 +30,7 @@
   transform-style: preserve-3d;
   transition: transform 300ms;
   /*   box-shadow: 0px 2px 7px 1px #050505cd; */
-  border-radius: map-get($b-radius, large);
+  border-radius: map.get($b-radius, large);
 }
 
 .front,
@@ -40,7 +41,7 @@
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: map-get($b-radius, large);
+  border-radius: map.get($b-radius, large);
   overflow: hidden;
 }
 
@@ -55,60 +56,60 @@
 .back--color0::before {
   background-image: linear-gradient(
     315deg,
-    map-get($colors, E) 0%,
-    map-get($colors, D) 74%
+    map.get($colors, E) 0%,
+    map.get($colors, D) 74%
   );
 }
 
 .back--color1::before {
   background-image: linear-gradient(
     315deg,
-    map-get($colors, B) 0%,
-    map-get($colors, G) 74%
+    map.get($colors, B) 0%,
+    map.get($colors, G) 74%
   );
 }
 
 .back--color2::before {
   background-image: linear-gradient(
     315deg,
-    map-get($colors, E) 0%,
-    map-get($colors, B) 74%
+    map.get($colors, E) 0%,
+    map.get($colors, B) 74%
   );
 }
 
 .back--color3::before {
   background-image: linear-gradient(
     315deg,
-    map-get($colors, G) 0%,
-    map-get($colors, F) 74%
+    map.get($colors, G) 0%,
+    map.get($colors, F) 74%
   );
 }
 .back--color4::before {
   background-image: linear-gradient(
     315deg,
-    map-get($colors, D) 0%,
-    map-get($colors, C) 74%
+    map.get($colors, D) 0%,
+    map.get($colors, C) 74%
   );
 }
 .back--color5::before {
   background-image: linear-gradient(
     315deg,
-    map-get($colors, F) 0%,
-    map-get($colors, B) 74%
+    map.get($colors, F) 0%,
+    map.get($colors, B) 74%
   );
 }
 .back--color6::before {
   background-image: linear-gradient(
     315deg,
-    map-get($colors, G) 0%,
-    map-get($colors, C) 74%
+    map.get($colors, G) 0%,
+    map.get($colors, C) 74%
   );
 }
 .back--color7::before {
   background-image: linear-gradient(
     315deg,
-    map-get($colors, D) 0%,
-    map-get($colors, E) 74%
+    map.get($colors, D) 0%,
+    map.get($colors, E) 74%
   );
 }
 
@@ -127,7 +128,7 @@
   width: 99%;
   height: 99%;
   background-color: hsl(227.14deg 16.67% 16.47%);
-  border-radius: map-get($b-radius, large);
+  border-radius: map.get($b-radius, large);
   color: white;
   display: flex;
   flex-direction: column;
@@ -162,14 +163,14 @@
   &__title {
     color: $text-color-light;
     text-align: center;
-    font-size: map-get($headings, h4);
+    font-size: map.get($headings, h4);
     font-family: $font-subtitle-it;
     text-transform: uppercase;
   }
   &__cod {
     color: $text-color-light;
     text-align: center;
-    font-size: map-get($headings, h5);
+    font-size: map.get($headings, h5);
 
     text-transform: uppercase;
   }
@@ -180,7 +181,7 @@
   }
 
   &__link:hover {
-    background-color: map-get($colors, B);
+    background-color: map.get($colors, B);
 
     cursor: pointer;
     border-radius: 50%;

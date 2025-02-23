@@ -1,5 +1,5 @@
-@use "../abstracts/vars.scss" as *;
-@use "../abstracts/fn.scss" as *;
+@use '../abstracts/vars' as *;
+@use '../abstracts/functions' as fn;
 
 .header {
   justify-content: space-between;

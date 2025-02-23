@@ -1,21 +1,22 @@
+@use 'sass:map';
 @use '../abstracts/vars' as *;
 @use '../abstracts/fonts' as *;
 @use '../abstracts/mixins' as *;
 @use '../abstracts/functions' as fn;
 
 .name {
-  font-size: map-get($headings, h1);
+  font-size: map.get($headings, h1);
   font-family: $font-title;
   /*   letter-spacing: 1px; */
   color: $text-color-light;
   animation-duration: 2s;
   animation-delay: 0.25s;
   animation-name: opacity;
-  text-shadow: fn.shadow(map-get($colors, B));
+  text-shadow: fn.shadow(map.get($colors, B));
 }
 
 .role {
-  font-size: map-get($headings, h3);
+  font-size: map.get($headings, h3);
   font-family: $font-subtitle-it;
   color: $text-color-light;
   justify-items: start;
@@ -41,10 +42,10 @@
 
 @include respond-to(sm) {
   .name {
-    font-size: map-get($headings, h2);
+    font-size: map.get($headings, h2);
   }
 
   .role {
-    font-size: map-get($headings, h3);
+    font-size: map.get($headings, h3);
   }
 }

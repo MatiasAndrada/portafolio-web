@@ -397,45 +397,22 @@ const skills = [
 ]
 
 const experiences = [
-  /* {
-    title: "Editor de multimedia y contenido de marca",
-    company_name: "Huata-Haruu - Cerveceria Artesanal.",
-    icon: beer,
-    iconBg: "#383E56",
-    date: "March 2019 - April 2021",
-    points: [
-      "Trabajé en la producción de videos promocionales y publicitarios para diversas marcas utilizando Adobe Premiere y After Effects.",
-      "Me encargué de la edición de video, incluyendo la selección de clips, la creación de efectos visuales y la integración de música y efectos de sonido.",
-      "También utilicé Adobe Photoshop para la creación y edición de gráficos y animaciones, incluyendo la creación de diseños de logotipos y la edición de imágenes para su uso en redes sociales y otros canales de marketing digital.",
-    ],
-  },
-  */
   {
-    title: 'Desarrollador Web Freelance',
-    company_name: 'Mi propia empresa',
-    icon: me,
-    iconBg: '#E6DEDD',
-    date: 'Ene 2021 - Jun 2022',
-    points: [
-      'Diseñé y desarrollé páginas web para contenido de marca, utilizando HTML, CSS y JavaScript',
-      'Creé sitios web personalizados para clientes, desarrollando páginas de inicio, contacto y de servicios.',
-      'Utilicé herramientas como AdobeXD o Figma para crear wireframes y prototipos de las páginas, lo que permitió al cliente visualizar cómo se vería la página.',
-      'Implementé técnicas de SEO para mejorar el posicionamiento de las páginas en los motores de búsqueda y aumentar la visibilidad de los sitios web de los clientes.',
-      'Realicé pruebas de calidad en las páginas web para garantizar que estuvieran libres de errores y fueran responsivas, además de ser compatibles con diversos navegadores.'
-    ]
-  },
-  {
-    title: 'Full stack Developer',
-    company_name: 'MERN Stack',
+    title: 'Full Stack Developer Jr',
+    company_name: 'En Hacela Simple',
     icon: fullStack,
     iconBg: '#E6DEDD',
-    date: 'Mar 2023 -  Oct 2023',
+    date: 'Feb 2025 - Actualmente',
     points: [
-      'Desarrolle de aplicaciones web utilizando tecnologías como React, Node.js, Express, MongoDB',
-      'Trabajar en colaboración con equipos, incluyendo diseñadores y otros desarrolladores, para crear productos de alta calidad con soluciones escalables.',
-      'Adquirí habilidades en el desarrollo de  API RESTful y GraphQL, así como en la evaluación, selección de tecnologías y herramientas para mejorar la  eficiencia del desarrollo junto al rendimiento',
-      'También me familiaricé con muchas metodologías ágiles en el desarrollo de software.'
-      /*       'Trabajar en proyectos que involucran bases de datos relacionales y no relacionales, así como en la implementación de estrategias de seguridad y autenticación para proteger la información de los usuarios.' */
+      // Frontend
+      'Desarrollo de interfaces de usuario utilizando React, con un sistema de internacionalización implementado para soportar múltiples idiomas.',
+      'Creación de un microfrontend de gestión desarrollado en Next.js, con soporte SSR.',
+      'Implementación de capacidades de PWA mediante Workbox, mejorando la accesibilidad y la experiencia en dispositivos móviles, acercándose a una experiencia de aplicación nativa.',
+      // Backend
+      'Desarrollo del backend utilizando Express como framework principal, con soporte para SSR para mejorar el rendimiento y SEO.',
+      'Gestión de datos mediante GraphQL y Sequelize, incluyendo la implementación de migraciones para bases de datos.',
+      'Implementación de cargas de imágenes en el backend, permitiendo a los usuarios subir y gestionar archivos.',
+      'Integración de WebSockets para comunicación en tiempo real.'
     ]
   }
 ]

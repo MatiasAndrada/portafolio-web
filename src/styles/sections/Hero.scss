@@ -9,9 +9,11 @@
   font-family: $font-title;
   /*   letter-spacing: 1px; */
   color: $text-color-light;
-  animation-duration: 2s;
-  animation-delay: 0.25s;
   animation-name: opacity;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
   text-shadow: fn.shadow(map.get($colors, B));
 }
 

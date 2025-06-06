@@ -2,7 +2,7 @@
   font-family: 'Dancing Script';
   font-weight: 100;
   src: local('Dancing Script'),
-    url(/src/assets/fonts/DancingScript-VariableFont_wght.ttf)
+    url(/src/assets/fonts/DancingScript-VariableFont_wght.woff2)
       format('truetype');
   font-display: swap;
 }
@@ -19,7 +19,7 @@
   font-family: 'gothic-style'; //Alas
   font-weight: 900;
   src: local('gothic-style'),
-    url(/src/assets/fonts/Nightcore.ttf) format('truetype');
+    url(/src/assets/fonts/Nightcore.woff2) format('truetype');
   font-display: swap;
 }
 

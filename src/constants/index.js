@@ -405,13 +405,16 @@ const experiences = [
     date: 'Feb 2025 - Actualmente',
     points: [
       // Frontend
-      'Desarrollo de interfaces de usuario utilizando React, con un sistema de internacionalización implementado para soportar múltiples idiomas.',
-      'Creación de un microfrontend de gestión desarrollado en Next.js, con soporte SSR.',
+      'Desarrollo de interfaces de usuario utilizando React.',
+      /* 'Creación de un microfrontend de gestión desarrollado en Next.js, con soporte SSR.', */
       'Implementación de capacidades de PWA mediante Workbox, mejorando la accesibilidad y la experiencia en dispositivos móviles, acercándose a una experiencia de aplicación nativa.',
+      'Desarrolle un blog de la empresa utilizando astro, con un enfoque en la optimización del rendimiento y la carga rápida de contenido. Con su panel de administración con Strapi CMS.',
       // Backend
+      'Estoy a cargo del servidor linux de la empresa, gestionando la infraestructura y servicios subyacentes, incluyendo la configuración de Nginx como proxy inverso para las diversas apps y la implementación de certificados SSL para conexiones seguras.',
+      'Implementación de sistema de internacionalización para soportar múltiples idiomas.',
       'Desarrollo del backend utilizando Express como framework principal, con soporte para SSR para mejorar el rendimiento y SEO.',
-      'Gestión de datos mediante GraphQL y Sequelize, incluyendo la implementación de migraciones para bases de datos.',
-      'Implementación de cargas de imágenes en el backend, permitiendo a los usuarios subir y gestionar archivos.',
+      'Gestión de datos mediante GraphQL y Sequelize, incluyendo el control de migraciones para bases de datos.',
+      'Implementación de cargas de imágenes en el backend, normalizando y optimizando antes de guardarlas.',
       'Integración de WebSockets para comunicación en tiempo real.'
     ]
   }

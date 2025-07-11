@@ -406,7 +406,7 @@ const experiences = [
     points: [
       // Frontend
       'Desarrollo de interfaces de usuario utilizando React.',
-      /* 'Creación de un microfrontend de gestión desarrollado en Next.js, con soporte SSR.', */
+      /* 'Creación de un microfrontend de gestión desarrollado en Next.js, con soporte SSR.',*/
       'Implementación de capacidades de PWA mediante Workbox, mejorando la accesibilidad y la experiencia en dispositivos móviles, acercándose a una experiencia de aplicación nativa.',
       'Desarrolle un blog de la empresa utilizando astro, con un enfoque en la optimización del rendimiento y la carga rápida de contenido. Con su panel de administración con Strapi CMS.',
       // Backend

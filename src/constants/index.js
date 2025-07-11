@@ -423,7 +423,7 @@ const experiences = [
 const now = [
   {
     title:
-      'Cursando último cuatrimestre de Tecnicatura Universitaria en Programación (UTN Villa María - turno noche)'
+      'Cursando la ultima materia para recibir el título de Técnico Superior en Programación. (UTN-FRVM)'
   }
 ]
 /*

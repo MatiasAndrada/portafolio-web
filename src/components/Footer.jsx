@@ -4,6 +4,8 @@ import { SectionWrapper } from '../hoc'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 20 }}
@@ -31,7 +33,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      {/*       <p className="footerText">&copy; 2023 Matías Andrada</p> */}
+      <p className="footerText">&copy; {year} Matías Andrada</p>
     </motion.footer>
   )
 }

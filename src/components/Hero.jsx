@@ -30,17 +30,22 @@ const Hero = () => {
         >
           <div className="flex flex-col justify-center items-center mt-5 sm:mt-0 sm:flex">
             <div className="w-5 h-5 rounded-full bg-[#2820bd] hidden sm:block" />
-            <div className="w-1 h-40 bg-gradient-to-b from-[#2820bd] to-[#f272c8] hidden sm:block" />
+            <div className="w-1 h-48 bg-gradient-to-b from-[#2820bd] to-[#f272c8] hidden sm:block" />
           </div>
         </motion.div>
 
         <div className="flex flex-col justify-start ">
           <h1 className="name">Matías Andrada.</h1>
           <div className="flex items-center subtitle">
-            <h3 className="role mr-6 ">
-              Desarrollador Full Stack{/*  Junior */}.
-            </h3>
+            <div>
+              <h3 className="role mr-6 ">
+                Desarrollador Full Stack{/*  Junior */}.
+              </h3>
+              <h3 className="role mr-6 ">
+                Por graduarme en Técnico Superior en Programación.
+              </h3>
 
+            </div>
             <div className="iconContainer">
               <a
                 href="https://github.com/MatiasAndrada"

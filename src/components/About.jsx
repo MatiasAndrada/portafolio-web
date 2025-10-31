@@ -18,13 +18,9 @@ const About = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className=" indent-8 px-6 mt-4 subpixel-antialiased  text-slate-200 text-[19px] leading-[30px]"
         >
-          Soy un desarrollador Full Stack con 3 años de experiencia, cursando la ultima materia para ser técnico superior
-          en programación especializado en diferentes aplicaciones SPA's o PWA's, con renderizado
-          del lado cliente o el servidor, ademas de tengo conocimientos en
-          aplicaciones móviles nativas, con experiencia en diversos frameworks y
-          lenguajes de programación. Junto con administración de la nube de AWS y servidores linux
-          para diferentes tareas. Estoy en busca de un trabajo que me apasione y me permita aportar mis habilidades técnicas,
-          para poder seguir aprendiendo y creciendo profesionalmente.
+          Soy un desarrollador Full Stack con tres años de experiencia, actualmente cursando la última materia para obtener el título de Técnico Superior en Programación.
+          Me especializo en el desarrollo de aplicaciones SPA y PWA, con renderizado del lado del cliente o del servidor. También tengo experiencia en el desarrollo móvil nativo, la administración de servidores Linux y el uso de servicios en la nube de AWS.
+          Busco seguir creciendo profesionalmente, aportar valor en cada proyecto y profesionalizar mi nivel de inglés.
           {/* Mi enfoque se
           centra en la creación de soluciones eficientes y escalables, junto a
           la administración en la nube de AWS y las diferentes modalidades de

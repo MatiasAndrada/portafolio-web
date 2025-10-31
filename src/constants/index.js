@@ -404,18 +404,19 @@ const experiences = [
     iconBg: '#E6DEDD',
     date: 'Feb 2025 - Actualmente',
     points: [
-      // Frontend
-      'Desarrollo de interfaces de usuario utilizando React.',
-      /* 'Creación de un microfrontend de gestión desarrollado en Next.js, con soporte SSR.',*/
-      'Implementación de capacidades de PWA mediante Workbox, mejorando la accesibilidad y la experiencia en dispositivos móviles, acercándose a una experiencia de aplicación nativa.',
-      'Desarrolle un blog de la empresa utilizando astro, con un enfoque en la optimización del rendimiento y la carga rápida de contenido. Con su panel de administración con Strapi CMS.',
-      // Backend
-      'Estoy a cargo del servidor linux de la empresa, gestionando la infraestructura y servicios subyacentes, incluyendo la configuración de Nginx como proxy inverso para las diversas apps y la implementación de certificados SSL para conexiones seguras.',
-      'Implementación de sistema de internacionalización para soportar múltiples idiomas.',
-      'Desarrollo del backend utilizando Express como framework principal, con soporte para SSR para mejorar el rendimiento y SEO.',
-      'Gestión de datos mediante GraphQL y Sequelize, incluyendo el control de migraciones para bases de datos.',
-      'Implementación de cargas de imágenes en el backend, normalizando y optimizando antes de guardarlas.',
-      'Integración de WebSockets para comunicación en tiempo real.'
+      "Ampliación de la lógica de negocio para incluir la venta de viajes.",
+      "Desarrollo de interfaces de usuario modernas con React, priorizando la accesibilidad y la experiencia de usuario.",
+      "Implementación de capacidades PWA mediante Workbox, mejorando la usabilidad en dispositivos móviles y acercándose a una experiencia nativa.",
+      "Desarrollo del blog corporativo con Astro, enfocado en rendimiento y carga rápida de contenido, junto con un panel administrativo en Strapi CMS.",
+      "Desarrollo del backend con Express, incluyendo soporte para SSR (Server-Side Rendering) para optimizar rendimiento y SEO.",
+      "Gestión y administración del servidor Linux, configurando Nginx como proxy inverso y aplicando certificados SSL para conexiones seguras.",
+      "Administración de la infraestructura y servicios en la nube mediante AWS.",
+      "Implementación de un sistema de autenticación con OAuth.",
+      "Integración de la pasarela de pagos Fiserv.",
+      "Gestión y modelado de datos con GraphQL y Sequelize, incluyendo control de migraciones.",
+      "Implementación de un sistema de internacionalización (i18n) para soportar múltiples idiomas en textos estáticos y dinámicos.",
+      "Optimización y carga eficiente de imágenes desde el backend, con normalización previa al almacenamiento.",
+      "Integración de WebSockets para funcionalidades de comunicación en tiempo real, como chat y avisos por correo electrónico."
     ]
   }
 ]

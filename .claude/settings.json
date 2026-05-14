@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude plugin *)",
+      "Bash(claude --version)",
+      "PowerShell(Get-ChildItem -Path $env:USERPROFILE\\\\.claude\\\\ -Force)",
+      "PowerShell(Get-ChildItem -Path $env:USERPROFILE\\\\.claude\\\\plugins\\\\ -Recurse | head -30)",
+      "PowerShell(Get-ChildItem -Path $env:USERPROFILE\\\\.claude\\\\plugins\\\\ -Recurse | Select-Object -First 30)",
+      "PowerShell(Get-ChildItem -Path $env:USERPROFILE\\\\.claude\\\\plugins\\\\marketplaces\\\\)",
+      "Read(//c/Users/matia/.claude/**)",
+      "PowerShell(npm uninstall -g @anthropic-ai/claude-code)",
+      "PowerShell(npm install -g @anthropic-ai/claude-code)",
+      "Read(//c/Users/matia/Downloads/**)"
+    ]
+  }
+}

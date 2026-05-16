@@ -1,28 +1,86 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
+import { Canvas } from '@react-three/fiber'
+import { View, PerspectiveCamera, OrbitControls } from '@react-three/drei'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { textVariant } from '../utils/motion'
-import { BallCanvas } from './canvas'
+import { BallView } from './canvas/Ball'
 import { SectionWrapper } from '../hoc'
 import { technologies, skills } from '../constants'
 
 const Tech = () => {
+  const containerRef = useRef(null)
+  const [isMobile, setIsMobile] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 500)
+    setMounted(true)
+  }, [])
+
+  const sharedCanvas = mounted
+    ? createPortal(
+        <Canvas
+          eventSource={containerRef}
+          dpr={[1, isMobile ? 1 : 2]}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            pointerEvents: 'none',
+            zIndex: 10
+          }}
+        >
+          <PerspectiveCamera makeDefault position={[0, 0, 5]} />
+          {!isMobile && (
+            <>
+              <ambientLight intensity={1.25} />
+              <directionalLight position={[0, 0, 0.03]} />
+            </>
+          )}
+          <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            minAzimuthAngle={-Math.PI / 4}
+            maxAzimuthAngle={Math.PI / 4}
+            minPolarAngle={Math.PI / 2 - Math.PI / 18}
+            maxPolarAngle={Math.PI / 2 + Math.PI / 18}
+            enableDamping
+            dampingFactor={0.05}
+            target={[0, 0, 0]}
+          />
+          <View.Port />
+        </Canvas>,
+        document.body
+      )
+    : null
+
   return (
-    <>
+    <div ref={containerRef}>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Tecnologías trabajadas</p>
         <h2 className={styles.sectionHeadText}>Skills</h2>
       </motion.div>
-      <div className="flex flex-row flex-wrap justify-center gap-10  text-center">
+      <div className="flex flex-row flex-wrap justify-center gap-10 text-center">
         {technologies.map((technology) => (
-          <div className="w-28 h-28" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
+          <div className="flex flex-col items-center" key={technology.name}>
+            <BallView
+              icon={technology.icon}
+              isMobile={isMobile}
+              className="w-28 h-28"
+            />
             <span className="text-white text-[16px] font-semibold capitalize select-none">
               {technology.name}
             </span>
           </div>
         ))}
       </div>
+
+      {sharedCanvas}
+
       <div className="flex flex-row flex-wrap justify-center  gap-10 mt-32">
         <p className={`${styles.sectionSubText} mt-12 `}>
           Otros conocimientos:
@@ -49,9 +107,8 @@ const Tech = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 
 export default SectionWrapper(Tech, 'skills')
-/* export default Tech; */

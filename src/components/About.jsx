@@ -13,36 +13,47 @@ const About = () => {
         <p className={styles.sectionSubText}>Introducción</p>
         <h2 className={styles.sectionHeadText}>Acerca de mí</h2>
       </motion.div>
-      <div className="flex flex-col xl:flex-row items-center justify-evenly">
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className=" indent-8 px-6 mt-4 subpixel-antialiased  text-slate-200 text-[19px] leading-[30px]"
-        >
-          Soy un desarrollador Full Stack con tres años de experiencia, actualmente cursando la última materia para obtener el título de Técnico Superior en Programación.
-          Me especializo en el desarrollo de aplicaciones SPA y PWA, con renderizado del lado del cliente o del servidor. También tengo experiencia en el desarrollo móvil nativo, la administración de servidores Linux y el uso de servicios en la nube de AWS.
-          Busco seguir creciendo profesionalmente, aportar valor en cada proyecto y profesionalizar mi nivel de inglés.
-          {/* Mi enfoque se
-          centra en la creación de soluciones eficientes y escalables, junto a
-          la administración en la nube de AWS y las diferentes modalidades de
-          migración. */}
-          {/* , también tengo experiencia programas de edición de multimedia */}
-          {/* Estoy preparado para aportar mis habilidades técnicas en equipos de
-          desarrollo. */}
-          {/*         Soy un apasionado desarrollador full-stack con enfoque en aplicaciones
-        web y amplia experiencia en diversos lenguajes y frameworks.
-        Actualmente, estoy estudiando técnico superior en programación en la UTN
-        y mantengo un constante aprendizaje en nuevas tecnologías y mejores
-        prácticas de desarrollo. Mi especialización en AWS para diseñar y
-        desarrollar soluciones de software, ademas de planes de migración hacia
-        la nube. Valoro el trabajo en equipo. */}
-          {/* , especialmente en lo que respecta a aplicaciones a gran escala. */}
-          {/*         Comprometido con la excelencia y la innovación en el desarrollo de software. */}
-        </motion.p>
+      <div className="flex flex-col xl:flex-row items-center justify-evenly gap-8">
+        <div className="flex-1 space-y-3 text-gray-100 leading-relaxed text-base">
+          <motion.p
+            variants={fadeIn('', '', 0.1, 1)}
+            className="px-6 subpixel-antialiased"
+          >
+            Soy Desarrollador Full Stack con tres años de experiencia
+            construyendo aplicaciones modernas y escalables. Mi fortaleza:
+            convertir ideas complejas en arquitecturas funcionales que funcionan
+            en producción.
+          </motion.p>
+
+          <motion.p
+            variants={fadeIn('', '', 0.2, 1)}
+            className="px-6 subpixel-antialiased"
+          >
+            Actualmente desarrollo{' '}
+            <strong className="text-emerald-400 font-semibold">Nubotik</strong>,
+            una plataforma SaaS de gestión de listas de espera que está en
+            producción. Implementé
+            {/* : bases de datos relacionales con Prisma, */}
+            integraciones complejas (WhatsApp API, Resend, OAuth, ChatIA),
+            dashboards analíticos en tiempo real y soporte en 5 idiomas.
+          </motion.p>
+
+          <motion.p
+            variants={fadeIn('', '', 0.3, 1)}
+            className="px-6 subpixel-antialiased"
+          >
+            Como Full Stack Jr en Hacela Simple, trabajo con PWA, integraciones
+            de pago (mercado pago, fiserv) e infraestructura AWS. Estoy
+            terminando Técnico Superior en Programación (UTN). Busco crecer a
+            roles mid-level donde pueda aportar soluciones con impacto directo.
+          </motion.p>
+        </div>
+
         <motion.img
-          variants={fadeIn('', '', 0.1, 1)}
+          variants={fadeIn('', '', 0.2, 1)}
           src="/me/me.jpeg"
           alt="About me"
-          className="w-72 h-72 md:w-96 md:h-96 lg:w-96 lg:h-96 xl:w-96 xl:h-96 mt-8 rounded-full  "
+          className="w-72 h-72 md:w-96 md:h-96 lg:w-96 lg:h-96 xl:w-96 xl:h-96 rounded-full flex-shrink-0"
         />
       </div>
     </>

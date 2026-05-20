@@ -23,7 +23,7 @@ const Stars = ({ points }) => {
       <Points ref={ref} positions={points}>
         <PointMaterial
           transparent
-          color="#f272c8"
+          color="#00D4FF"
           size={0.0035}
           sizeAttenuation={true}
           depthWrite={false}

@@ -6,7 +6,7 @@ const CircleCanvas = () => {
   useEffect(() => {
     const canvas = canvasRef.current
     const ctx = canvas.getContext('2d')
-    const colors = ['#ff0080', '#36c5f0', '#ffce00', '#2ed573', '#8c7ae6']
+    const colors = ['#0052CC', '#00D4FF', '#003B99', '#0080FF', '#00F0FF']
     let circles = []
 
     canvas.width = window.innerWidth

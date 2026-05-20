@@ -23,8 +23,8 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <div className="flex flex-col justify-center items-center mt-5 sm:mt-0 sm:flex">
-            <div className="w-5 h-5 rounded-full bg-[#2820bd] hidden sm:block" />
-            <div className="w-1 h-48 bg-gradient-to-b from-[#2820bd] to-[#f272c8] hidden sm:block" />
+            <div className="w-5 h-5 rounded-full bg-[#0052CC] hidden sm:block" />
+            <div className="w-1 h-48 bg-gradient-to-b from-[#0052CC] to-[#00D4FF] hidden sm:block" />
           </div>
         </motion.div>
 

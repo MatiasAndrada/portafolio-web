@@ -39,12 +39,11 @@ const Hero = () => {
           <div className="flex items-center subtitle">
             <div>
               <h3 className="role mr-6 ">
-                Desarrollador Full Stack{/*  Junior */}.
+                Desarrollador Full Stack — React, Next.js, Node.js.
               </h3>
               <h3 className="role mr-6 ">
-                Por graduarme en Técnico Superior en Programación.
+                Creador de Nubotik, SaaS en producción.
               </h3>
-
             </div>
             <div className="iconContainer">
               <a

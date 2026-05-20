@@ -199,22 +199,12 @@ const certificates = [
 ]
 
 const technologies = [
-  /*
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  } */ /*  {
-    name: 'JavaScript',
-    icon: javascript
-  }, */
+  // Lenguajes
   {
     name: 'TypeScript',
     icon: typescript
   },
+  // Frontend Frameworks
   {
     name: 'ReactJS',
     icon: reactjs
@@ -231,6 +221,7 @@ const technologies = [
     name: 'Astro',
     icon: astro
   },
+  // State Management
   {
     name: 'Redux',
     icon: redux
@@ -239,6 +230,7 @@ const technologies = [
     name: 'Zustand',
     icon: zustand
   },*/
+  // Backend
   {
     name: 'NodeJS',
     icon: nodejs
@@ -247,6 +239,7 @@ const technologies = [
     name: 'ExpressJS',
     icon: express
   },
+  // ORM & Database
   {
     name: 'Prisma',
     icon: prisma
@@ -255,14 +248,7 @@ const technologies = [
     name: 'Supabase',
     icon: supabase
   },
-  {
-    name: 'Mercado Pago',
-    icon: mercadopago
-  },
-  {
-    name: 'Git',
-    icon: git
-  },
+  // Styling
   {
     name: 'TailwindCSS',
     icon: tailwind
@@ -271,6 +257,30 @@ const technologies = [
     name: 'sass',
     icon: sass
   },
+  // APIs & GraphQL
+  {
+    name: 'GraphQL',
+    icon: graphQL
+  },
+  // Integraciones
+  {
+    name: 'Mercado Pago',
+    icon: mercadopago
+  },
+  // DevOps & Cloud
+  {
+    name: 'docker',
+    icon: docker
+  },
+  {
+    name: 'AWS',
+    icon: aws
+  },
+  // Herramientas
+  {
+    name: 'Git',
+    icon: git
+  }
   /*   {
     name: 'Handlebars',
     icon: handlebars
@@ -289,18 +299,7 @@ const technologies = [
       name: "Adonis",
       icon: adonis,
     }, */
-  {
-    name: 'docker',
-    icon: docker
-  },
-  {
-    name: 'AWS',
-    icon: aws
-  },
-  {
-    name: 'GraphQL',
-    icon: graphQL
-  }
+
   /*   {
       name: "jquery",
       icon: jquery,
@@ -425,22 +424,6 @@ const skills = [
 
 const experiences = [
   {
-    title: 'Full Stack Developer (Proyecto propio)',
-    company_name: 'Nubotik — SaaS de gestión de listas de espera',
-    icon: nubotikIcon,
-    iconBg: '#1729c5',
-    date: '2024 - Actualmente',
-    points: [
-      'Concepción, arquitectura e implementación 100% autónoma de un SaaS multitenant en producción (~10k LOC).',
-      'Backend con Next.js API Routes, Prisma ORM (7 modelos relacionales) y PostgreSQL en Supabase.',
-      'Sistema RBAC con autenticación OAuth (Google/GitHub) y Row Level Security de Supabase.',
-      'Integración bidireccional con WhatsApp Business API (sesiones persistentes, notificaciones automáticas).',
-      'Internacionalización completa en 5 idiomas con validación Zod localizada.',
-      'Dashboard real-time con métricas, gráficos (Recharts) y polling de actualizaciones en vivo.',
-      'Despliegue en Vercel con Analytics y Speed Insights; 40+ componentes React reutilizables con Radix UI.'
-    ]
-  },
-  {
     title: 'Full Stack Developer Jr',
     company_name: 'En Hacela Simple',
     icon: hacelasimpleIcon,
@@ -461,22 +444,37 @@ const experiences = [
       "Optimización y carga eficiente de imágenes desde el backend, con normalización previa al almacenamiento.",
       "Integración de WebSockets para funcionalidades de comunicación en tiempo real, como chat y avisos por correo electrónico."
     ]
+  },
+  {
+    title: 'Full Stack Developer (Proyecto propio)',
+    company_name: 'Nubotik — SaaS de gestión de listas de espera',
+    icon: nubotikIcon,
+    iconBg: '#1a9e78',
+    date: '2024 - Actualmente',
+    points: [
+      'Concepción, arquitectura e implementación 100% autónoma de un SaaS multitenant en producción (~10k LOC).',
+      'Backend con Next.js API Routes, Prisma ORM (7 modelos relacionales) y PostgreSQL en Supabase.',
+      'Sistema RBAC con autenticación OAuth (Google/GitHub) y Row Level Security de Supabase.',
+      'Integración bidireccional con WhatsApp Business API (sesiones persistentes, notificaciones automáticas).',
+      'Internacionalización completa en 5 idiomas con validación Zod localizada.',
+      'Dashboard real-time con métricas, gráficos (Recharts) y polling de actualizaciones en vivo.',
+      'Despliegue en Vercel con Analytics y Speed Insights; 40+ componentes React reutilizables con Radix UI.'
+    ]
   }
 ]
 
 const now = [
   {
     title:
-      'Cursando la ultima materia para recibir el título de Técnico Superior en Programación (UTN-FRVM)'
+      'Cursando la ultima materia para recibir el título de Técnico Superior en Programación (UTN-FRVM).'
+  },
+  {
+    title: "Profesionalizando mi nivel de inglés a diario en una academia."
   },
   {
     title:
-      'Desarrollando y mejorando Nubotik, mi SaaS de gestión de listas de espera en producción'
+      'Trabajando como Full Stack Developer en Hacela Simple y Nubotik.'
   },
-  {
-    title:
-      'Trabajando como Full Stack Developer en Hacela Simple (React, Next.js, AWS)'
-  }
 ]
 /*
 const testimonials = [

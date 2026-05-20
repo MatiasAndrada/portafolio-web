@@ -1,6 +1,7 @@
 import { EarthCanvas } from './canvas'
 import Hero from './Hero'
 import Background from './Background'
+import GlobalBackground from './GlobalBackground'
 import Navbar from './Navbar'
 import About from './About'
 import Certificate from './Certificate'
@@ -27,5 +28,6 @@ export {
   CanvasLoader,
   CanvasSpinner,
   Background,
+  GlobalBackground,
   Footer
 }

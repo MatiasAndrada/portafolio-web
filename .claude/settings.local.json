@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__context7__query-docs",
+      "WebSearch",
+      "Bash(pnpm dev *)",
+      "Bash(Get-Content -Path \"C:\\\\Users\\\\matia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-matia-Desktop-codes-portafolio-web\\\\873ba25a-ea16-495a-b614-8017bc3fb6b3\\\\tasks\\\\bw4xdvmwq.output\" -Wait -Tail 20)",
+      "Bash(Select-String -Pattern \"ready|listening|http|VITE|port 5173\")",
+      "PowerShell(Start-Process \"http://localhost:5174/\")",
+      "Bash(npm run *)",
+      "Bash(Start-Sleep -Seconds 4)",
+      "Bash(Get-Content \"C:\\\\Users\\\\matia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-matia-Desktop-codes-portafolio-web\\\\22ff2d11-ca3b-478d-a7a4-b93495dcae43\\\\tasks\\\\baspsmogo.output\")",
+      "Bash(Select-Object -Last 20)",
+      "Bash(chromium-cli --screenshot --url \"http://localhost:5175/\" --output /tmp/hero.png --window-width 1440 --window-height 900)",
+      "PowerShell(Start-Process \"http://localhost:5175/\" -WindowStyle Normal)",
+      "Bash(Start-Sleep -Seconds 5)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 3; Write-Host 'Server ready'\")",
+      "PowerShell(Start-Process \"http://localhost:5173\")",
+      "Bash(git add *)",
+      "Bash(git commit -m 'feat\\(Stars\\): Mejorar distribución y apariencia de partículas estrelladas *)",
+      "Bash(git commit -m 'feat\\(Background\\): Agregar configuración flexible de estilos de fondo *)",
+      "Bash(git commit -m 'feat\\(GlobalBackground\\): Crear componente global para fondo de estrellas *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git commit -m 'refactor\\(Hero, Background, App\\): Integrar configuración flexible de fondos *)",
+      "Bash(Write-Host \"\")",
+      "Bash(Write-Host \"=== Últimos commits ===\" -ForegroundColor Green)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(Start-Process -FilePath \"chrome.exe\" -ArgumentList \"http://localhost:5173\" -WindowStyle Normal)",
+      "Bash(xdg-open http://localhost:5173)",
+      "PowerShell(Start-Process -FilePath \"chrome.exe\" -ArgumentList \"http://localhost:5173\")",
+      "Bash(chromium-cli --screenshot http://localhost:5173 --full-page)",
+      "Bash(git commit -m 'feat\\(colors\\): implement new blue and teal color palette *)"
+    ]
+  }
+}

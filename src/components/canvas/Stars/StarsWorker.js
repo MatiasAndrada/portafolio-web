@@ -2,16 +2,16 @@
 import PoissonDiskSampling from 'poisson-disk-sampling'
 
 const pds = new PoissonDiskSampling({
-  shape: [1, 1, 0.9], // tamaño de la caja
-  minDistance: 0.2, // cantidad de estrellas
-  maxTries: 5 // cantidad de intentos
+  shape: [4, 3, 4], // tamaño de la caja expandido
+  minDistance: 0.15, // más partículas
+  maxTries: 8 // más intentos para mejor distribución
 })
 
 const generatePositions = () => {
   const positions = new Float32Array(
     pds
       .fill()
-      .map((p) => [p[0] - 0.5, p[1] - 0.5, p[2] - 0.5])
+      .map((p) => [p[0] - 2, p[1] - 1.5, p[2] - 2])
       .flat()
   )
   return positions

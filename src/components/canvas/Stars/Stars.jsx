@@ -24,16 +24,17 @@ const Stars = ({ points }) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.004} // reducir el tamaño de los puntos
+          size={0.0035}
           sizeAttenuation={true}
           depthWrite={false}
+          opacity={0.8}
         />
       </Points>
     </group>
   )
 }
-const StarsCanvas = () => {
-  const [shouldRenderStars, setShouldRenderStars] = useState(false)
+const StarsCanvas = ({ alwaysRender = false }) => {
+  const [shouldRenderStars, setShouldRenderStars] = useState(true)
   const [points, setPoints] = useState([])
 
   useEffect(() => {
@@ -48,6 +49,10 @@ const StarsCanvas = () => {
   }, [])
 
   useEffect(() => {
+    if (alwaysRender) {
+      return
+    }
+
     const handleScroll = () => {
       if (window.scrollY > window.innerHeight - 200) {
         setShouldRenderStars(false)
@@ -57,12 +62,11 @@ const StarsCanvas = () => {
     }
 
     window.addEventListener('scroll', handleScroll)
-    setShouldRenderStars(true) // Reiniciar al montar el componente
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [alwaysRender])
 
   return (
     shouldRenderStars && (

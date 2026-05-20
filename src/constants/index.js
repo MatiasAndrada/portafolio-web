@@ -29,18 +29,23 @@ import {
   /*   kubernetes, */
   sass,
   graphQL,
+  supabase,
+  prisma,
+  astro,
+  mercadopago,
+  zustand,
   // figma,
   // threejs,
-  // beer,
   //! experiences
-  fullStack,
-  me,
+  hacelasimpleIcon,
   //! projects
   eCommerce,
   // chatApp,
   playMovie,
   spaceXmirror,
   projectAdmin,
+  nubotikLogo,
+  nubotikIcon,
   //! loaders
   loader1
 } from '../assets'
@@ -223,9 +228,17 @@ const technologies = [
     icon: nextjs
   },
   {
+    name: 'Astro',
+    icon: astro
+  },
+  {
     name: 'Redux',
     icon: redux
   },
+  /*{
+    name: 'Zustand',
+    icon: zustand
+  },*/
   {
     name: 'NodeJS',
     icon: nodejs
@@ -233,6 +246,18 @@ const technologies = [
   {
     name: 'ExpressJS',
     icon: express
+  },
+  {
+    name: 'Prisma',
+    icon: prisma
+  },
+  {
+    name: 'Supabase',
+    icon: supabase
+  },
+  {
+    name: 'Mercado Pago',
+    icon: mercadopago
   },
   {
     name: 'Git',
@@ -301,24 +326,13 @@ const skills = [
   {
     title: 'Bases de datos',
     items: [
-      'SQL: MySQL, PostgreSQL, SQLite, RDS, Aurora',
+      'SQL: PostgreSQL, MySQL, SQLite, RDS, Aurora',
       'NoSQL: MongoDB, Firebase, DynamoDB',
-      'ORM: Prisma, Sequelize, ',
-      'Gestión de sesiones: Redis, cookie-session, express-session, JWT'
+      'ORM: Prisma, Sequelize',
+      'Backend-as-a-Service: Supabase (Auth + RLS + SSR)',
+      'Sesiones: Redis, JWT, cookie-session, express-session'
     ]
   },
-  /*   {
-    title: 'Arquitectura Y Patrones de diseño',
-    items: [
-      'DAO (Data Access Object)',
-      'DTO (Data Transfer Object)',
-      'MVC(Model-View-Controller)',
-      'Patron Singleton',
-      'Patron Factory',
-      "Patron Observer",
-      "Patron Strategy",
-    ]
-  }, */
   {
     title: 'Desarrollo de aplicaciones',
     items: [
@@ -329,20 +343,33 @@ const skills = [
       'Desarrollo de aplicaciones móviles nativas',
       'APIs RESTful',
       'APIs GraphQL',
-      'Websockets'
+      'Websockets',
+      'Arquitectura SaaS multitenant'
     ]
   },
-  /*   {
+  {
     title: 'Herramientas y bibliotecas',
     items: [
-      'Redux',
-      'Zustand',
-      'Astro',
-      'Vite',
-      'Npm y Yarn'
-      "Deno"
+      'Estado: Zustand, Redux',
+      'Frameworks: Astro, Next.js',
+      'UI: Radix UI, TailwindCSS, Sass',
+      'Formularios: React Hook Form, Zod',
+      'Datos: Recharts, TanStack Query',
+      'Build: Vite, Webpack',
+      'Internacionalización: i18n (5+ idiomas en producción)'
     ]
-  }, */
+  },
+  {
+    title: 'Integraciones y pasarelas',
+    items: [
+      'Mercado Pago (pagos en LATAM)',
+      'Fiserv (pasarela de pagos)',
+      'WhatsApp Business API (sesiones, notificaciones)',
+      'Resend (emails transaccionales)',
+      'OAuth (Google, GitHub) + NextAuth',
+      'Webhooks y APIs externas'
+    ]
+  },
   /*   {
     title: "Metodologías agiles",
     items: [
@@ -398,9 +425,25 @@ const skills = [
 
 const experiences = [
   {
+    title: 'Full Stack Developer (Proyecto propio)',
+    company_name: 'Nubotik — SaaS de gestión de listas de espera',
+    icon: nubotikIcon,
+    iconBg: '#1729c5',
+    date: '2024 - Actualmente',
+    points: [
+      'Concepción, arquitectura e implementación 100% autónoma de un SaaS multitenant en producción (~10k LOC).',
+      'Backend con Next.js API Routes, Prisma ORM (7 modelos relacionales) y PostgreSQL en Supabase.',
+      'Sistema RBAC con autenticación OAuth (Google/GitHub) y Row Level Security de Supabase.',
+      'Integración bidireccional con WhatsApp Business API (sesiones persistentes, notificaciones automáticas).',
+      'Internacionalización completa en 5 idiomas con validación Zod localizada.',
+      'Dashboard real-time con métricas, gráficos (Recharts) y polling de actualizaciones en vivo.',
+      'Despliegue en Vercel con Analytics y Speed Insights; 40+ componentes React reutilizables con Radix UI.'
+    ]
+  },
+  {
     title: 'Full Stack Developer Jr',
     company_name: 'En Hacela Simple',
-    icon: fullStack,
+    icon: hacelasimpleIcon,
     iconBg: '#E6DEDD',
     date: 'Feb 2025 - Actualmente',
     points: [
@@ -424,7 +467,15 @@ const experiences = [
 const now = [
   {
     title:
-      'Cursando la ultima materia para recibir el título de Técnico Superior en Programación. (UTN-FRVM)'
+      'Cursando la ultima materia para recibir el título de Técnico Superior en Programación (UTN-FRVM)'
+  },
+  {
+    title:
+      'Desarrollando y mejorando Nubotik, mi SaaS de gestión de listas de espera en producción'
+  },
+  {
+    title:
+      'Trabajando como Full Stack Developer en Hacela Simple (React, Next.js, AWS)'
   }
 ]
 /*
@@ -456,6 +507,37 @@ const testimonials = [
 ];
 */
 const projects = [
+  /*   {
+      name: 'Nubotik',
+      description:
+        'Plataforma SaaS multitenant para gestión de listas de espera en comercios. Notificaciones automáticas vía WhatsApp, dashboard en tiempo real con métricas y gráficos, autenticación OAuth con Supabase RLS, internacionalización en 5 idiomas y arquitectura escalable. Desarrollo 100% autónomo en producción.',
+      tags: [
+        { name: 'NextJS', color: 'blue-text-gradient' },
+        { name: 'TypeScript', color: 'purple-text-gradient' },
+        { name: 'Prisma', color: 'green-text-gradient' },
+        { name: 'Supabase', color: 'pink-text-gradient' },
+        { name: 'WhatsAppAPI', color: 'orange-text-gradient' },
+        { name: 'i18n', color: 'blue-text-gradient' },
+        { name: 'SaaS', color: 'green-text-gradient' }
+      ],
+      image: nubotikIcon,
+      source_code_link: 'https://github.com/MatiasAndrada',
+      source_demo_link: 'https://nubotik.com'
+    }, */
+  /* {
+    name: 'Store POS SaaS',
+    description:
+      'Sistema Point of Sale (POS) en la nube para comercios minoristas. Permite la gestión de inventario, ventas y reportes desde cualquier dispositivo, con arquitectura SaaS y stack moderno en TypeScript. Proyecto open source.',
+    tags: [
+      { name: 'TypeScript', color: 'blue-text-gradient' },
+      { name: 'SaaS', color: 'green-text-gradient' },
+      { name: 'POS', color: 'pink-text-gradient' },
+      { name: 'Cloud', color: 'orange-text-gradient' }
+    ],
+    image: eCommerce,
+    source_code_link: 'https://github.com/MatiasAndrada/store-POS-SaaS',
+    source_demo_link: 'https://github.com/MatiasAndrada/store-POS-SaaS'
+  },
   {
     name: 'ProjectAdmin',
     description:
@@ -485,7 +567,7 @@ const projects = [
     image: projectAdmin,
     source_code_link: 'https://github.com/MatiasAndrada/nextjs-adminProject',
     source_demo_link: 'https://projectadmin.vercel.app'
-  },
+  }, */
 
   /*   {
     name: "Chat App",

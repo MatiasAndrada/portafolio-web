@@ -27,7 +27,7 @@ import express from './tech/express.webp'
 import nginx from './tech/nginx.webp'
 import socket from './tech/socket.png'
 import figma from './tech/figma.png'
-import threejs from './tech/threejs.svg'
+import threejs from './tech/threejs.webp'
 import adonis from './tech/adonis.png'
 import aws from './tech/aws.webp'
 import docker from './tech/docker.webp'
@@ -35,11 +35,16 @@ import jquery from './tech/jquery.webp'
 import kubernetes from './tech/kubernetes.webp'
 import sass from './tech/sass.webp'
 import graphQL from './tech/graphql.webp'
+import supabase from './tech/supabase.webp'
+import prisma from './tech/prisma.webp'
+import astro from './tech/astro.webp'
+import mercadopago from './tech/mercadopago.webp'
+import zustand from './tech/zustand.jpg'
 //! experience
-import fullStack from './companies/fullStack.png'
-import shopify from './companies/shopify.png'
-import beer from './companies/beer.png'
-import me from './companies/me.png'
+import shopify from './experiences/shopify.png'
+import hacelasimpleIcon from './experiences/hacelaSimple/favicon.png'
+import nubotikLogo from './experiences/nubotik/logo.png'
+import nubotikIcon from './experiences/nubotik/icon.png'
 //! projects
 import eCommerce from './projects/e-commerce/e-commerce-1.png'
 import chatApp from './projects/chatApp/chatApp-1.png'
@@ -85,17 +90,22 @@ export {
   kubernetes,
   sass,
   graphQL,
+  supabase,
+  prisma,
+  astro,
+  mercadopago,
+  zustand,
   //! experience
-  fullStack,
   shopify,
-  beer,
-  me,
+  hacelasimpleIcon,
   //! projects
   eCommerce,
   chatApp,
   playMovie,
   spaceXmirror,
   projectAdmin,
+  nubotikLogo,
+  nubotikIcon,
   //! loaders
   loader1
 }

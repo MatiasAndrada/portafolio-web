@@ -11,6 +11,7 @@ import {
   Hero,
   Navbar,
   Background,
+  GlobalBackground,
   CanvasSpinner
 } from './components'
 
@@ -19,6 +20,7 @@ const LazyContact = lazy(() => import('./components/Contact'))
 
 const AppContent = () => (
   <>
+    <GlobalBackground />
     <Navbar />
     <Hero />
     <Background />

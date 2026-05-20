@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { StarsCanvas } from './canvas'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
@@ -16,11 +15,6 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen mx-auto">
-      {!isMobile && (
-        <div className="absolute inset-0 -z-50">
-          <StarsCanvas />
-        </div>
-      )}
 
       <div className=" absolute inset-0 bottom-[100px] max-w-7xl mx-auto px-5 flex flex-row items-center gap-5">
         <motion.div

@@ -1,3 +1,16 @@
+// Background style configuration
+// hero: 'stars' | 'none'
+// sections: 'circles' | 'stars' | 'none'
+// Combinations:
+//   { hero: 'stars', sections: 'circles' } - estrellas en hero + bolas en resto
+//   { hero: 'stars', sections: 'stars' } - solo estrellas en todo
+//   { hero: 'none', sections: 'circles' } - solo bolas en todo
+//   { hero: 'stars', sections: 'none' } - solo estrellas en hero, nada después
+export const BACKGROUND_CONFIG = {
+  hero: 'stars',
+  sections: 'stars'
+}
+
 import {
   // !certificates
   webDesignCertificate,
@@ -424,41 +437,40 @@ const skills = [
 
 const experiences = [
   {
-    title: 'Full Stack Developer Jr',
-    company_name: 'En Hacela Simple',
+    title: 'Full Stack Developer',
+    company_name: 'Hacela Simple — Agencia de alquiler de vehículos y experiencias',
     icon: hacelasimpleIcon,
     iconBg: '#E6DEDD',
-    date: 'Feb 2025 - Actualmente',
+    date: 'Feb 2024 - Actualmente',
     points: [
-      "Ampliación de la lógica de negocio para incluir la venta de viajes.",
-      "Desarrollo de interfaces de usuario modernas con React, priorizando la accesibilidad y la experiencia de usuario.",
-      "Implementación de capacidades PWA mediante Workbox, mejorando la usabilidad en dispositivos móviles y acercándose a una experiencia nativa.",
+      "Ampliación de la lógica de negocio para incluir la venta de viajes y experiencias.",
+      "Refactorización y desarrollo de interfaces de usuario con React, priorizando la accesibilidad y la experiencia de usuario.",
+      "Implementación de capacidades PWA mediante Workbox, mejorando la usabilidad en dispositivos móviles buscando a una experiencia nativa.",
       "Desarrollo del blog corporativo con Astro, enfocado en rendimiento y carga rápida de contenido, junto con un panel administrativo en Strapi CMS.",
-      "Desarrollo del backend con Express, incluyendo soporte para SSR (Server-Side Rendering) para optimizar rendimiento y SEO.",
-      "Gestión y administración del servidor Linux, configurando Nginx como proxy inverso y aplicando certificados SSL para conexiones seguras.",
+/*       "Desarrollo del backend con Express, incluyendo soporte para SSR optimizando rendimiento y SEO.",
+ */      "Gestión y administración del servidor Linux, configurando Nginx como proxy inverso y aplicando certificados SSL para conexiones seguras.",
       "Administración de la infraestructura y servicios en la nube mediante AWS.",
-      "Implementación de un sistema de autenticación con OAuth.",
-      "Integración de la pasarela de pagos Fiserv.",
-      "Gestión y modelado de datos con GraphQL y Sequelize, incluyendo control de migraciones.",
-      "Implementación de un sistema de internacionalización (i18n) para soportar múltiples idiomas en textos estáticos y dinámicos.",
-      "Optimización y carga eficiente de imágenes desde el backend, con normalización previa al almacenamiento.",
-      "Integración de WebSockets para funcionalidades de comunicación en tiempo real, como chat y avisos por correo electrónico."
+/*       "Implementación de un sistema de autenticación con OAuth.",
+ */      "Integración de la pasarela de pagos Fiserv.",
+      "Implementación de un sistema de internacionalización, incluyendo la generación de archivos de traducción para soportar múltiples idiomas en textos estáticos y dinámicos.",
+      "Integración de WebSockets para funcionalidades de comunicación en tiempo real, como chat.",
+      /*       "Gestión y modelado de datos con GraphQL y Sequelize, incluyendo control de migraciones.",
+            "Optimización y carga eficiente de imágenes desde el backend, con normalización previa al almacenamiento.", */
     ]
   },
   {
-    title: 'Full Stack Developer (Proyecto propio)',
+    title: 'Full Stack Developer',
     company_name: 'Nubotik — SaaS de gestión de listas de espera',
     icon: nubotikIcon,
     iconBg: '#1a9e78',
-    date: '2024 - Actualmente',
+    date: '2026 - Actualmente',
     points: [
-      'Concepción, arquitectura e implementación 100% autónoma de un SaaS multitenant en producción (~10k LOC).',
-      'Backend con Next.js API Routes, Prisma ORM (7 modelos relacionales) y PostgreSQL en Supabase.',
-      'Sistema RBAC con autenticación OAuth (Google/GitHub) y Row Level Security de Supabase.',
-      'Integración bidireccional con WhatsApp Business API (sesiones persistentes, notificaciones automáticas).',
-      'Internacionalización completa en 5 idiomas con validación Zod localizada.',
-      'Dashboard real-time con métricas, gráficos (Recharts) y polling de actualizaciones en vivo.',
-      'Despliegue en Vercel con Analytics y Speed Insights; 40+ componentes React reutilizables con Radix UI.'
+      'Concepción, arquitectura e implementación 100%.',
+      'Servidor de IA que encargado de las sesiones de WhatsApp con generación automática de respuestas mediante LLMs.',
+      'Dashboard real-time con métricas, gráficos.',
+      'Dashboard administrativo para manejo general de comercios brindando posibilidad de accionar y visualizar informes.',
+      "Integración de autenticación OAuth con Supabase RLS, control de acceso basado en roles y permisos.",
+      'Internacionalización en 5 idiomas.',
     ]
   }
 ]
@@ -471,10 +483,10 @@ const now = [
   {
     title: "Profesionalizando mi nivel de inglés a diario en una academia."
   },
-  {
-    title:
-      'Trabajando como Full Stack Developer en Hacela Simple y Nubotik.'
-  },
+  /*   {
+      title:
+        'Trabajando como Full Stack Developer en Hacela Simple y Nubotik.'
+    }, */
 ]
 /*
 const testimonials = [
@@ -535,7 +547,7 @@ const projects = [
     image: eCommerce,
     source_code_link: 'https://github.com/MatiasAndrada/store-POS-SaaS',
     source_demo_link: 'https://github.com/MatiasAndrada/store-POS-SaaS'
-  },
+  },*/
   {
     name: 'ProjectAdmin',
     description:
@@ -565,7 +577,7 @@ const projects = [
     image: projectAdmin,
     source_code_link: 'https://github.com/MatiasAndrada/nextjs-adminProject',
     source_demo_link: 'https://projectadmin.vercel.app'
-  }, */
+  },
 
   /*   {
     name: "Chat App",

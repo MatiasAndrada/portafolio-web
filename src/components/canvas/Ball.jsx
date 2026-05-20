@@ -49,9 +49,9 @@ const BallContent = ({ imgUrl, isMobile }) => {
       <mesh scale={2}>
         <icosahedronGeometry args={[1, 1]} />
         {isMobile ? (
-          <meshBasicMaterial color="#fff8eb" />
+          <meshBasicMaterial color="#ffffff" />
         ) : (
-          <meshLambertMaterial color="#fff8eb" />
+          <meshBasicMaterial color="#f0f0f0" />
         )}
         {decal && (
           <Decal

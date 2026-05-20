@@ -37,8 +37,7 @@ const Tech = () => {
           <PerspectiveCamera makeDefault position={[0, 0, 5]} />
           {!isMobile && (
             <>
-              <ambientLight intensity={1.25} />
-              <directionalLight position={[0, 0, 0.03]} />
+              <ambientLight intensity={4} />
             </>
           )}
           <OrbitControls

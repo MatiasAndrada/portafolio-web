@@ -1,8 +1,6 @@
-import { lazy } from 'react'
-
 import EarthCanvas from './Earth'
 import StarsCanvas from './Stars/Stars'
 import CirclesCanvas from './Circles'
-const BallCanvas = lazy(() => import('./Ball'))
+import { BallView } from './Ball'
 
-export { EarthCanvas, BallCanvas, StarsCanvas, CirclesCanvas }
+export { EarthCanvas, BallView, StarsCanvas, CirclesCanvas }

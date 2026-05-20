@@ -1,4 +1,4 @@
-import { EarthCanvas, BallCanvas } from './canvas'
+import { EarthCanvas } from './canvas'
 import Hero from './Hero'
 import Background from './Background'
 import Navbar from './Navbar'
@@ -14,7 +14,6 @@ import { CanvasLoader, CanvasSpinner } from './Loader'
 
 export {
   EarthCanvas,
-  BallCanvas,
   Hero,
   Navbar,
   About,

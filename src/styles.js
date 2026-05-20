@@ -7,9 +7,9 @@ const styles = {
   sectionSubText:
     'sm:text-[24px] text-[28px] text-secondary uppercase tracking-wider font-bold',
   sectionTitleListText:
-    'bg-sky-800 text-orange-700 sm:text-[18px] text-[14px] uppercase tracking-wider rounded-2xl',
+    'bg-blue-700 text-cyan-300 sm:text-[18px] text-[14px] uppercase tracking-wider rounded-2xl',
   sectionItemListText:
-    'sm:text-[18px] text-[14px] text-cian-300 uppercase tracking-wide border-b-2'
+    'sm:text-[18px] text-[14px] text-cyan-300 uppercase tracking-wide border-b-2'
 }
 
 export { styles }

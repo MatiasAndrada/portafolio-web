@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import {
   About,
   Certificate,
@@ -16,24 +16,40 @@ import {
 
 const LazyTech = lazy(() => import('./components/Tech'))
 const LazyContact = lazy(() => import('./components/Contact'))
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Hero />
-      <Background />
-      <Suspense fallback={<CanvasSpinner />}>
-        <About />
-        <Certificate />
-        <Experience />
-        <Now />
-        <LazyTech />
-        <Works />
-        <LazyContact />
-        <Footer />
-      </Suspense>
-    </BrowserRouter>
-  )
-}
+
+const AppContent = () => (
+  <>
+    <Navbar />
+    <Hero />
+    <Background />
+    <Suspense fallback={<CanvasSpinner />}>
+      <About />
+      <Certificate />
+      <Experience />
+      <Now />
+      <LazyTech />
+      <Works />
+      <LazyContact />
+      <Footer />
+    </Suspense>
+  </>
+)
+
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <AppContent />
+    }
+  ],
+  {
+    future: {
+      v7_startTransition: true,
+      v7_relativeSplatPath: true
+    }
+  }
+)
+
+const App = () => <RouterProvider router={router} />
 
 export default App

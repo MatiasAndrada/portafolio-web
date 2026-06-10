@@ -35,7 +35,10 @@ const Background = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  if (BACKGROUND_CONFIG.sections === 'none' || BACKGROUND_CONFIG.sections === 'stars') {
+  if (
+    BACKGROUND_CONFIG.sections === 'none' ||
+    BACKGROUND_CONFIG.sections === 'stars'
+  ) {
     return null
   }
 
@@ -44,7 +47,13 @@ const Background = () => {
       {isMobile && <MemoizedCirclesCanvas style={{ opacity: 1 }} />}
       {!isMobile && (
         <div style={{ opacity: showCanvas ? 1 : 0 }}>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense
+            fallback={
+              {
+                /* <div>Loading...</div> */
+              }
+            }
+          >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: showCanvas ? 1 : 0, y: showCanvas ? 0 : 20 }}

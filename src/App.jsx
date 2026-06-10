@@ -26,10 +26,10 @@ const AppContent = () => (
     <Background />
     <Suspense fallback={<CanvasSpinner />}>
       <About />
-      <Certificate />
       <Experience />
-      <Now />
+      <Certificate />
       <LazyTech />
+      <Now />
       <Works />
       <LazyContact />
       <Footer />

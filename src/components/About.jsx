@@ -51,7 +51,7 @@ const About = () => {
 
         <motion.img
           variants={fadeIn('', '', 0.2, 1)}
-          src="/me/me.jpeg"
+          src="/me/me3.png"
           alt="About me"
           className="w-72 h-72 md:w-96 md:h-96 lg:w-96 lg:h-96 xl:w-96 xl:h-96 rounded-full flex-shrink-0"
         />

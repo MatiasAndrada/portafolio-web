@@ -1,21 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:github.com)",
-      "Bash(curl -sSL -o src/assets/tech/supabase.svg \"https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg\")",
-      "Bash(curl -sSL -o src/assets/tech/prisma.svg \"https://raw.githubusercontent.com/devicons/devicon/master/icons/prisma/prisma-original.svg\")",
-      "Bash(curl -sSL -o src/assets/tech/astro.svg \"https://raw.githubusercontent.com/devicons/devicon/master/icons/astro/astro-original.svg\")",
-      "Bash(curl -sSL -o src/assets/tech/mercadopago.svg \"https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/mercadopago.svg\")",
-      "Bash(curl -sSL -o src/assets/tech/zustand.png \"https://raw.githubusercontent.com/pmndrs/zustand/main/bear.jpg\")",
-      "Bash(curl -sSL -o src/assets/tech/zustand.jpg \"https://github.com/pmndrs/zustand/raw/main/bear.jpg\")",
-      "Bash(pnpm build *)",
-      "Bash(Test-Path \"c:\\\\Users\\\\matia\\\\Desktop\\\\codes\\\\portafolio-web\\\\src\\\\assets\\\\tech\\\\zustand.jpg\" -PathType Leaf)",
-      "Bash(Get-ChildItem \"C:\\\\Users\\\\matia\\\\Desktop\\\\codes\\\\portafolio-web\\\\src\\\\assets\\\\tech\\\\\" | Select-Object Name, Length | Sort-Object Name)",
-      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\matia\\\\Desktop\\\\codes\\\\portafolio-web\\\\src\\\\assets\\\\tech\\\\\" | Select-Object Name, @{Name=\"Size\\(KB\\)\";Expression={[math]::Round\\($_.Length/1KB, 2\\)}} | Sort-Object Name)",
-      "PowerShell(Get-Command magick -ErrorAction SilentlyContinue)",
-      "Bash(npm list *)",
-      "Bash(npm install *)",
-      "Bash(node convert-svg-to-webp.js)"
+      "Bash(claude plugin *)",
+      "Bash(claude --version)",
+      "PowerShell(Get-ChildItem -Path $env:USERPROFILE\\\\.claude\\\\ -Force)",
+      "PowerShell(Get-ChildItem -Path $env:USERPROFILE\\\\.claude\\\\plugins\\\\ -Recurse | head -30)",
+      "PowerShell(Get-ChildItem -Path $env:USERPROFILE\\\\.claude\\\\plugins\\\\ -Recurse | Select-Object -First 30)",
+      "PowerShell(Get-ChildItem -Path $env:USERPROFILE\\\\.claude\\\\plugins\\\\marketplaces\\\\)",
+      "Read(//c/Users/matia/.claude/**)",
+      "PowerShell(npm uninstall -g @anthropic-ai/claude-code)",
+      "PowerShell(npm install -g @anthropic-ai/claude-code)",
+      "Read(//c/Users/matia/Downloads/**)"
     ]
   }
 }

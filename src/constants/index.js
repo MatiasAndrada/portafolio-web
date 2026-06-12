@@ -438,6 +438,21 @@ const skills = [
 const experiences = [
   {
     title: 'Full Stack Developer',
+    company_name: 'Nubotik — SaaS de gestión de listas de espera',
+    icon: nubotikIcon,
+    iconBg: '#1a9e78',
+    date: '2026 - Actualmente',
+    points: [
+      'Concepción, arquitectura e implementación 100%.',
+      'Servidor de IA que encargado de las sesiones de WhatsApp con generación automática de respuestas mediante LLMs.',
+      'Dashboard real-time con métricas, gráficos.',
+      'Dashboard administrativo para manejo general de comercios brindando posibilidad de accionar y visualizar informes.',
+      "Integración de autenticación OAuth con Supabase RLS, control de acceso basado en roles y permisos.",
+      'Internacionalización en 5 idiomas.',
+    ]
+  },
+  {
+    title: 'Full Stack Developer',
     company_name: 'Hacela Simple — Agencia de alquiler de vehículos y experiencias',
     icon: hacelasimpleIcon,
     iconBg: '#E6DEDD',
@@ -456,21 +471,6 @@ const experiences = [
       "Integración de WebSockets para funcionalidades de comunicación en tiempo real, como chat.",
       /*       "Gestión y modelado de datos con GraphQL y Sequelize, incluyendo control de migraciones.",
             "Optimización y carga eficiente de imágenes desde el backend, con normalización previa al almacenamiento.", */
-    ]
-  },
-  {
-    title: 'Full Stack Developer',
-    company_name: 'Nubotik — SaaS de gestión de listas de espera',
-    icon: nubotikIcon,
-    iconBg: '#1a9e78',
-    date: '2026 - Actualmente',
-    points: [
-      'Concepción, arquitectura e implementación 100%.',
-      'Servidor de IA que encargado de las sesiones de WhatsApp con generación automática de respuestas mediante LLMs.',
-      'Dashboard real-time con métricas, gráficos.',
-      'Dashboard administrativo para manejo general de comercios brindando posibilidad de accionar y visualizar informes.',
-      "Integración de autenticación OAuth con Supabase RLS, control de acceso basado en roles y permisos.",
-      'Internacionalización en 5 idiomas.',
     ]
   }
 ]

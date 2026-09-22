@@ -459,18 +459,18 @@ const experiences = [
     date: 'Feb 2024 - Actualmente',
     points: [
       "Ampliación de la lógica de negocio para incluir la venta de viajes y experiencias.",
-      "Refactorización y desarrollo de interfaces de usuario con React, priorizando la accesibilidad y la experiencia de usuario.",
-      "Implementación de capacidades PWA mediante Workbox, mejorando la usabilidad en dispositivos móviles buscando a una experiencia nativa.",
+/*       "Refactorización y desarrollo de interfaces de usuario con React, priorizando la accesibilidad y la experiencia de usuario.",
+ */      "Implementación de capacidades PWA mediante Workbox, mejorando la usabilidad en dispositivos móviles buscando a una experiencia nativa.",
       "Desarrollo del blog corporativo con Astro, enfocado en rendimiento y carga rápida de contenido, junto con un panel administrativo en Strapi CMS.",
 /*       "Desarrollo del backend con Express, incluyendo soporte para SSR optimizando rendimiento y SEO.",
  */      "Gestión y administración del servidor Linux, configurando Nginx como proxy inverso y aplicando certificados SSL para conexiones seguras.",
       "Administración de la infraestructura y servicios en la nube mediante AWS.",
 /*       "Implementación de un sistema de autenticación con OAuth.",
- */      "Integración de la pasarela de pagos Fiserv.",
+ */      "Integración de la pasarela de pagos Fiserv y Mercado Pago.",
       "Implementación de un sistema de internacionalización, incluyendo la generación de archivos de traducción para soportar múltiples idiomas en textos estáticos y dinámicos.",
-      "Integración de WebSockets para funcionalidades de comunicación en tiempo real, como chat.",
-      /*       "Gestión y modelado de datos con GraphQL y Sequelize, incluyendo control de migraciones.",
-            "Optimización y carga eficiente de imágenes desde el backend, con normalización previa al almacenamiento.", */
+      /*       "Integración de WebSockets para funcionalidades de comunicación en tiempo real, como chat.",
+       */      /*       "Gestión y modelado de datos con GraphQL y Sequelize, incluyendo control de migraciones.",
+                 "Optimización y carga eficiente de imágenes desde el backend, con normalización previa al almacenamiento.", */
     ]
   }
 ]

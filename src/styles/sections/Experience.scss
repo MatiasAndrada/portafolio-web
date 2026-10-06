@@ -1,0 +1,42 @@
+// Reemplazo de las animaciones "bounce" de react-vertical-timeline-component.
+// Mismos nombres de keyframes que la librería: este archivo se importa después
+// de su CSS, así que estas definiciones ganan. La duración (.6s) la fija la
+// librería; la curva va dentro del keyframe inicial.
+@keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+    animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(-32px, 12px, 0);
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    transform: translate3d(32px, 12px, 0);
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -46,7 +46,7 @@ const Background = () => {
     <div>
       {isMobile && <MemoizedCirclesCanvas style={{ opacity: 1 }} />}
       {!isMobile && (
-        <div style={{ opacity: showCanvas ? 1 : 0 }}>
+        <div>
           <Suspense
             fallback={
               {
@@ -57,7 +57,7 @@ const Background = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: showCanvas ? 1 : 0, y: showCanvas ? 0 : 20 }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              transition={{ duration: 0.8, ease: 'easeInOut' }}
             >
               <LazyCirclesCanvas />
             </motion.div>

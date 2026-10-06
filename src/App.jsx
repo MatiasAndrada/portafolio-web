@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { MotionConfig } from 'framer-motion'
 import {
   About,
   Certificate,
@@ -18,8 +19,10 @@ import {
 const LazyTech = lazy(() => import('./components/Tech'))
 const LazyContact = lazy(() => import('./components/Contact'))
 
+// reducedMotion="user": con "reducir movimiento" activado en el sistema, se
+// desactivan los desplazamientos/escalas y quedan solo los fades.
 const AppContent = () => (
-  <>
+  <MotionConfig reducedMotion="user">
     <GlobalBackground />
     <Navbar />
     <Hero />
@@ -34,7 +37,7 @@ const AppContent = () => (
       <LazyContact />
       <Footer />
     </Suspense>
-  </>
+  </MotionConfig>
 )
 
 const router = createBrowserRouter(

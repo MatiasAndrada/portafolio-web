@@ -9,11 +9,6 @@
   font-family: $font-title;
   /*   letter-spacing: 1px; */
   color: $text-color-light;
-  animation-name: opacity;
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-  animation-delay: 0.2s;
   text-shadow: fn.shadow(map.get($colors, B));
 }
 
@@ -22,24 +17,6 @@
   font-family: $font-subtitle-it;
   color: $text-color-light;
   justify-items: start;
-}
-
-.subtitle {
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-name: opacity;
-  animation-delay: 1s;
-  animation-duration: 2s;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @include respond-to(sm) {

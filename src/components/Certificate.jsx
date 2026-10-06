@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { SectionWrapper } from '../hoc'
 import { motion } from 'framer-motion'
-import { textVariant } from '../utils/motion'
+import { fadeIn, inView, staggerContainer, textVariant } from '../utils/motion'
 import { styles } from '../styles'
 import { certificates } from '../constants'
 // react-icons eye
@@ -37,7 +37,14 @@ const CertificateCard = ({ title, image, link, cod }) => {
                 id="SVGRepo_tracerCarrier"
               ></g>
             </svg>
-            <img src={image} alt={title} width={'120px'} height={'120px'} />
+            <img
+              src={image}
+              alt={title}
+              width={'120px'}
+              height={'120px'}
+              loading="lazy"
+              decoding="async"
+            />
             <strong className="text-center">{title}</strong>
           </div>
         </div>
@@ -68,17 +75,24 @@ const CertificateCard = ({ title, image, link, cod }) => {
 const Certificate = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="certificate__container">
-        <p className={styles.sectionSubText}>Certificaciones:</p>
+      <motion.div
+        variants={staggerContainer(0.12)}
+        {...inView(0.1)}
+        className="certificate__container"
+      >
+        <motion.p variants={textVariant()} className={styles.sectionSubText}>
+          Certificaciones:
+        </motion.p>
 
         {certificates.map((certificate, index) => (
-          <CertificateCard
-            key={index}
-            title={certificate.title}
-            image={certificate.image}
-            link={certificate.link}
-            cod={certificate.cod}
-          />
+          <motion.div key={index} variants={fadeIn('up', 'tween', 0, 0.7)}>
+            <CertificateCard
+              title={certificate.title}
+              image={certificate.image}
+              link={certificate.link}
+              cod={certificate.cod}
+            />
+          </motion.div>
         ))}
       </motion.div>
     </>

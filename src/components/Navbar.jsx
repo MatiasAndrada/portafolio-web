@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { menu, close } from '../assets'
+import { easings } from '../utils/motion'
 
 const Navbar = () => {
   const [active, setActive] = useState('')
   const [toggle, setToggle] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const variants = {
-    left: { x: 0 },
-    right: { x: 20 }
-  }
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY
@@ -29,10 +26,13 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav
+    <motion.nav
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: easings.out, delay: 0.1 }}
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 transition-colors duration-200 ${
+      } w-full flex items-center py-5 fixed top-0 z-20 transition-colors duration-300 ${
         scrolled ? 'bg-emerald-700' : 'bg-transparent'
       }`}
     >
@@ -57,15 +57,23 @@ const Navbar = () => {
               ()
             </motion.h1>
           </div> */}
-          <motion.div
-            className="text-white text-[18px] font-bold cursor-pointer flex"
-            animate={scrolled ? 'right' : 'left'}
-            initial="left"
-            variants={variants}
-            transition={{ duration: 0.2 }}
-          >
-            <p>{scrolled ? 'Matías | Portafolio' : '| Portafolio'}</p>
-          </motion.div>
+          <div className="text-white text-[18px] font-bold cursor-pointer flex">
+            <AnimatePresence initial={false}>
+              {scrolled && (
+                <motion.span
+                  key="brand-name"
+                  initial={{ opacity: 0, width: 0 }}
+                  animate={{ opacity: 1, width: 'auto' }}
+                  exit={{ opacity: 0, width: 0 }}
+                  transition={{ duration: 0.35, ease: easings.out }}
+                  className="overflow-hidden whitespace-pre"
+                >
+                  Matías{' '}
+                </motion.span>
+              )}
+            </AnimatePresence>
+            <p>| Portafolio</p>
+          </div>
         </Link>
 
         <ul className="list-none hidden md:flex flex-row gap-10">
@@ -74,47 +82,69 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? 'text-secondary' : 'text-white'
-              } hover:text-secondary text-[18px] font-medium cursor-pointer`}
+              } relative hover:text-secondary transition-colors duration-300 text-[18px] font-medium cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-secondary after:transition-transform after:duration-300 hover:after:scale-x-100`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
+              {active === nav.title && (
+                <motion.span
+                  layoutId="nav-underline"
+                  transition={{ duration: 0.4, ease: easings.out }}
+                  className="absolute left-0 -bottom-1 h-[2px] w-full rounded-full bg-secondary"
+                />
+              )}
             </li>
           ))}
         </ul>
 
         <div className="md:hidden flex flex-1 justify-end items-center">
-          <img
+          <motion.img
             src={toggle ? close : menu}
             alt="menu"
+            whileTap={{ scale: 0.85 }}
             className="w-[28px] h-[28px] object-contain"
             onClick={() => setToggle(!toggle)}
           />
 
-          <div
-            className={`${
-              !toggle ? 'hidden' : 'flex'
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? 'text-white' : 'text-secondary'
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle)
-                    setActive(nav.title)
-                  }}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <AnimatePresence>
+            {toggle && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: -8 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: -8 }}
+                transition={{ duration: 0.2, ease: easings.out }}
+                style={{ transformOrigin: 'top right' }}
+                className="flex p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl"
+              >
+                <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+                  {navLinks.map((nav, index) => (
+                    <motion.li
+                      key={nav.id}
+                      initial={{ opacity: 0, x: 12 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        ease: easings.out,
+                        delay: 0.05 + index * 0.05
+                      }}
+                      className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                        active === nav.title ? 'text-white' : 'text-secondary'
+                      }`}
+                      onClick={() => {
+                        setToggle(!toggle)
+                        setActive(nav.title)
+                      }}
+                    >
+                      <a href={`#${nav.id}`}>{nav.title}</a>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   )
 }
 

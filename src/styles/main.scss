@@ -88,3 +88,20 @@ html {
   color: #00D4FF;
   filter: drop-shadow(0 0 15px #00D4FF) drop-shadow(0 0 30px rgba(0, 212, 255, 0.5));
 }
+
+// Usuarios con "reducir movimiento": sin scroll suave, sin bordes giratorios
+// ni flips; los cambios de estado pasan a ser instantáneos.
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+
+  .back::before {
+    animation: none !important;
+  }
+
+  .content,
+  .icon {
+    transition-duration: 0.01ms !important;
+  }
+}

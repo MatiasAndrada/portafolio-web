@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { SectionWrapper } from '../hoc'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { easings } from '../utils/motion'
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -9,8 +10,9 @@ const Footer = () => {
   return (
     <motion.footer
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.8, ease: easings.out }}
       className="footer"
     >
       <div className="footerContent">

@@ -6,11 +6,13 @@ import {
 import { motion } from 'framer-motion'
 
 import 'react-vertical-timeline-component/style.min.css'
+// Debe ir después del CSS de la librería: pisa sus keyframes de entrada.
+import '../styles/sections/Experience.scss'
 
-import { styles } from '../styles'
 import { experiences } from '../constants'
 import { SectionWrapper } from '../hoc'
-import { textVariant } from '../utils/motion'
+import { fadeIn, inView, staggerContainer } from '../utils/motion'
+import SectionHeader from './SectionHeader'
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -44,16 +46,21 @@ const ExperienceCard = ({ experience }) => {
         </p>
       </div>
 
-      <ul className="mt-5 list-disc ml-5 space-y-2">
+      <motion.ul
+        variants={staggerContainer(0.08, 0.2)}
+        {...inView(0.1)}
+        className="mt-5 list-disc ml-5 space-y-2"
+      >
         {experience.points.map((point, index) => (
-          <li
+          <motion.li
             key={`experience-point-${index}`}
+            variants={fadeIn('up', 'tween', 0, 0.6, 12)}
             className="text-slate-200 text-[14px] pl-1 tracking-wider"
           >
             {point}
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </VerticalTimelineElement>
   )
 }
@@ -61,10 +68,10 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Lo que he hecho hasta ahora</p>
-        <h2 className={styles.sectionHeadText}>Mi experiencia laboral</h2>
-      </motion.div>
+      <SectionHeader
+        subtitle="Lo que he hecho hasta ahora"
+        title="Mi experiencia laboral"
+      />
 
       <div className="mt-20 flex flex-col h-100">
         <VerticalTimeline>

@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { staggerContainer } from '../utils/motion'
+import React, { useState, useEffect, useRef } from 'react'
 import { styles } from '../styles'
 
-const SectionWrapper = (Component, idName) => {
+// Las secciones livianas se montan de entrada, así el alto de la página no
+// cambia mientras se scrollea. Las que cargan un canvas 3D (`deferMount`) se
+// montan recién cuando se acercan al viewport, con margen para que ya estén
+// listas cuando el usuario llega.
+const SectionWrapper = (Component, idName, { deferMount = false } = {}) => {
   return function WrappedComponent() {
-    const [shouldRender, setShouldRender] = useState(false)
+    const ref = useRef(null)
+    const [shouldRender, setShouldRender] = useState(!deferMount)
 
     useEffect(() => {
+      if (shouldRender || !ref.current) return
+
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
@@ -15,33 +20,25 @@ const SectionWrapper = (Component, idName) => {
             observer.disconnect()
           }
         },
-        { threshold: 0.5 } // Adjust the threshold as needed
+        { rootMargin: '600px 0px' }
       )
+      observer.observe(ref.current)
 
-      const target = document.getElementById(idName)
-      if (target) {
-        observer.observe(target)
-      }
-
-      return () => {
-        if (target) {
-          observer.unobserve(target)
-        }
-      }
-    }, [idName])
+      return () => observer.disconnect()
+    }, [shouldRender])
 
     return (
-      <motion.section
-        variants={staggerContainer()}
-        initial={shouldRender ? 'show' : 'hidden'}
+      <section
+        ref={ref}
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+        style={shouldRender ? undefined : { minHeight: '60vh' }}
         id={idName}
       >
         <span className="hash-span" id={idName}>
           &nbsp;
         </span>
         {shouldRender && <Component />}
-      </motion.section>
+      </section>
     )
   }
 }

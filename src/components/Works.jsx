@@ -1,11 +1,11 @@
 import React from 'react'
 import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
-import { styles } from '../styles'
 import { FaGithub, FaEye } from 'react-icons/fa'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
-import { fadeIn, textVariant } from '../utils/motion'
+import { fadeIn, inView } from '../utils/motion'
+import SectionHeader from './SectionHeader'
 
 const ProjectCard = ({
   index,
@@ -18,10 +18,10 @@ const ProjectCard = ({
 }) => {
   const optionsTilt = {
     reverse: false, // reverse the tilt direction
-    max: 30, // max tilt rotation (degrees)
+    max: 12, // max tilt rotation (degrees)
     perspective: 1300, // Transform perspective, the lower the more extreme the tilt gets.
-    scale: 1, // 2 = 200%, 1.5 = 150%, etc..
-    speed: 1000, // Speed of the enter/exit transition
+    scale: 1.02, // 2 = 200%, 1.5 = 150%, etc..
+    speed: 600, // Speed of the enter/exit transition
     transition: true, // Set a transition on enter/exit.
     axis: null, // What axis should be disabled. Can be X or Y.
     reset: true, // If the tilt effect has to be reset on exit.
@@ -29,7 +29,12 @@ const ProjectCard = ({
   }
 
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    // El delay depende de la columna (no del índice global) para que las
+    // tarjetas de filas inferiores no esperen segundos al llegar a ellas.
+    <motion.div
+      variants={fadeIn('up', 'tween', (index % 3) * 0.12, 0.8)}
+      {...inView(0.15)}
+    >
       <Tilt
         options={optionsTilt}
         className="bg-slate-800 p-5 rounded-2xl sm:w-[350px] w-full relative group"
@@ -40,6 +45,8 @@ const ProjectCard = ({
           <img
             src={image}
             alt={name}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover rounded-2xl"
           />
 
@@ -81,14 +88,12 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Mi trabajo</p>
-        <h2 className={styles.sectionHeadText}>Proyectos</h2>
-      </motion.div>
+      <SectionHeader subtitle="Mi trabajo" title="Proyectos" />
 
       <div className="w-full flex">
         <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
+          variants={fadeIn('up', 'tween', 0.1, 0.8, 24)}
+          {...inView(0.3)}
           className="mt-3 text-slate-200 text-[17px] max-w-3xl leading-[30px]"
         >
           En mi sección de proyectos, podrás encontrar ejemplos concretos de mi

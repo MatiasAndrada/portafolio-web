@@ -4,10 +4,21 @@ import { Canvas } from '@react-three/fiber'
 import { View, PerspectiveCamera, OrbitControls } from '@react-three/drei'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
-import { textVariant } from '../utils/motion'
+import { easings, fadeIn, inView, textVariant } from '../utils/motion'
 import { BallView } from './canvas/Ball'
 import { SectionWrapper } from '../hoc'
 import { technologies, skills } from '../constants'
+import SectionHeader from './SectionHeader'
+
+// Cada chip entra con un pequeño retraso según su posición dentro de la card.
+const chip = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: (i) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.4, ease: easings.out, delay: 0.25 + i * 0.04 }
+  })
+}
 
 const Tech = () => {
   const containerRef = useRef(null)
@@ -59,13 +70,17 @@ const Tech = () => {
 
   return (
     <div ref={containerRef}>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Tecnologías trabajadas</p>
-        <h2 className={styles.sectionHeadText}>Skills</h2>
-      </motion.div>
+      <SectionHeader subtitle="Tecnologías trabajadas" title="Skills" />
       <div className="flex flex-row flex-wrap justify-center gap-10 text-center">
-        {technologies.map((technology) => (
-          <div className="flex flex-col items-center" key={technology.name}>
+        {technologies.map((technology, index) => (
+          // Solo se anima y/opacidad: el canvas 3D sigue al rect del <View>,
+          // así que la bola se mueve junto con el contenedor.
+          <motion.div
+            className="flex flex-col items-center"
+            key={technology.name}
+            variants={fadeIn('up', 'tween', (index % 6) * 0.06, 0.7, 24)}
+            {...inView(0.4)}
+          >
             <BallView
               icon={technology.icon}
               isMobile={isMobile}
@@ -74,20 +89,26 @@ const Tech = () => {
             <span className="text-white text-[16px] font-semibold capitalize select-none">
               {technology.name}
             </span>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {sharedCanvas}
 
       <div className="flex flex-row flex-wrap justify-center  gap-10 mt-32">
-        <p className={`${styles.sectionSubText} mt-12 `}>
+        <motion.p
+          variants={textVariant()}
+          {...inView(0.5)}
+          className={`${styles.sectionSubText} mt-12 `}
+        >
           Otros conocimientos:
-        </p>
+        </motion.p>
         {skills.map((skill, index) => (
-          <div
+          <motion.div
             className=" overflow-hidden bg-opacity-60 bg-gray-900  backdrop-blur-sm p-4 rounded-lg shadow-lg w-fit max-w-4xl"
             key={index}
+            variants={fadeIn('up', 'tween', (index % 3) * 0.1, 0.8, 32)}
+            {...inView(0.2)}
           >
             <div className="px-6 py-4">
               <div className="font-semibold text-xl text-emerald-400 mb-2 uppercase">
@@ -95,19 +116,25 @@ const Tech = () => {
               </div>
               <ul className="flex flex-row flex-wrap gap-3   mt-2 ">
                 {skill.items.map((skill, index) => (
-                  <li className="place-self-center" key={index}>
+                  <motion.li
+                    className="place-self-center"
+                    key={index}
+                    custom={index}
+                    variants={chip}
+                  >
                     <span className="inline-block bg-sky-700 rounded-full px-3 py-1 text-sm  text-white mr- mb-1 capitalize select-none">
                       {skill}
                     </span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
   )
 }
 
-export default SectionWrapper(Tech, 'skills')
+// Monta el canvas 3D solo cuando la sección se acerca al viewport.
+export default SectionWrapper(Tech, 'skills', { deferMount: true })

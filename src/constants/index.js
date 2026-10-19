@@ -340,7 +340,7 @@ const skills = [
     items: [
       'SQL: PostgreSQL, MySQL, SQLite, RDS, Aurora',
       'NoSQL: MongoDB, Firebase, DynamoDB',
-      'ORM: Prisma, Sequelize',
+      'ORM: Prisma, Sequelize, Drizzle',
       'Backend-as-a-Service: Supabase (Auth + RLS + SSR)',
       'Sesiones: Redis, JWT, cookie-session, express-session'
     ]
@@ -443,11 +443,10 @@ const experiences = [
     iconBg: '#1a9e78',
     date: '2026 - Actualmente',
     points: [
-      'Concepción, arquitectura e implementación 100%.',
-      'Servidor de IA que encargado de las sesiones de WhatsApp con generación automática de respuestas mediante LLMs.',
-      'Dashboard real-time con métricas, gráficos.',
-      'Dashboard administrativo para manejo general de comercios brindando posibilidad de accionar y visualizar informes.',
-      "Integración de autenticación OAuth con Supabase RLS, control de acceso basado en roles y permisos.",
+      'Concepción, arquitectura e implementación end-to-end.',
+      'Servidor de IA que se encarga de las sesiones de WhatsApp, con generación automática de respuestas mediante LLMs.',
+      'Dashboard en tiempo real con métricas y gráficos de uso, más un panel administrativo para que cada comercio gestione y visualice sus reportes.',
+      'Autenticación OAuth con Supabase RLS, control de acceso basado en roles y permisos.',
       'Internacionalización en 5 idiomas.',
     ]
   },
@@ -456,32 +455,25 @@ const experiences = [
     company_name: 'Hacela Simple — Agencia de alquiler de vehículos y experiencias',
     icon: hacelasimpleIcon,
     iconBg: '#E6DEDD',
-    date: 'Feb 2024 - Actualmente',
+    date: 'Feb 2024 - 2026',
     points: [
-      "Ampliación de la lógica de negocio para incluir la venta de viajes y experiencias.",
-/*       "Refactorización y desarrollo de interfaces de usuario con React, priorizando la accesibilidad y la experiencia de usuario.",
- */      "Implementación de capacidades PWA mediante Workbox, mejorando la usabilidad en dispositivos móviles buscando a una experiencia nativa.",
-      "Desarrollo del blog corporativo con Astro, enfocado en rendimiento y carga rápida de contenido, junto con un panel administrativo en Strapi CMS.",
-/*       "Desarrollo del backend con Express, incluyendo soporte para SSR optimizando rendimiento y SEO.",
- */      "Gestión y administración del servidor Linux, configurando Nginx como proxy inverso y aplicando certificados SSL para conexiones seguras.",
-      "Administración de la infraestructura y servicios en la nube mediante AWS.",
-/*       "Implementación de un sistema de autenticación con OAuth.",
- */      "Integración de la pasarela de pagos Fiserv y Mercado Pago.",
-      "Implementación de un sistema de internacionalización, incluyendo la generación de archivos de traducción para soportar múltiples idiomas en textos estáticos y dinámicos.",
-      /*       "Integración de WebSockets para funcionalidades de comunicación en tiempo real, como chat.",
-       */      /*       "Gestión y modelado de datos con GraphQL y Sequelize, incluyendo control de migraciones.",
-                 "Optimización y carga eficiente de imágenes desde el backend, con normalización previa al almacenamiento.", */
+      'Ampliación de la lógica de negocio para incluir venta de viajes y experiencias, más allá del alquiler de vehículos.',
+      'Capacidades PWA mediante Workbox, acercando la experiencia mobile a una app nativa.',
+      'Blog corporativo con Astro y panel administrativo en Strapi CMS, con foco en rendimiento.',
+      'Administración de servidor Linux (Nginx como proxy inverso, certificados SSL) e infraestructura en AWS.',
+      'Integración de pasarelas de pago Fiserv y Mercado Pago.',
+      'Sistema de internacionalización para contenido estático y dinámico.',
     ]
   }
 ]
 
 const now = [
+  /*   {
+      title:
+        'Cursando la ultima materia para recibir el título de Técnico Superior en Programación (UTN-FRVM).'
+    }, */
   {
-    title:
-      'Cursando la ultima materia para recibir el título de Técnico Superior en Programación (UTN-FRVM).'
-  },
-  {
-    title: "Profesionalizando mi nivel de inglés a diario en una academia."
+    title: "Profesionalizando mi nivel de inglés a diario."
   },
   /*   {
       title:

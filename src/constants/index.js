@@ -26,10 +26,10 @@ import {
   javascript,
   typescript,
   git,
-  tailwind,
+  // tailwind,
   reactjs,
   nextjs,
-  redux,
+  // redux,
   nodejs,
   /*   handlebars, */
   express,
@@ -40,13 +40,14 @@ import {
   docker,
   /*   jquery, */
   /*   kubernetes, */
-  sass,
-  graphQL,
+  // sass,
+  // graphQL,
   supabase,
   prisma,
   astro,
-  mercadopago,
-  zustand,
+  // mercadopago,
+  // zustand,
+  postgresql,
   // figma,
   // threejs,
   //! experiences
@@ -223,10 +224,6 @@ const technologies = [
     icon: reactjs
   },
   {
-    name: 'React Native',
-    icon: reactjs
-  },
-  {
     name: 'NextJS',
     icon: nextjs
   },
@@ -234,15 +231,6 @@ const technologies = [
     name: 'Astro',
     icon: astro
   },
-  // State Management
-  {
-    name: 'Redux',
-    icon: redux
-  },
-  /*{
-    name: 'Zustand',
-    icon: zustand
-  },*/
   // Backend
   {
     name: 'NodeJS',
@@ -258,27 +246,12 @@ const technologies = [
     icon: prisma
   },
   {
+    name: 'PostgreSQL',
+    icon: postgresql
+  },
+  {
     name: 'Supabase',
     icon: supabase
-  },
-  // Styling
-  {
-    name: 'TailwindCSS',
-    icon: tailwind
-  },
-  {
-    name: 'sass',
-    icon: sass
-  },
-  // APIs & GraphQL
-  {
-    name: 'GraphQL',
-    icon: graphQL
-  },
-  // Integraciones
-  {
-    name: 'Mercado Pago',
-    icon: mercadopago
   },
   // DevOps & Cloud
   {
@@ -336,50 +309,73 @@ const technologies = [
 
 const skills = [
   {
+    title: 'Frontend y UI',
+    items: [
+      'TailwindCSS',
+      'Sass',
+      'Radix UI',
+      'Framer Motion',
+      'React Hook Form',
+      'Zod',
+      'Recharts',
+      'i18n'
+      /*       'Vite',
+            'Webpack' */
+    ]
+  },
+  {
+    title: 'Estado y formularios',
+    items: [
+      'Zustand',
+      'Redux',
+      'TanStack Query',
+      'React Hook Form',
+      'Zod'
+    ]
+  },
+  {
+    title: 'Arquitectura web',
+    items: [
+      'SSR',
+      'CSR',
+      'SPA',
+      'PWA',
+      'SaaS multitenant',
+      'Apps móviles (React Native)'
+    ]
+  },
+  {
+    title: 'Backend y APIs',
+    items: ['APIs RESTful', 'GraphQL', 'WebSockets', 'Webhooks', 'Strapi']
+  },
+  {
     title: 'Bases de datos',
     items: [
-      'SQL: PostgreSQL, MySQL, SQLite, RDS, Aurora',
-      'NoSQL: MongoDB, Firebase, DynamoDB',
-      'ORM: Prisma, Sequelize, Drizzle',
-      'Backend-as-a-Service: Supabase (Auth + RLS + SSR)',
-      'Sesiones: Redis, JWT, cookie-session, express-session'
+      'MySQL',
+      'SQLite',
+      'RDS',
+      'Aurora',
+      'MongoDB',
+      'Firebase',
+      'DynamoDB',
+      'Sequelize',
+      'Drizzle',
+      'Redis'
     ]
   },
   {
-    title: 'Desarrollo de aplicaciones',
-    items: [
-      'SPA (Single Page Application)',
-      'PWA (Progressive Web App)',
-      'SSR (Server Side Rendering)',
-      'CSR (Client Side Rendering)',
-      'Desarrollo de aplicaciones móviles nativas',
-      'APIs RESTful',
-      'APIs GraphQL',
-      'Websockets',
-      'Arquitectura SaaS multitenant'
-    ]
+    title: 'Autenticación y seguridad',
+    items: ['JWT', 'OAuth', 'NextAuth', 'RLS', 'RBAC']
   },
   {
-    title: 'Herramientas y bibliotecas',
+    title: 'Integraciones e IA',
     items: [
-      'Estado: Zustand, Redux',
-      'Frameworks: Astro, Next.js',
-      'UI: Radix UI, TailwindCSS, Sass',
-      'Formularios: React Hook Form, Zod',
-      'Datos: Recharts, TanStack Query',
-      'Build: Vite, Webpack',
-      'Internacionalización: i18n (5+ idiomas en producción)'
-    ]
-  },
-  {
-    title: 'Integraciones y pasarelas',
-    items: [
-      'Mercado Pago (pagos en LATAM)',
-      'Fiserv (pasarela de pagos)',
-      'WhatsApp Business API (sesiones, notificaciones)',
-      'Resend (emails transaccionales)',
-      'OAuth (Google, GitHub) + NextAuth',
-      'Webhooks y APIs externas'
+      'Mercado Pago',
+      'Fiserv',
+      'WhatsApp Business API',
+      'Resend',
+      'OpenRouter',
+      'LLMs'
     ]
   },
   /*   {
@@ -420,19 +416,21 @@ const skills = [
     ]
   },
   */
-  {
-    title: 'DevOps y despliegue',
-    items: [
-      'AWS - EC2, ECS, EKS, EBS',
-      'Clusters y Servidores',
-      'Proxy y Proxy inverso',
-      'Docker y Kubernetes',
-      'CI/CD',
-      /*       'Github Actions', */
-      'Balanceadores de carga'
-      /*       'pm2 y forever (gestor de procesos NodeJS)' */
-    ]
-  }
+  /*  {
+     title: 'DevOps y despliegue',
+     items: [
+       'Vercel',
+       'Linux',
+       'Nginx (proxy inverso)',
+       'SSL',
+       'CI/CD',
+       'Github Actions',
+       'EC2',
+       'ECS',
+       'Balanceadores de carga',
+       'pm2 y forever (gestor de procesos NodeJS)'
+     ]
+   } */
 ]
 
 const experiences = [
@@ -441,7 +439,7 @@ const experiences = [
     company_name: 'Nubotik — SaaS de gestión de listas de espera',
     icon: nubotikIcon,
     iconBg: '#1a9e78',
-    date: '2026 - Actualmente',
+    date: '2025 - Actualmente',
     points: [
       'Concepción, arquitectura e implementación end-to-end.',
       'Servidor de IA que se encarga de las sesiones de WhatsApp, con generación automática de respuestas mediante LLMs.',

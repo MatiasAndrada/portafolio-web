@@ -40,6 +40,7 @@ import prisma from './tech/prisma.webp'
 import astro from './tech/astro.webp'
 import mercadopago from './tech/mercadopago.webp'
 import zustand from './tech/zustand.jpg'
+import postgresql from './tech/postgresql.png'
 //! experience
 import shopify from './experiences/shopify.png'
 import hacelasimpleIcon from './experiences/hacelaSimple/favicon.png'
@@ -95,6 +96,7 @@ export {
   astro,
   mercadopago,
   zustand,
+  postgresql,
   //! experience
   shopify,
   hacelasimpleIcon,

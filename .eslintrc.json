@@ -9,13 +9,25 @@
       "jsx": true
     },
     "ecmaVersion": 2021,
-    "sourceType": "module"
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "parserOpts": {
+        "plugins": ["jsx"]
+      }
+    }
   },
+  "ignorePatterns": ["dist", "node_modules"],
   "plugins": ["react"],
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/no-unknown-property": [
+      "error",
+      { "ignore": ["args", "object", "material", "intensity"] }
+    ]
   },
-  "parser": "babel-eslint", // Utiliza el parser de Babel para JavaScript
+  "parser": "@babel/eslint-parser",
   "settings": {
     "react": {
       "version": "18.2"

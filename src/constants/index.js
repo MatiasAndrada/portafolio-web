@@ -436,31 +436,32 @@ const skills = [
 const experiences = [
   {
     title: 'Full Stack Developer',
-    company_name: 'Nubotik — SaaS de gestión de listas de espera',
+    company_name: 'Nubotik — SaaS multi-tenant de gestión de reservas',
     icon: nubotikIcon,
     iconBg: '#1a9e78',
     date: '2025 - Actualmente',
     points: [
-      'Concepción, arquitectura e implementación end-to-end.',
-      'Servidor de IA que se encarga de las sesiones de WhatsApp, con generación automática de respuestas mediante LLMs.',
-      'Dashboard en tiempo real con métricas y gráficos de uso, más un panel administrativo para que cada comercio gestione y visualice sus reportes.',
-      'Autenticación OAuth con Supabase RLS, control de acceso basado en roles y permisos.',
-      'Internacionalización en 5 idiomas.',
+      'Desarrollado de forma autónoma como MVP por encargo directo, hoy utilizado por más de 20 comercios en Argentina.',
+      'Arquitectura multi-tenant con paneles diferenciados para comercios y administradores, y administración centralizada de funcionalidades, clientes, campañas de marketing y configuración de cada cuenta.',
+      'Bot de IA (LLMs) que toma reservas de forma automatizada por WhatsApp, reduciendo la intervención manual en la operación del comercio.',
+      'Módulo de analytics con gráficos de comportamiento de clientes, para cada comercio y para el panel central.',
+      'Autenticación OAuth con Supabase RLS y autorización basada en roles para administradores y comercios.',
+      'Soporte multilenguaje en 5 idiomas, con traducciones automáticas para contenido estático y dinámico.',
     ]
   },
   {
     title: 'Full Stack Developer',
-    company_name: 'Hacela Simple — Agencia de alquiler de vehículos y experiencias',
+    company_name: 'Hacela Simple — Marketplace de movilidad y turismo',
     icon: hacelasimpleIcon,
     iconBg: '#E6DEDD',
     date: 'Feb 2024 - 2026',
     points: [
-      'Ampliación de la lógica de negocio para incluir venta de viajes y experiencias, más allá del alquiler de vehículos.',
+      'Lógica de pagos con Mercado Pago y Fiserv, y sistema de comisiones configurable desde el panel de administración sin tocar código.',
+      'Expansión del marketplace para incorporar viajes y excursiones, con flujos de publicación, validación y administración.',
+      'Chat en tiempo real con WebSockets, con notificaciones push y por correo para mantener la comunicación aun con usuarios inactivos.',
       'Capacidades PWA mediante Workbox, acercando la experiencia mobile a una app nativa.',
-      'Blog corporativo con Astro y panel administrativo en Strapi CMS, con foco en rendimiento.',
-      'Administración de servidor Linux (Nginx como proxy inverso, certificados SSL) e infraestructura en AWS.',
-      'Integración de pasarelas de pago Fiserv y Mercado Pago.',
-      'Sistema de internacionalización para contenido estático y dinámico.',
+      'Blog autoadministrable con Astro y Strapi CMS, sin depender del equipo técnico para publicar contenido.',
+      'Administración de servidor Linux (Nginx como proxy inverso, SSL) y servicios AWS (EC2, S3, Route 53).',
     ]
   }
 ]

@@ -348,21 +348,21 @@ const skills = [
     title: 'Backend y APIs',
     items: ['APIs RESTful', 'GraphQL', 'WebSockets', 'Webhooks', 'Strapi']
   },
-  {
-    title: 'Bases de datos',
-    items: [
-      'MySQL',
-      'SQLite',
-      'RDS',
-      'Aurora',
-      'MongoDB',
-      'Firebase',
-      'DynamoDB',
-      'Sequelize',
-      'Drizzle',
-      'Redis'
-    ]
-  },
+  /*   {
+      title: 'Bases de datos',
+      items: [
+        'MySQL',
+        'SQLite',
+        'RDS',
+        'Aurora',
+        'MongoDB',
+        'Firebase',
+        'DynamoDB',
+        'Sequelize',
+        'Drizzle',
+        'Redis'
+      ]
+    }, */
   {
     title: 'Autenticación y seguridad',
     items: ['JWT', 'OAuth', 'NextAuth', 'RLS', 'RBAC']

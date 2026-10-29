@@ -95,42 +95,37 @@ const Tech = () => {
 
       {sharedCanvas}
 
-      <div className="flex flex-row flex-wrap justify-center  gap-10 mt-32">
+      <div className="mt-32">
         <motion.p
           variants={textVariant()}
           {...inView(0.5)}
-          className={`${styles.sectionSubText} mt-12 `}
+          className={`${styles.sectionSubText} mb-8 text-center`}
         >
-          Otros conocimientos:
+          Y también trabajo con…
         </motion.p>
-        {skills.map((skill, index) => (
-          <motion.div
-            className=" overflow-hidden bg-opacity-60 bg-gray-900  backdrop-blur-sm p-4 rounded-lg shadow-lg w-fit max-w-4xl"
-            key={index}
-            variants={fadeIn('up', 'tween', (index % 3) * 0.1, 0.8, 32)}
-            {...inView(0.2)}
-          >
-            <div className="px-6 py-4">
-              <div className="font-semibold text-xl text-emerald-400 mb-2 uppercase">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skills.map((skill, index) => (
+            <motion.div
+              className="bg-gray-900 bg-opacity-60 backdrop-blur-sm p-6 rounded-lg shadow-lg"
+              key={skill.title}
+              variants={fadeIn('up', 'tween', (index % 3) * 0.1, 0.8, 32)}
+              {...inView(0.2)}
+            >
+              <div className="font-semibold text-xl text-emerald-400 mb-4 uppercase">
                 {skill.title}
               </div>
-              <ul className="flex flex-row flex-wrap gap-3   mt-2 ">
-                {skill.items.map((skill, index) => (
-                  <motion.li
-                    className="place-self-center"
-                    key={index}
-                    custom={index}
-                    variants={chip}
-                  >
-                    <span className="inline-block bg-sky-700 rounded-full px-3 py-1 text-sm  text-white mr- mb-1 capitalize select-none">
-                      {skill}
+              <ul className="flex flex-row flex-wrap gap-2">
+                {skill.items.map((item, i) => (
+                  <motion.li key={item} custom={i} variants={chip}>
+                    <span className="inline-block bg-sky-700 rounded-full px-3 py-1 text-sm text-white select-none">
+                      {item}
                     </span>
                   </motion.li>
                 ))}
               </ul>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   )

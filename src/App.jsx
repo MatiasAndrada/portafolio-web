@@ -6,7 +6,7 @@ import {
   Certificate,
   Experience,
   Now,
-  //Feedbacks,
+  // Feedbacks,
   Works,
   Footer,
   Hero,

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import {
   motion,
@@ -72,16 +72,6 @@ const scrollCue = {
 const NAME_WORDS = ['Matías', 'Andrada']
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(true)
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
   // Al scrollear, el contenido se desvanece y baja más lento que la página.
   const sectionRef = useRef(null)
   const reduceMotion = useReducedMotion()

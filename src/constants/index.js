@@ -1,16 +1,3 @@
-// Background style configuration
-// hero: 'stars' | 'none'
-// sections: 'circles' | 'stars' | 'none'
-// Combinations:
-//   { hero: 'stars', sections: 'circles' } - estrellas en hero + bolas en resto
-//   { hero: 'stars', sections: 'stars' } - solo estrellas en todo
-//   { hero: 'none', sections: 'circles' } - solo bolas en todo
-//   { hero: 'stars', sections: 'none' } - solo estrellas en hero, nada después
-export const BACKGROUND_CONFIG = {
-  hero: 'stars',
-  sections: 'stars'
-}
-
 import {
   // !certificates
   webDesignCertificate,
@@ -23,7 +10,7 @@ import {
   // !tech
   // html,
   // css,
-  javascript,
+  // javascript,
   typescript,
   git,
   // tailwind,
@@ -53,16 +40,29 @@ import {
   //! experiences
   hacelasimpleIcon,
   //! projects
-  eCommerce,
+  // eCommerce,
   // chatApp,
   playMovie,
   spaceXmirror,
   projectAdmin,
-  nubotikLogo,
+  // nubotikLogo,
   nubotikIcon,
   //! loaders
-  loader1
+  // loader1
 } from '../assets'
+
+// Background style configuration
+// hero: 'stars' | 'none'
+// sections: 'circles' | 'stars' | 'none'
+// Combinations:
+//   { hero: 'stars', sections: 'circles' } - estrellas en hero + bolas en resto
+//   { hero: 'stars', sections: 'stars' } - solo estrellas en todo
+//   { hero: 'none', sections: 'circles' } - solo bolas en todo
+//   { hero: 'stars', sections: 'none' } - solo estrellas en hero, nada después
+export const BACKGROUND_CONFIG = {
+  hero: 'stars',
+  sections: 'stars'
+}
 
 export const navLinks = [
   {
@@ -538,7 +538,7 @@ const projects = [
     image: eCommerce,
     source_code_link: 'https://github.com/MatiasAndrada/store-POS-SaaS',
     source_demo_link: 'https://github.com/MatiasAndrada/store-POS-SaaS'
-  },*/
+  }, */
   {
     name: 'ProjectAdmin',
     description:

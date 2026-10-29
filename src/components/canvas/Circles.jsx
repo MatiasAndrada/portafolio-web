@@ -7,7 +7,7 @@ const CircleCanvas = () => {
     const canvas = canvasRef.current
     const ctx = canvas.getContext('2d')
     const colors = ['#0052CC', '#00D4FF', '#003B99', '#0080FF', '#00F0FF']
-    let circles = []
+    const circles = []
 
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight

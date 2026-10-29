@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { SectionWrapper } from '../hoc'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { easings } from '../utils/motion'
 
@@ -35,6 +34,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <p className="footerText">&copy; {year} Matías Andrada</p>
       <p className="footerCredit">
         Modelo 3D{' '}
         <a
@@ -61,7 +61,6 @@ const Footer = () => {
           CC BY 4.0
         </a>
       </p>
-      <p className="footerText">&copy; {year} Matías Andrada</p>
     </motion.footer>
   )
 }

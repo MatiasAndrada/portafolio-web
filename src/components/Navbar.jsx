@@ -45,7 +45,7 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          {/*ALAS*/}
+          {/* ALAS */}
           {/*           <div className="w-10 sm:w-32"> 
             <motion.h1
               initial={{ opacity: 0 }} // Estado inicial con opacidad 0

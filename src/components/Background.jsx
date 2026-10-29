@@ -5,12 +5,13 @@ import { BACKGROUND_CONFIG } from '../constants'
 const LazyCirclesCanvas = lazy(() => import('./canvas/Circles'))
 
 // Componente memoizado para evitar que se vuelva a renderizar si no cambian sus props
-const MemoizedCirclesCanvas = memo(() => <LazyCirclesCanvas />)
+const MemoizedCirclesCanvas = memo(function MemoizedCirclesCanvas() {
+  return <LazyCirclesCanvas />
+})
 
 const Background = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [showCanvas, setShowCanvas] = useState(false)
-  const [hasScrolled, setHasScrolled] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,13 +24,7 @@ const Background = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight / 1.2) {
-        setHasScrolled(true)
-        setShowCanvas(true)
-      } else {
-        setHasScrolled(false)
-        setShowCanvas(false)
-      }
+      setShowCanvas(window.scrollY > window.innerHeight / 1.2)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)

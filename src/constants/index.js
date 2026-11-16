@@ -314,11 +314,11 @@ const skills = [
       'TailwindCSS',
       'Sass',
       'Radix UI',
-      'Framer Motion',
       'React Hook Form',
       'Zod',
-      'Recharts',
-      'i18n'
+      'i18n',
+      'Charts'
+      /*       'Framer Motion', */
       /*       'Vite',
             'Webpack' */
     ]

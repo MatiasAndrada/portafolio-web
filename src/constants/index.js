@@ -42,7 +42,7 @@ import {
   //! projects
   // eCommerce,
   // chatApp,
-  playMovie,
+  // playMovie,
   spaceXmirror,
   projectAdmin,
   // nubotikLogo,
@@ -64,14 +64,21 @@ export const BACKGROUND_CONFIG = {
   sections: 'stars'
 }
 
+// CV descargable. Se genera desde cv/cv.html con `pnpm cv`.
+export const CV_URL = '/cv/Matias_Andrada_CV.pdf'
+
 export const navLinks = [
   {
     id: 'about',
-    title: 'About'
+    title: 'Sobre mí'
   },
   {
     id: 'work',
-    title: 'Work'
+    title: 'Experiencia'
+  },
+  {
+    id: 'works',
+    title: 'Proyectos'
   },
   {
     id: 'skills',
@@ -79,136 +86,79 @@ export const navLinks = [
   },
   {
     id: 'contact',
-    title: 'Contact'
+    title: 'Contacto'
   }
 ]
 
+// Formación: mismo contenido que las secciones "Formación" y
+// "Certificaciones" del CV (cv/cv.html).
+const education = [
+  {
+    title: 'Técnico Superior en Programación',
+    institution: 'UTN — Facultad Regional Villa María',
+    date: '2023 – 2026'
+  },
+  {
+    title: 'Carrera Desarrollador Full Stack',
+    institution: 'Coderhouse',
+    date: '2021 – 2023',
+    note: 'Desarrollo Web, JavaScript, React y Programación Backend, más cursos de Next.js y React Native (2024).'
+  }
+]
+
+// `featured` se muestra destacado; el resto como credenciales compactas.
+// Sin `link`, la credencial se muestra sin enlace.
 const certificates = [
   {
-    title: 'Desarrollo Web',
-    description:
-      'Adquirí conocimientos en herramientas de optimización de sitios web, como el uso de GIT y preprocesadores como SASS. Aprendí a aplicar Bootstrap y comprendí la importancia del SEO. También aprendí a subir mi sitio a un servidor y a interactuar con él. Finalmente, ademas a presentar un presupuesto y atender a mi cliente final.',
-    items: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'jQuery',
-      'Bootstrap',
-      'React',
-      'Angular'
-    ],
-    image: webDesignCertificate,
-    link: 'https://pub.coderhouse.com/legacy-certificates/61cdec542bed53003d8455e1?lang=es'
-  },
-  {
-    title: 'JavaScript',
-    description:
-      'Puedo crear aplicaciones de todo tipo, aplicando casos prácticos en mis desarrollos. Además, aprendí a utilizar librerías como jQuery entre muchas otras  y técnicas de desarrollo para crear aplicaciones modernas con AJAX. Ahora soy capaz de crear soluciones web interactivas y trasladar mis conocimientos a cualquier framework JavaScript.',
-    items: [
-      'Sintaxis y gramática de JavaScript',
-      'Manipulación del DOM',
-      'Eventos y manejo de eventos',
-      'Funciones y objetos',
-      'Asincronía y callbacks',
-      'Promesas y async/await'
-    ],
-    image: javascriptCertificate,
-    link: 'https://pub.coderhouse.com/legacy-certificates/624c3073fa5d58001aa9d6a4?lang=es'
-  },
-  {
-    title: 'React.js',
-    description:
-      'Aprendí a programar por componentes utilizando JavaScript, tanto en su versión estándar como en ES6, También adquirí conocimientos sobre el uso de flujos de datos y el manejo de rutas en aplicaciones SPA. Ademas a utilizar el virtual DOM. Estoy  en condiciones de desarrollar cualquier proyecto con Javascript y React.',
-    items: [
-      'Componentes y props',
-      'Estado y ciclo de vida',
-      'Manejo de formularios',
-      'React Router',
-      'Redux',
-      'Testing con Jest y Enzyme'
-    ],
-    image: reactjsCertificate,
-    link: 'https://www.example.com/e-commerce'
-  },
-  {
-    title: 'Back-end',
-    description:
-      'He aprendido a programar en Javascript del lado del servidor utilizando técnicas asincrónicas y trabajando con Bases de datos SQL y NoSQL dominando la gestión de los datos de forma eficiente y con facilidad de escalabilidad. También he aprendido sobre la arquitectura de servidor y el modelo MVC. Además, testear y monitorear aplicaciones REST, y dominar la tecnología Websocket, He normalizado/denormalizado datos en formato JSON, he manejado patrones de diseño y code style para aplicaciones de alta concurrencia. Por último, puedo implementar proyectos en la nube a través de plataformas como, MongoAtlas y AWS entre otras.',
-    items: [
-      'NodeJS',
-      'Express',
-      'Hbs, Pug, Ejs',
-      'MongoDB',
-      'Firebase',
-      'MySQL',
-      'Websocket',
-      'Sequelize',
-      'APIs RESTFul y GraphQL',
-      'Autenticación y Seguridad',
-      'Escalabilidad y Rendimiento'
-    ],
-    image: backendCertificate,
-    link: 'https://pub.coderhouse.com/legacy-certificates/63f5609005d81e000e838b34?lang=es'
-  },
-  {
     title: 'AWS Cloud Computing',
-    description:
-      'El curso de AWS Cloud Computing abarca una amplia gama de temas esenciales para la creación y gestión efectiva de infraestructuras en la nube utilizando Amazon Web Services. Desde los fundamentos de la nube y la configuración de cuentas seguras hasta la orquestación de contenedores con ECS y EKS, así como la optimización de recursos mediante herramientas como CloudWatch, el curso explora la configuración de redes virtuales, migraciones a la nube, escalabilidad, tolerancia a fallos y servicios avanzados como Lambda y DynamoDB. Al finalizar, los participantes obtienen habilidades sólidas para diseñar, implementar y administrar aplicaciones y recursos en AWS, aprovechando su potencial para impulsar la innovación y la eficiencia en entornos en la nube.',
-    items: [
-      'IAM (Identity and Access Management)',
-      'EC2 (Elastic Compute Cloud)',
-      'S3 (Simple Storage Service)',
-      'RDS (Relational Database Service)',
-      'VPC (Virtual Private Cloud)',
-      'ECS (Elastic Container Service)',
-      'EKS (Elastic Kubernetes Service)',
-      'CloudWatch',
-      'Auto Scaling',
-      'Elastic Load Balancing',
-      'Lambda',
-      'DynamoDB',
-      'CloudFormation',
-      'CloudTrail',
-      'Route 53',
-      'SNS (Simple Notification Service)',
-      'SQS (Simple Queue Service)',
-      'Kinesis',
-      'Glacier',
-      'Direct Connect',
-      'API Gateway',
-      'Redshift',
-      'Elastic Beanstalk',
-      'Athena',
-      'Glue',
-      'Step Functions',
-      'Batch',
-      'Elasticache',
-      'CodePipeline',
-      'CodeDeploy',
-      'Cognito',
-      'Elasticsearch Service',
-      'KMS (Key Management Service)',
-      'WAF (Web Application Firewall)'
-    ],
+    issuer: 'UTN — Facultad Regional Buenos Aires',
+    grade: 'Sobresaliente',
     image: awsCertificate,
-    cod: 'CER-G6KFOJXF-1030583',
-    link: 'https://sigead.utnba.centrodeelearning.com/alumnos/validar_certificado'
+    code: 'CER-G6KFOJXF-1030583',
+    link: 'https://sigead.utnba.centrodeelearning.com/alumnos/validar_certificado',
+    featured: true
   },
   {
     title: 'Next.js',
-    description:
-      'En este curso aprenderás los fundamentos del Server Side Rendering. Crearás una aplicación web auto administrable con NextJS, interactuando con servicios de autenticación y bases de datos, con óptimos resultados en optimización de SEO.',
-    items: [],
+    issuer: 'Coderhouse',
+    year: 2024,
     image: nextCertificate,
     link: 'https://pub.coderhouse.com/legacy-certificates/65e9017682e54de735329c41?lang=es'
   },
   {
-    title: 'Desarrollo de aplicaciones (React Native)',
-    description:
-      'En este curso aprenderás los conocimientos y bases para crear aplicaciones bridge con capacidad de despliegue tanto para Android como iOS, utilizando React Native, Javascript y un software de prototipado como Sketch o Adobe Xd. Te conectarás a APIs y aprenderás la capacidad de sync con Firebase o Realm db. Al finalizar este curso estarás en condiciones de desarrollar, implementar y desplegar tu propia aplicación móvil.',
-    items: [],
+    title: 'React Native',
+    issuer: 'Coderhouse',
+    year: 2024,
     image: desarrolloAppCertificate,
     link: 'https://pub.coderhouse.com/legacy-certificates/661b1a67a9be799635fb3bc4?lang=es'
+  },
+  {
+    title: 'Programación Backend',
+    issuer: 'Coderhouse',
+    year: 2023,
+    image: backendCertificate,
+    link: 'https://pub.coderhouse.com/legacy-certificates/63f5609005d81e000e838b34?lang=es'
+  },
+  {
+    title: 'React.js',
+    issuer: 'Coderhouse',
+    image: reactjsCertificate,
+    // TODO: agregar la URL pública de la credencial (antes apuntaba a example.com).
+    link: null
+  },
+  {
+    title: 'JavaScript',
+    issuer: 'Coderhouse',
+    year: 2022,
+    image: javascriptCertificate,
+    link: 'https://pub.coderhouse.com/legacy-certificates/624c3073fa5d58001aa9d6a4?lang=es'
+  },
+  {
+    title: 'Desarrollo Web',
+    issuer: 'Coderhouse',
+    year: 2021,
+    image: webDesignCertificate,
+    link: 'https://pub.coderhouse.com/legacy-certificates/61cdec542bed53003d8455e1?lang=es'
   }
 ]
 
@@ -307,13 +257,17 @@ const technologies = [
   }, */
 ]
 
+// Mismas categorías que "Habilidades técnicas" del CV. Las tecnologías
+// principales ya aparecen arriba como esferas 3D (technologies).
 const skills = [
   {
-    title: 'Frontend y UI',
+    title: 'Frontend y estado',
     items: [
-      'TailwindCSS',
-      'Sass',
       'Radix UI',
+      'Sass',
+      'Zustand',
+      'Redux',
+      'TanStack Query',
       'React Hook Form',
       'Zod',
       'i18n',
@@ -324,29 +278,26 @@ const skills = [
     ]
   },
   {
-    title: 'Estado y formularios',
+    title: 'Arquitectura',
     items: [
-      'Zustand',
-      'Redux',
-      'TanStack Query',
-      'React Hook Form',
-      'Zod'
-    ]
-  },
-  {
-    title: 'Arquitectura web',
-    items: [
+      'SaaS multi-tenant',
       'SSR',
       'CSR',
       'SPA',
       'PWA',
-      'SaaS multitenant',
       'Apps móviles (React Native)'
     ]
   },
   {
     title: 'Backend y APIs',
-    items: ['APIs RESTful', 'GraphQL', 'WebSockets', 'Webhooks', 'Strapi']
+    items: [
+      'APIs REST',
+      'WebSockets',
+      'Webhooks',
+      'GraphQL',
+      'Drizzle',
+      'Strapi'
+    ]
   },
   /*   {
       title: 'Bases de datos',
@@ -365,7 +316,7 @@ const skills = [
     }, */
   {
     title: 'Autenticación y seguridad',
-    items: ['JWT', 'OAuth', 'NextAuth', 'RLS', 'RBAC']
+    items: ['OAuth', 'JWT', 'NextAuth', 'RBAC', 'Supabase RLS']
   },
   {
     title: 'Integraciones e IA',
@@ -374,8 +325,18 @@ const skills = [
       'Fiserv',
       'WhatsApp Business API',
       'Resend',
-      'OpenRouter',
-      'LLMs'
+      'OpenRouter (LLMs)'
+    ]
+  },
+  {
+    title: 'Cloud y DevOps',
+    items: [
+      'AWS EC2 · S3 · Route 53',
+      'Vercel',
+      'Linux',
+      'Nginx',
+      'SSL',
+      'CI/CD'
     ]
   },
   /*   {
@@ -433,35 +394,63 @@ const skills = [
    } */
 ]
 
+// Mismo contenido que "Experiencia" del CV, con algo más de detalle.
 const experiences = [
   {
-    title: 'Full Stack Developer',
-    company_name: 'Nubotik — SaaS multi-tenant de gestión de reservas',
+    title: 'Desarrollador Full Stack',
+    company_name: 'Nubotik',
+    role_note: 'Único desarrollador',
+    link: 'https://nubotik.com',
+    summary:
+      'SaaS multi-tenant de reservas y listas de espera, creado desde cero como MVP por encargo. Hoy lo usan más de 20 comercios en Argentina.',
     icon: nubotikIcon,
     iconBg: '#1a9e78',
-    date: '2025 - Actualmente',
+    date: '2025 – Actualidad',
     points: [
-      'Desarrollado de forma autónoma como MVP por encargo directo, hoy utilizado por más de 20 comercios en Argentina.',
-      'Arquitectura multi-tenant con paneles diferenciados para comercios y administradores, y administración centralizada de funcionalidades, clientes, campañas de marketing y configuración de cada cuenta.',
-      'Bot de IA (LLMs) que toma reservas de forma automatizada por WhatsApp, reduciendo la intervención manual en la operación del comercio.',
-      'Módulo de analytics con gráficos de comportamiento de clientes, para cada comercio y para el panel central.',
-      'Autenticación OAuth con Supabase RLS y autorización basada en roles para administradores y comercios.',
-      'Soporte multilenguaje en 5 idiomas, con traducciones automáticas para contenido estático y dinámico.',
+      'Diseñé la arquitectura multi-tenant, con un panel para cada comercio y un panel central para administrar cuentas, funcionalidades, clientes y campañas de marketing.',
+      'Integré un bot de IA (LLMs + WhatsApp Business API) que toma reservas de forma automática y reduce la gestión manual del comercio.',
+      'Construí el módulo de analytics con métricas y gráficos de comportamiento de clientes, por comercio y consolidado en el panel central.',
+      'Implementé autenticación OAuth y autorización por roles (RBAC + Supabase RLS) para administradores y comercios.',
+      'Soporte en 5 idiomas con traducción automática de contenido estático y dinámico.'
+    ],
+    stack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Prisma',
+      'PostgreSQL',
+      'Supabase',
+      'WhatsApp API',
+      'Resend',
+      'Vercel'
     ]
   },
   {
-    title: 'Full Stack Developer',
-    company_name: 'Hacela Simple — Marketplace de movilidad y turismo',
+    title: 'Desarrollador Full Stack',
+    company_name: 'Hacela Simple',
+    summary:
+      'Marketplace de movilidad y turismo (PWA): vehículos —autos, motos y embarcaciones—, viajes y excursiones, con oferentes y compradores en la misma plataforma.',
     icon: hacelasimpleIcon,
     iconBg: '#E6DEDD',
-    date: 'Feb 2024 - 2026',
+    date: '2024 – 2026',
     points: [
-      'Lógica de pagos con Mercado Pago y Fiserv, y sistema de comisiones configurable desde el panel de administración sin tocar código.',
-      'Expansión del marketplace para incorporar viajes y excursiones, con flujos de publicación, validación y administración.',
-      'Chat en tiempo real con WebSockets, con notificaciones push y por correo para mantener la comunicación aun con usuarios inactivos.',
-      'Capacidades PWA mediante Workbox, acercando la experiencia mobile a una app nativa.',
-      'Blog autoadministrable con Astro y Strapi CMS, sin depender del equipo técnico para publicar contenido.',
-      'Administración de servidor Linux (Nginx como proxy inverso, SSL) y servicios AWS (EC2, S3, Route 53).',
+      'Implementé los pagos con Mercado Pago y Fiserv y un sistema de comisiones configurable desde el panel de administración, sin tocar código.',
+      'Diseñé e implementé la expansión del marketplace a viajes y excursiones: flujos de publicación, validación y administración.',
+      'Construí un chat en tiempo real con WebSockets, con notificaciones push y por email para reactivar a usuarios inactivos.',
+      'Desarrollé la PWA con Workbox, acercando la experiencia mobile a la de una app nativa.',
+      'Creé un blog autoadministrable con Astro y Strapi para que el equipo publique contenido sin depender de desarrollo.',
+      'Administré la infraestructura de producción: servidor Linux con Nginx (proxy inverso, SSL) y servicios AWS (EC2, S3, Route 53).'
+    ],
+    stack: [
+      'Mercado Pago',
+      'Fiserv',
+      'WebSockets',
+      'PWA',
+      'Astro',
+      'Strapi',
+      'AWS',
+      'Nginx',
+      'Linux'
     ]
   }
 ]
@@ -542,7 +531,7 @@ const projects = [
   {
     name: 'ProjectAdmin',
     description:
-      'En esta aplicación de NextJS para la administración de tareas en equipos de trabajo. También se utiliza NextAuthJS para la autenticación con Oauth con proveedores como Github, Google, también es posible con credenciales, la app mantiene la sincronización de las sesiones y las cuentas vinculadas a un único usuario. En la base de datos se utiliza PrismaORM por lo que es agnóstica a la base de datos. La app permite a los usuarios crear proyectos, grupos de tareas, tareas individuales. Ademas de poder ver los proyectos que le fueron asignados y asignar tareas a otros usuarios. Desplegada en Vercel.',
+      'App colaborativa de gestión de proyectos y tareas: proyectos, grupos de tareas y asignación entre usuarios. Auth con NextAuth (OAuth con GitHub y Google, o credenciales) y cuentas vinculadas a un único usuario. Prisma ORM y deploy en Vercel.',
     tags: [
       {
         name: 'NextJS',
@@ -594,7 +583,7 @@ const projects = [
   {
     name: 'SpaceXMirror',
     description:
-      'Un espejo con información de SpaceX. Utiliza astro como tecnología. Cuenta con paginación en la api y filtros. Ademas de una galería de imágenes',
+      'Explorador de datos de SpaceX construido con Astro: listados paginados desde la API, filtros y galería de imágenes. Desplegado en Cloudflare Pages.',
     tags: [
       {
         name: 'Astro',
@@ -604,10 +593,6 @@ const projects = [
         name: 'Typescript',
         color: 'blue-text-gradient'
       },
-      {
-        name: 'Tailwind',
-        color: 'green-text-gradient'
-      }
     ],
     image: spaceXmirror,
     source_code_link: 'https://github.com/MatiasAndrada/spaceXmirror',
@@ -636,7 +621,7 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   */
-  {
+  /*   {
     name: 'Play Movie',
     description:
       'En esta aplicación de películas desarrollada en React, se utiliza la API de omdbapi para obtener información de películas y mostrarlas. La aplicación permite a los usuarios buscar películas por título y ver detalles de como el reparto, la calificación, el resumen, actores, etc. Además, la aplicación cuenta con un sistema de autenticación para que los usuarios puedan crear cuentas y guardar películas en su lista de favoritos.',
@@ -657,7 +642,7 @@ const projects = [
     image: playMovie,
     source_code_link: 'https://github.com/MatiasAndrada/playMovie',
     source_demo_link: 'https://playmovie-web.pages.dev/'
-  }
+  } */
   /*   {
     name: 'E-commerce',
     description:
@@ -691,6 +676,7 @@ const projects = [
 ]
 
 export {
+  education,
   certificates,
   technologies,
   skills,

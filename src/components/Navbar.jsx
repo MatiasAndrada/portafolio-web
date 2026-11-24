@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { styles } from '../styles'
-import { navLinks } from '../constants'
+import { CV_URL, navLinks } from '../constants'
 import { menu, close } from '../assets'
 import { easings } from '../utils/motion'
 
@@ -76,7 +76,7 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <ul className="list-none hidden md:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row items-center gap-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -95,9 +95,18 @@ const Navbar = () => {
               )}
             </li>
           ))}
+          <li>
+            <a
+              href={CV_URL}
+              download="Matias_Andrada_CV.pdf"
+              className="rounded-full border-2 border-secondary px-4 py-1.5 text-[16px] font-semibold text-white transition-colors hover:bg-secondary/20"
+            >
+              CV
+            </a>
+          </li>
         </ul>
 
-        <div className="md:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <motion.img
             src={toggle ? close : menu}
             alt="menu"
@@ -138,6 +147,24 @@ const Navbar = () => {
                       <a href={`#${nav.id}`}>{nav.title}</a>
                     </motion.li>
                   ))}
+                  <motion.li
+                    initial={{ opacity: 0, x: 12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      ease: easings.out,
+                      delay: 0.05 + navLinks.length * 0.05
+                    }}
+                    className="font-poppins font-semibold text-[16px] text-white"
+                  >
+                    <a
+                      href={CV_URL}
+                      download="Matias_Andrada_CV.pdf"
+                      onClick={() => setToggle(false)}
+                    >
+                      Descargar CV
+                    </a>
+                  </motion.li>
                 </ul>
               </motion.div>
             )}

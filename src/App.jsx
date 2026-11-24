@@ -5,7 +5,7 @@ import {
   About,
   Certificate,
   Experience,
-  Now,
+  // Now,
   // Feedbacks,
   Works,
   Footer,
@@ -28,12 +28,14 @@ const AppContent = () => (
     <Hero />
     <Background />
     <Suspense fallback={<CanvasSpinner />}>
+      {/* Orden pensado para reclutadores: quién soy → experiencia →
+          proyectos → stack → formación → contacto. */}
       <About />
       <Experience />
-      <Certificate />
+      {/* <Works /> */}
       <LazyTech />
-      <Now />
-      <Works />
+      <Certificate />
+      {/* <Now /> */}
       <LazyContact />
       <Footer />
     </Suspense>

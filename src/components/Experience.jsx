@@ -34,16 +34,35 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
+      {/* Se usan <div> en lugar de <p>: la librería del timeline pisa márgenes
+          y tamaños de los <p>. */}
       <div>
-        <h3 className="text-white text-[24px] font-bold capitalize">
-          {experience.title}
-        </h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
+        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <div className="text-secondary text-[16px] font-semibold">
+          {experience.link ? (
+            <a
+              href={experience.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 hover:underline"
+            >
+              {experience.company_name}
+            </a>
+          ) : (
+            experience.company_name
+          )}
+          {experience.role_note && (
+            <span className="text-slate-400 font-medium">
+              {' '}
+              · {experience.role_note}
+            </span>
+          )}
+        </div>
+        {experience.summary && (
+          <div className="mt-3 text-slate-300 text-[15px] leading-relaxed">
+            {experience.summary}
+          </div>
+        )}
       </div>
 
       <motion.ul
@@ -61,6 +80,22 @@ const ExperienceCard = ({ experience }) => {
           </motion.li>
         ))}
       </motion.ul>
+
+      {experience.stack && (
+        <ul
+          className="mt-5 flex flex-wrap gap-2"
+          aria-label={`Stack en ${experience.company_name}`}
+        >
+          {experience.stack.map((tech) => (
+            <li
+              key={tech}
+              className="rounded-full bg-sky-900/70 px-3 py-1 text-xs font-medium text-sky-100"
+            >
+              {tech}
+            </li>
+          ))}
+        </ul>
+      )}
     </VerticalTimelineElement>
   )
 }
@@ -73,7 +108,7 @@ const Experience = () => {
         title="Mi experiencia laboral"
       />
 
-      <div className="mt-20 flex flex-col h-100">
+      <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />

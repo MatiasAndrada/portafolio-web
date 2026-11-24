@@ -52,10 +52,10 @@ const About = () => {
             variants={fadeIn('up', 'tween', 0, 0.8, 24)}
             className="px-6 subpixel-antialiased"
           >
-            Soy Desarrollador Full Stack con tres años de experiencia
-            construyendo aplicaciones que llegan a producción y se usan de
-            verdad. Soy Técnico Superior en Programación (UTN) y trabajo con
-            React, Next.js, Node.js y PostgreSQL, siempre buscando convertir
+            Soy Desarrollador Full Stack con 3 años de experiencia llevando
+            productos a producción con React, Next.js, Node.js y PostgreSQL.
+            Soy Técnico Superior en Programación (UTN) y me enfoco en el
+            ownership end-to-end: del modelo de datos al deploy, convirtiendo
             ideas complejas en arquitecturas simples que funcionan.
           </motion.p>
 
@@ -63,13 +63,16 @@ const About = () => {
             variants={fadeIn('up', 'tween', 0, 0.8, 24)}
             className="px-6 subpixel-antialiased"
           >
-            Actualmente desarrollo{' '}
+            Hoy desarrollo{' '}
             <strong className="text-emerald-400 font-semibold">Nubotik</strong>,
-            una plataforma SaaS multi-tenant que ayuda a comercios a gestionar
-            reservas y listas de espera, con chatbots con IA para mejorar la
-            atención al cliente. Antes sumé experiencia en Hacela Simple, donde
-            trabajé con PWA, integraciones de pago (Mercado Pago, Fiserv) e
-            infraestructura en AWS.
+            un SaaS multi-tenant de reservas y listas de espera que construí
+            desde cero y que ya usan{' '}
+            <strong className="text-emerald-400 font-semibold">
+              más de 20 comercios
+            </strong>
+            , con un bot de IA que toma reservas por WhatsApp. Antes, en Hacela
+            Simple, integré pagos con Mercado Pago y Fiserv, chat en tiempo real
+            e infraestructura en AWS para un marketplace de movilidad y turismo.
           </motion.p>
 
           <motion.p
@@ -85,7 +88,7 @@ const About = () => {
           variants={zoomIn(0.2, 0.9)}
           {...inView(0.3)}
           src="/me/me3.png"
-          alt="About me"
+          alt="Matías Andrada"
           className="w-72 h-72 md:w-96 md:h-96 lg:w-96 lg:h-96 xl:w-96 xl:h-96 rounded-full flex-shrink-0"
         />
       </div>

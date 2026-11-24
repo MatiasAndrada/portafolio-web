@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaDownload, FaGithub, FaLinkedin } from 'react-icons/fa'
 import {
   motion,
   useReducedMotion,
@@ -7,9 +7,10 @@ import {
   useTransform
 } from 'framer-motion'
 import { easings } from '../utils/motion'
+import { CV_URL } from '../constants'
 
 // Línea de tiempo de entrada (segundos desde que carga la página):
-// punto/línea 0.1 → nombre 0.3 → roles 0.9 → iconos 1.4 → indicador de scroll 1.9
+// punto/línea 0.1 → nombre 0.3 → roles 0.9 → CTAs 1.2 → iconos 1.4 → scroll 1.9
 const dotVariant = {
   hidden: { scale: 0, opacity: 0 },
   show: {
@@ -88,7 +89,9 @@ const Hero = () => {
       <motion.div
         initial="hidden"
         animate="show"
-        style={reduceMotion ? undefined : { y: contentY, opacity: contentOpacity }}
+        style={
+          reduceMotion ? undefined : { y: contentY, opacity: contentOpacity }
+        }
         className=" absolute inset-0 bottom-[100px] max-w-7xl mx-auto px-5 flex flex-row items-center gap-5"
       >
         <div className="flex flex-col justify-center items-center mt-5 sm:mt-0 sm:flex">
@@ -120,19 +123,22 @@ const Hero = () => {
               </React.Fragment>
             ))}
           </h1>
-          <div className="flex items-center subtitle">
+          {/* En mobile los íconos bajan debajo de los roles para no
+              comprimirlos. */}
+          <div className="flex flex-col items-start sm:flex-row sm:items-center subtitle">
             <div>
+              {/* Mismo titular que el CV. */}
               <motion.h3 custom={0} variants={roleLine} className="role mr-6 ">
-                Técnico Superior en Programación.
+                Técnico superior en Programación · Full Stack Developer
               </motion.h3>
               <motion.h3 custom={1} variants={roleLine} className="role mr-6 ">
-                Desarrollador Full Stack — React, Next, Node
+                React · Next.js · Node.js · TypeScript
               </motion.h3>
               {/*               <h3 className="role mr-6 ">
                 Creador de Nubotik, SaaS en producción.
               </h3> */}
             </div>
-            <div className="iconContainer">
+            <div className="iconContainer -ml-5 sm:ml-0">
               <motion.a
                 custom={0}
                 variants={socialIcon}
@@ -155,12 +161,32 @@ const Hero = () => {
               </motion.a>
             </div>
           </div>
+          <motion.div
+            custom={2}
+            variants={roleLine}
+            className="mt-4 sm:mt-8 flex flex-wrap items-center gap-4"
+          >
+            <a
+              href={CV_URL}
+              download="Matias_Andrada_CV.pdf"
+              className="inline-flex items-center gap-2 rounded-full bg-[#0052CC] px-6 py-3 font-semibold text-white shadow-lg shadow-[#0052CC]/30 transition-colors hover:bg-[#0062F5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
+            >
+              <FaDownload aria-hidden="true" />
+              Descargar CV
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center rounded-full border-2 border-secondary px-6 py-[10px] font-semibold text-white transition-colors hover:bg-secondary/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
+            >
+              Contactame
+            </a>
+          </motion.div>
         </div>
       </motion.div>
 
       <motion.div
         style={reduceMotion ? undefined : { opacity: cueOpacity }}
-        className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center"
+        className="absolute bottom-10 w-full hidden xs:flex justify-center items-center"
       >
         <motion.a
           href="#about"

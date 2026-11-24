@@ -96,10 +96,9 @@ const Works = () => {
           {...inView(0.3)}
           className="mt-3 text-slate-200 text-[17px] max-w-3xl leading-[30px]"
         >
-          En mi sección de proyectos, podrás encontrar ejemplos concretos de mi
-          trabajo que demuestran mis habilidades y experiencia. Cada proyecto se
-          describe brevemente y se incluyen enlaces a los repositorios de código
-          y demos en vivo.
+          Proyectos personales con código abierto y demo en vivo. Mi trabajo
+          principal —Nubotik y Hacela Simple— es código privado; lo detallo en
+          la sección de experiencia.
           {/*           <br />
           Estos proyectos reflejan mi capacidad para resolver problemas
           complejos, trabajar con diversas tecnologías y gestionar proyectos de

@@ -102,7 +102,7 @@ const education = [
     title: 'Carrera Desarrollador Full Stack',
     institution: 'Coderhouse',
     date: '2021 – 2023',
-    note: 'Desarrollo Web, JavaScript, React y Programación Backend, más cursos de Next.js y React Native (2024).'
+    note: 'Desarrollo Web, JavaScript, React y Programación Backend'
   }
 ]
 
@@ -114,8 +114,7 @@ const certificates = [
     issuer: 'UTN — Facultad Regional Buenos Aires',
     grade: 'Sobresaliente',
     image: awsCertificate,
-    code: 'CER-G6KFOJXF-1030583',
-    link: 'https://sigead.utnba.centrodeelearning.com/alumnos/validar_certificado',
+    link: 'https://validator.centrodeelearning.com/validator/UZEoPCX9SS',
     featured: true
   },
   {
